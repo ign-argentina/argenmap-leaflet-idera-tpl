@@ -168,3 +168,10 @@ Control graticula
 	background-color: #f4f4f4;
 	cursor: pointer;
 }
+
+/*******************************
+Personalizado
+*******************************/
+.navbar-header > a > img {
+    width: 134px;
+}

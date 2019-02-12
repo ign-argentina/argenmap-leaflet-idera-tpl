@@ -7,12 +7,12 @@ var argenmap = "";
 var mapa = "";
 
 //Change logotype
-$('#top-left-logo-link').attr("href","http://www.ign.gob.ar/");
-$('#top-left-logo').attr("src","templates/ign-geoportal-basic/img/logo.png");
-$('#top-left-logo').attr("alt","Logo Instituto Geográfico Nacional");
-$('#top-left-logo').attr("title","Instituto Geográfico Nacional");
+$('#top-left-logo-link').attr("href","http://www.idera.gob.ar/");
+$('#top-left-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logo.png");
+$('#top-left-logo').attr("alt","Logo IDERA");
+$('#top-left-logo').attr("title","Infraestructura de Datos Espaciales de la República Argentina");
 $('#top-right-logo-link').attr("href","https://www.argentina.gob.ar/defensa");
-$('#top-right-logo').attr("src","templates/ign-geoportal-basic/img/logoMinDef.png");
+$('#top-right-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logoMinDef.png");
 $('#top-right-logo').attr("alt","Logo Ministerio de Defensa");
 $('#top-right-logo').attr("title","Ministerio de Defensa");
 
@@ -399,6 +399,9 @@ $("body").on("pluginLoad", function(event, plugin){
                     popupInfo = new Array();
                 }, 2000);
             });
+            
+            showMainMenuTpl();
+            
 			break;
 		case 'MousePosition':
 			// Leaflet-MousePosition plugin https://github.com/ardhi/Leaflet.MousePosition
@@ -463,12 +466,11 @@ function pointToLayer(feature, latlng) {
     })
 }
 
-/****** Enveloped functions ******/
 function showMainMenuTpl() {
-    //Ocultar loading
-    $(".loading").hide();
     //Imprimir menú
-    gestorMenu.imprimir($(".nav.nav-sidebar"));
+    gestorMenu.setMenuDOM(".nav.nav-sidebar");
+    gestorMenu.setLoadingDOM(".loading");
+    gestorMenu.print();
     //Agregar tooltip resumen
     $("[data-toggle2='tooltip']").tooltip({
         placement: "right",
@@ -477,6 +479,7 @@ function showMainMenuTpl() {
     });
 }
 
+/****** Enveloped functions ******/
 var popupInfo = new Array(); //Declare popupInfo (this initialize in mapa.js)
 var popupInfoToPaginate = new Array();
 var popupInfoPage = 0;
