@@ -543,8 +543,8 @@ function loadWmsTpl (objLayer) {
         } else {
             infoAux = info.search("<table"); // search if info has a table
             if (infoAux > 0) { // check if info has any content, if so shows popup
-                info = info.replace('<table', '<table class="featureInfo" id="featureInfoPopup' + idTxt + '"');
-                return info;
+                //info = info.replace('<table', '<table class="featureInfo" id="featureInfoPopup' + idTxt + '"');
+                return '<div class="featureInfo" id="featureInfoPopup' + idTxt + '"><div class="featureGroup"><div style="padding:1em;overflow:scroll-x;overflow-y:hidden" class="individualFeature">' + info + '</div></div></div>';
             }
         }
         
