@@ -11,10 +11,13 @@ $('#top-left-logo-link').attr("href","http://www.idera.gob.ar/");
 $('#top-left-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logo.png");
 $('#top-left-logo').attr("alt","Logo IDERA");
 $('#top-left-logo').attr("title","Infraestructura de Datos Espaciales de la República Argentina");
+/*
 $('#top-right-logo-link').attr("href","https://www.argentina.gob.ar/defensa");
 $('#top-right-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logoMinDef.png");
 $('#top-right-logo').attr("alt","Logo Ministerio de Defensa");
 $('#top-right-logo').attr("title","Ministerio de Defensa");
+*/
+$('#top-right-logo-link').hide();
 
 // get all lybraries
 gestorMenu.addPlugin("leaflet","https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js", function() {
