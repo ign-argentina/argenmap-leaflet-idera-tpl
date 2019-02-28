@@ -1,4 +1,4 @@
-var atrib_ign = "<a href='http://www.ign.gob.ar/argenmap/argenmap.jquery/docs/datosdelmapa.html' target='_blank'>Instituto Geográfico Nacional</a> + <a href='http://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+var atrib_ign = "<a href='http://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='http://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
     baseMaps = {},
     overlayMaps = new Object(),
     layerName,
@@ -59,9 +59,6 @@ $("body").on("pluginLoad", function(event, plugin){
 		// Add ordered plugins in order
 		case 'leaflet':
 			unordered = plugin.pluginName;
-			break;
-        case 'menuPrinter':
-			showMainMenu();
 			break;
 		case 'ZoomHome':
 			ordered.splice(ordenZoomHome, 1, plugin.pluginName);
@@ -399,6 +396,9 @@ $("body").on("pluginLoad", function(event, plugin){
                     popupInfo = new Array();
                 }, 2000);
             });
+            
+            showMainMenuTpl();
+            
 			break;
 		case 'MousePosition':
 			// Leaflet-MousePosition plugin https://github.com/ardhi/Leaflet.MousePosition
@@ -463,12 +463,11 @@ function pointToLayer(feature, latlng) {
     })
 }
 
-/****** Enveloped functions ******/
 function showMainMenuTpl() {
-    //Ocultar loading
-    $(".loading").hide();
     //Imprimir menú
-    gestorMenu.imprimir($(".nav.nav-sidebar"));
+    gestorMenu.setMenuDOM(".nav.nav-sidebar");
+    gestorMenu.setLoadingDOM(".loading");
+    gestorMenu.print();
     //Agregar tooltip resumen
     $("[data-toggle2='tooltip']").tooltip({
         placement: "right",
@@ -477,6 +476,7 @@ function showMainMenuTpl() {
     });
 }
 
+/****** Enveloped functions ******/
 var popupInfo = new Array(); //Declare popupInfo (this initialize in mapa.js)
 var popupInfoToPaginate = new Array();
 var popupInfoPage = 0;
