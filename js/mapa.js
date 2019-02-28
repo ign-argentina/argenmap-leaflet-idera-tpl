@@ -8,11 +8,11 @@ var mapa = "";
 
 //Change logotype
 $('#top-left-logo-link').attr("href","http://www.ign.gob.ar/");
-$('#top-left-logo').attr("src","templates/ign-geoportal-basic/img/logo.png");
-$('#top-left-logo').attr("alt","Logo Instituto Geográfico Nacional");
-$('#top-left-logo').attr("title","Instituto Geográfico Nacional");
+$('#top-left-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logo.png");
+$('#top-left-logo').attr("alt","Logo IDERA");
+$('#top-left-logo').attr("title","Demo de visualizador IDERA");
 $('#top-right-logo-link').attr("href","https://www.argentina.gob.ar/defensa");
-$('#top-right-logo').attr("src","templates/ign-geoportal-basic/img/logoMinDef.png");
+$('#top-right-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logoMinDef.png");
 $('#top-right-logo').attr("alt","Logo Ministerio de Defensa");
 $('#top-right-logo').attr("title","Ministerio de Defensa");
 
