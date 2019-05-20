@@ -483,8 +483,16 @@ function showMainMenuTpl() {
     gestorMenu.setMenuDOM(".nav.nav-sidebar");
     gestorMenu.setLoadingDOM(".loading");
     gestorMenu.setPrintCallback(printFinished);
+    gestorMenu.setLazyInitialization(true);
+	gestorMenu.setShowSearcher(true);
     gestorMenu.print();
 }
+
+/****** Misc functions ******/
+//Capture map click to clear popinfo array before fill it
+$('#mapa').on( "click", function() {
+  popupInfo = [];
+});
 
 /****** Enveloped functions ******/
 var popupInfo = new Array(); //Declare popupInfo (this initialize in mapa.js)
