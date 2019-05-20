@@ -52,7 +52,7 @@ Por:
 	<b>logFile="/var/log/mapaideraproxy/proxy_log.log"</b>
 	mustMatch="true">
 	
-Si encuentra problemas al utilizar el proxy, puede deshabilitar el log para evaluar si es un problemas de permisos en el directorio de salida del archivo del log, eliminando la opción <b>logFile</>
+Si encuentra problemas al utilizar el proxy, puede deshabilitar el log para evaluar si es un problemas de permisos en el directorio de salida del archivo del log, eliminando la opción <b>logFile</b>
 
 	<?xml version="1.0" encoding="utf-8" ?>
 	<ProxyConfig allowedReferers="*"	
