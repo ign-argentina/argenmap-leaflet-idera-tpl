@@ -39,12 +39,14 @@ Requirements
 El proxy tiene un archivo de log que debe ser redirigido a un directorio que PHP pueda escribir.
 Para configurarlo debe editarse el archivo: /templates/argenmap-leaflet-idera-tpl/proxy/proxy.config
 En el caso de IDERA se debe remplazar:
+
 	<?xml version="1.0" encoding="utf-8" ?>
 	<ProxyConfig allowedReferers="*"
 	<b>logFile="proxy_log.log"</b>
 	mustMatch="true">
 	
 Por:
+
 	<?xml version="1.0" encoding="utf-8" ?>
 	<ProxyConfig allowedReferers="*"
 	<b>logFile="/var/log/mapaideraproxy/proxy_log.log"</b>
