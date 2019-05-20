@@ -35,3 +35,26 @@ Requirements
 * cURL PHP extension
 * OpenSSL PHP extension
 * PDO_SQLITE PDO PHP extension
+
+El proxy tiene un archivo de log que debe ser redirigido a un directorio que PHP pueda escribir.
+Para configurarlo debe editarse el archivo: /templates/argenmap-leaflet-idera-tpl/proxy/proxy.config
+En el caso de IDERA se debe remplazar:
+
+	<?xml version="1.0" encoding="utf-8" ?>
+	<ProxyConfig allowedReferers="*"
+	logFile="proxy_log.log"
+	mustMatch="true">
+	
+Por:
+
+	<?xml version="1.0" encoding="utf-8" ?>
+	<ProxyConfig allowedReferers="*"
+	logFile="/var/log/mapaideraproxy/proxy_log.log"
+	mustMatch="true">
+	
+Si encuentra problemas al utilizar el proxy, puede deshabilitar el log para evaluar si es un problemas de permisos en el directorio de salida del archivo del log, eliminando la opción <b>logFile</b>
+
+	<?xml version="1.0" encoding="utf-8" ?>
+	<ProxyConfig allowedReferers="*"	
+	mustMatch="true">
+	
