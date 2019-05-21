@@ -1072,7 +1072,38 @@
             "customize_layers": {
                 "a010303a003" : {
                     "new_title": "Área de cultivo de especies arbóreas",
-                    "new_abstract": "Área de cultivo de especies arbóreas"
+                    "new_abstract": "Área de cultivo de especies arbóreas",
+                    "new_keywords": "coltivo de árboles, cultivo forestal"
+                }
+            }
+            
+        },
+		{
+            "tab": { "id":"Datos", "searcheable":true, "content":"Datos" },
+            "type": "wmslayer",
+			"peso": 210,
+			"nombre": "Biota",
+			"short_abstract": "Áreas de cultivo y vegetación",
+            "class": "",
+            "seccion": "otros-biota",
+			"servicio": "wms",
+			"version": "1.3.0",
+			"host": "https://mapa.idera.gob.ar/templates/argenmap-leaflet-idera-tpl/proxy/proxy.php?http://geo2.ambiente.gob.ar/geoserver/wms",
+            "feature_info_format": "application/json",
+            "allowed_layers": [
+                                "ordenamiento:AreasdePastizal_ARG_2004_lat_lon",
+                                "bosque_nativo:cobertura_bn"
+                              ],
+            "customize_layers": {
+                "ordenamiento:AreasdePastizal_ARG_2004_lat_lon" : {
+                    "new_title": "Vegetación natural herbácea cerrada",
+                    "new_abstract": "Área de vegetación natural cubierta por pastizal cerrado, sea de cobertura simple, con árboles, con arbustos, o con árboles y arbustos.",
+					"new_keywords": "pastizales, vegetación natural"
+                },
+                "bosque_nativo:cobertura_bn" : {
+                    "new_title": "Área de vegetación natural arbórea cerrada",
+                    "new_abstract": "Área de vegetación natural cubierta por bosque cerrado, sea de un estrato arbóreo o de más de un estrato arbóreo, sin emergentes o con emergentes.",
+					"new_keywords": "Bosque, vegetación natural, vegetación nativa"
                 }
             }
             
