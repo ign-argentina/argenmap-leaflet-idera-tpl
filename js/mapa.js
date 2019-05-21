@@ -7,6 +7,7 @@ var argenmap = "";
 var mapa = "";
 
 //Change logotype
+$(document).prop('title', 'IDERA - Argenmap');
 $('#top-left-logo-link').attr("href","http://www.idera.gob.ar/");
 $('#top-left-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logo.png");
 $('#top-left-logo').attr("alt","Logo IDERA");
