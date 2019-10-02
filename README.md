@@ -58,3 +58,6 @@ Si encuentra problemas al utilizar el proxy, puede deshabilitar el log para eval
 	<ProxyConfig allowedReferers="*"	
 	mustMatch="true">
 	
+## 7. Estadisticas
+Puede incorporar el código que requiere el sistema de estadísticas de su elección modificando el archivo: js/analytics/analytics.js
+	
