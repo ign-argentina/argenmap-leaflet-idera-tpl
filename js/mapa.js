@@ -7,14 +7,18 @@ var argenmap = "";
 var mapa = "";
 
 //Change logotype
-$('#top-left-logo-link').attr("href","http://www.ign.gob.ar/");
+$(document).prop('title', 'IDERA - Argenmap');
+$('#top-left-logo-link').attr("href","http://www.idera.gob.ar/");
 $('#top-left-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logo.png");
 $('#top-left-logo').attr("alt","Logo IDERA");
-$('#top-left-logo').attr("title","Demo de visualizador IDERA");
+$('#top-left-logo').attr("title","Infraestructura de Datos Espaciales de la República Argentina");
+/*
 $('#top-right-logo-link').attr("href","https://www.argentina.gob.ar/defensa");
 $('#top-right-logo').attr("src","templates/argenmap-leaflet-idera-tpl/img/logoMinDef.png");
 $('#top-right-logo').attr("alt","Logo Ministerio de Defensa");
 $('#top-right-logo').attr("title","Ministerio de Defensa");
+*/
+$('#top-right-logo-link').hide();
 
 // get all lybraries
 gestorMenu.addPlugin("leaflet","https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js", function() {
@@ -23,27 +27,27 @@ gestorMenu.addPlugin("leaflet","https://cdnjs.cloudflare.com/ajax/libs/leaflet/1
     // Awesome Markers
 	gestorMenu.addPlugin("AwesomeMarkers","https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.1/leaflet.awesome-markers.min.js");
 	// Leaflet Zoomhome plugin
-	gestorMenu.addPlugin("ZoomHome","templates/ign-geoportal-basic/js/leaflet-zoomhome/dist/leaflet.zoomhome.min.js");
+	gestorMenu.addPlugin("ZoomHome","templates/argenmap-leaflet-idera-tpl/js/leaflet-zoomhome/dist/leaflet.zoomhome.min.js");
 	// Leaflet Bing Layer
-	gestorMenu.addPlugin("BingLayer","templates/ign-geoportal-basic/js/leaflet-bing-layer-gh-pages/leaflet-bing-layer.js");
+	gestorMenu.addPlugin("BingLayer","templates/argenmap-leaflet-idera-tpl/js/leaflet-bing-layer-gh-pages/leaflet-bing-layer.js");
 	// <!-- Leaflet Minimap plugin -->
-	gestorMenu.addPlugin("minimap","templates/ign-geoportal-basic/js/leaflet-minimap/Control.MiniMap.js");
+	gestorMenu.addPlugin("minimap","templates/argenmap-leaflet-idera-tpl/js/leaflet-minimap/Control.MiniMap.js");
 	// <!-- Leaflet Locate plugin -->
-	gestorMenu.addPlugin("locate","templates/ign-geoportal-basic/js/leaflet-locate/L.Control.Locate.min.js");
+	gestorMenu.addPlugin("locate","templates/argenmap-leaflet-idera-tpl/js/leaflet-locate/L.Control.Locate.min.js");
 	// <!-- Leaflet Mouse Position plugin -->
-	gestorMenu.addPlugin("MousePosition","templates/ign-geoportal-basic/js/leaflet-mouseposition/src/L.Control.MousePosition.js");
+	gestorMenu.addPlugin("MousePosition","templates/argenmap-leaflet-idera-tpl/js/leaflet-mouseposition/src/L.Control.MousePosition.js");
 	// <!-- Leaflet Measure plugin --> 
-	gestorMenu.addPlugin("Measure","templates/ign-geoportal-basic/js/leaflet-measure/leaflet-measure.js");
+	gestorMenu.addPlugin("Measure","templates/argenmap-leaflet-idera-tpl/js/leaflet-measure/leaflet-measure.js");
 	// <!-- Leaflet EasyPrint plugin -->
-	gestorMenu.addPlugin("EasyPrint","templates/ign-geoportal-basic/js/leaflet-easyPrint/bundle.js");
+	gestorMenu.addPlugin("EasyPrint","templates/argenmap-leaflet-idera-tpl/js/leaflet-easyPrint/bundle.js");
 	// <!-- Leaflet Control.FullScreen plugin -->
-	gestorMenu.addPlugin("FullScreen","templates/ign-geoportal-basic/js/leaflet-fullscreen/Control.FullScreen.js");
+	gestorMenu.addPlugin("FullScreen","templates/argenmap-leaflet-idera-tpl/js/leaflet-fullscreen/Control.FullScreen.js");
 	// <!-- Leaflet BetterWMS -->
-	gestorMenu.addPlugin("betterWMS","templates/ign-geoportal-basic/js/leaflet-wms/leaflet.wms.js");
+	gestorMenu.addPlugin("betterWMS","templates/argenmap-leaflet-idera-tpl/js/leaflet-wms/leaflet.wms.js");
 	// <!-- Leaflet Draw -->  
 	gestorMenu.addPlugin("Draw","https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js")
 	// <!-- Leaflet SimpleGraticule -->
-	gestorMenu.addPlugin("graticula","templates/ign-geoportal-basic/js/leaflet-simplegraticule/L.SimpleGraticule.js");
+	gestorMenu.addPlugin("graticula","templates/argenmap-leaflet-idera-tpl/js/leaflet-simplegraticule/L.SimpleGraticule.js");
 });
 
 // Add plugins to map when (and if) avaiable
@@ -240,7 +244,7 @@ $("body").on("pluginLoad", function(event, plugin){
 					break;
 				case 'graticula':
 					// Leaflet-SimpleGraticule plugin https://github.com/turban/Leaflet.Graticule
-					var customGraticule = null;
+                    var customGraticule = null;
 					L.Control.CustomGraticule = L.Control.extend({
 					  onAdd: function (map) {
 						var container = L.DomUtil.create('div', 'leaflet-control leaflet-control-customgraticule');
@@ -463,11 +467,7 @@ function pointToLayer(feature, latlng) {
     })
 }
 
-function showMainMenuTpl() {
-    //Imprimir menú
-    gestorMenu.setMenuDOM(".nav.nav-sidebar");
-    gestorMenu.setLoadingDOM(".loading");
-    gestorMenu.print();
+function printFinished() {
     //Agregar tooltip resumen
     $("[data-toggle2='tooltip']").tooltip({
         placement: "right",
@@ -475,6 +475,22 @@ function showMainMenuTpl() {
         container: "body"
     });
 }
+
+function showMainMenuTpl() {
+    //Imprimir menú
+    gestorMenu.setMenuDOM(".nav.nav-sidebar");
+    gestorMenu.setLoadingDOM(".loading");
+    gestorMenu.setPrintCallback(printFinished);
+    gestorMenu.setLazyInitialization(true);
+	gestorMenu.setShowSearcher(true);
+    gestorMenu.print();
+}
+
+/****** Misc functions ******/
+//Capture map click to clear popinfo array before fill it
+$('#mapa').on( "click", function() {
+  popupInfo = [];
+});
 
 /****** Enveloped functions ******/
 var popupInfo = new Array(); //Declare popupInfo (this initialize in mapa.js)
@@ -501,12 +517,16 @@ function loadGeojsonTpl (url, layer) {
 
 }
 
-function loadWmsTpl (wmsUrl, layer) {
+//function loadWmsTpl (wmsUrl, layer) {
+function loadWmsTpl (objLayer) {
+    wmsUrl = objLayer.capa.host;
+    layer = objLayer.nombre;
     if (overlayMaps.hasOwnProperty(layer)) {
         overlayMaps[layer].removeFrom(mapa);
         delete overlayMaps[layer];
     } else {
-        createWmsLayer(wmsUrl, layer);
+        //createWmsLayer(wmsUrl, layer);
+        createWmsLayer(objLayer);
         overlayMaps[layer].addTo(mapa);
     }
     
@@ -519,7 +539,6 @@ function loadWmsTpl (wmsUrl, layer) {
         infoAux = info.search("<ul>"); // search if info has a list
         if (infoAux > 0) { // check if info has any content, if so shows popup
             $(info).find('li').each(function( index ) {
-                //console.log( index + ": " + $( this ).text() );
                 var aux = $( this ).text().split(':');
                 info = info.replace('<b>' + aux[0] + '</b>:', '<b>' + ucwords(aux[0].replace(/_/g, ' ')) + ':</b>');
             });
@@ -527,38 +546,43 @@ function loadWmsTpl (wmsUrl, layer) {
             info = info.replace('class="featureInfo"', 'class="featureInfo" id="featureInfoPopup' + idTxt + '"');
             
             return info;
+        } else {
+            infoAux = info.search("<table"); // search if info has a table
+            if (infoAux > 0) { // check if info has any content, if so shows popup
+                //info = info.replace('<table', '<table class="featureInfo" id="featureInfoPopup' + idTxt + '"');
+                return '<div class="featureInfo" id="featureInfoPopup' + idTxt + '"><div class="featureGroup"><div style="padding:1em;overflow:scroll-x;overflow-y:hidden" class="individualFeature">' + info + '</div></div></div>';
+            }
         }
         
         return '';
     }
     
     //Parse FeatureInfo to display into popup (if info is application/json)
-    function parseFeatureInfoJSON(info, idTxt) {
+    function parseFeatureInfoJSON(info, idTxt, title) {
         info = JSON.parse(info);
-        console.log(info);
         if (info.features.length > 0) { // check if info has any content, if so shows popup
             
             var infoAux = '<div class="featureInfo" id="featureInfoPopup' + idTxt + '">';
             infoAux += '<div class="featureGroup">';
             infoAux += '<div style="padding:1em" class="individualFeature">';
-            infoAux += '<h4 style="border-top:1px solid gray;text-decoration:underline;margin:1em 0">Aeropuerto</h4>';
+            infoAux += '<h4 style="border-top:1px solid gray;text-decoration:underline;margin:1em 0">' + title + '</h4>';
             infoAux += '<ul>';
             
             for (i in info.features) {
-                //console.log(info.features[i].properties);
                 Object.keys(info.features[i].properties).forEach(function(k){
-                    //console.log(k + ' - ' + info.features[i].properties[k]);
                     if (k != 'bbox') { //Do not show bbox property
                         infoAux += '<li>';
                         infoAux += '<b>' + ucwords(k.replace(/_/g, ' ')) + ':</b>';
-                        infoAux += ' ' + info.features[i].properties[k];
+                        if (info.features[i].properties[k] != null) {
+                            infoAux += ' ' + info.features[i].properties[k];
+                        }
                         infoAux += '<li>';
                     }
                 });
             }
             
             infoAux += '</ul>';
-            infoAux += '<img style="height:40px" src="http://ventas.ign.gob.ar/image/data/general/logoAzul.png"/>';
+            //infoAux += '<img style="height:40px" src="http://ventas.ign.gob.ar/image/data/general/logoAzul.png"/>';
             infoAux += '</div></div></div>';
             
             return infoAux;
@@ -567,7 +591,8 @@ function loadWmsTpl (wmsUrl, layer) {
         return '';
     }
     
-    function createWmsLayer(wmsUrl, layer) {
+    //function createWmsLayer(wmsUrl, layer) {
+    function createWmsLayer(objLayer) {
         //Extends WMS.Source to customize popup behavior
         var MySource = L.WMS.Source.extend({
             'showFeatureInfo': function(latlng, info) {
@@ -577,7 +602,7 @@ function loadWmsTpl (wmsUrl, layer) {
                 if (this.options.INFO_FORMAT == 'text/html') {
                     var infoParsed = parseFeatureInfoHTML(info, popupInfo.length);
                 } else {
-                    var infoParsed = parseFeatureInfoJSON(info, popupInfo.length);
+                    var infoParsed = parseFeatureInfoJSON(info, popupInfo.length, this.options.title);
                 }
                 if (infoParsed != '') { // check if info has any content, if so shows popup
                     var popupContent = $('.leaflet-popup').html();
@@ -593,15 +618,15 @@ function loadWmsTpl (wmsUrl, layer) {
             }
         });
         //var wmsSource = new L.WMS.source(wmsUrl + "/wms?", {
-        var wmsSource = new MySource(wmsUrl + "/wms?", {
+        var wmsSource = new MySource(objLayer.capa.getHostWMS(), {
             transparent: true,
             tiled: true,
             maxZoom: 21,
+            'title': objLayer.titulo,
             format: 'image/png',
-            INFO_FORMAT: 'text/html'
-            //INFO_FORMAT: 'application/json'
+            INFO_FORMAT: objLayer.capa.featureInfoFormat
         });
-        overlayMaps[layer] = wmsSource.getLayer(layer);
+        overlayMaps[objLayer.nombre] = wmsSource.getLayer(objLayer.nombre);
     }
 }
 
@@ -638,7 +663,6 @@ function loadMapaBaseBingTpl (bingKey, layer, attribution) {
 //Paginate FeatureInfo into popup
 function paginateFeatureInfo(infoArray, actualPage, hasPrev, hasNext) {
     var infoStr = infoArray.join('');
-    //console.log(infoStr);
     if (infoArray.length > 1) {
         for (var i = 0; i < infoArray.length; i++) {
             if (i == actualPage) {
