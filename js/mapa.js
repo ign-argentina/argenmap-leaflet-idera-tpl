@@ -629,7 +629,7 @@ function loadWmsTpl (objLayer) {
             format: 'image/png',
             INFO_FORMAT: objLayer.capa.featureInfoFormat
         });
-        overlayMaps[objLayer.nombre] = wmsSource.getLayer(objLayer.nombre);
+        overlayMaps[objLayer.nombre] = wmsSource.getLayer(objLayer.capa.nombre);
     }
 }
 
