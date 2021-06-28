@@ -100,7 +100,9 @@
         "enargas_visor_gasoductos_troncales",
         "hid_area_vacamuerta",
         "shale_gas_basins",
-        "capituloiv_pozos"
+        "pozos_noconvencionales_shale",
+        "pozos_noconvencionales_tight",
+        "pozos_noinformados"
       ],
       "customize_layers": {
         "planosbase_yacimientos": {
@@ -158,8 +160,18 @@
           "new_abstract": "Cuerpo geológico aproximado, constituido por petróleo y / o gas, económicamente explotable.",
           "new_keywords": "yacimiento, yacimiento hidrocarburífero, yacimiento petrolero, hidrocarburos, vaca muerta, gas, reservas de gas, gas natural"
         },
-        "capituloiv_pozos": {
-          "new_title": "Pozo hidrocarburífero",
+        "pozos_noconvencionales_shale": {
+          "new_title": "Pozo de hidrocarburos Shale (RES.319/93)",
+          "new_abstract": "Perforación realizada con el objetivo de realizar la extracción de hidrocarburos líquidos o gaseosos.",
+          "new_keywords": "extracción, pozo de extracción, pozo petrolero, ypf, pozo"
+        },
+        "pozos_noconvencionales_tight": {
+          "new_title": "Pozo de hidrocarburos Tight (RES.319/93)",
+          "new_abstract": "Perforación realizada con el objetivo de realizar la extracción de hidrocarburos líquidos o gaseosos.",
+          "new_keywords": "extracción, pozo de extracción, pozo petrolero, ypf, pozo"
+        },
+        "pozos_noinformados": {
+          "new_title": "Pozo de hidrocarburos (RES.319/93)",
           "new_abstract": "Perforación realizada con el objetivo de realizar la extracción de hidrocarburos líquidos o gaseosos.",
           "new_keywords": "extracción, pozo de extracción, pozo petrolero, ypf, pozo"
         }
@@ -187,7 +199,7 @@
       ],
       "customize_layers": {
         "Met_Depositos_Metalogeneticos": {
-          "new_title": "Yacimiento Mineral (depositos metalíferos)",
+          "new_title": "Yacimiento Mineral (metalíferos)",
           "new_abstract": "Yacimiento Mineral",
           "new_keywords": "depósito de minerales, minerales, depósito de metales, metalíferos, auríferos, recursos minerales"
         },
@@ -431,7 +443,7 @@
       "seccion": "transporte",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://ide.transporte.gob.ar/geoserver/wms",
+      "host": "src/config/proxy/proxy.php?https://ide.transporte.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "idera:Ferrocarril",
@@ -584,17 +596,23 @@
       "host": "https://wms.ign.gob.ar/geoserver/idera",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "Isla",
-        "lineas_de_aguas_continentales",
+        "isla",
+        "lineas_de_aguas_continentales_perenne",
+        "lineas_de_aguas_continentales_intermitentes",
         "espejo_de_agua"
       ],
       "customize_layers": {
-        "Isla": {
+        "isla": {
           "new_title": "Isla",
           "new_abstract": "Parte de la superficie terrestre rodeada de agua y de dimensiones menores que un continente."
         },
-        "lineas_de_aguas_continentales": {
-          "new_title": "Corriente de agua",
+        "lineas_de_aguas_continentales_perenne": {
+          "new_title": "Corriente de agua perenne",
+          "new_abstract": "Flujo natural de agua que sigue los desniveles del terreno, siendo arreico o desembocando en otra corriente de agua, en un espejo de agua o en el mar.",
+          "new_keywords": "corriente de agua,río, torrente, riachuelo, riacho, afluente, caudal"
+        },
+        "lineas_de_aguas_continentales_intermitentes": {
+          "new_title": "Corriente de agua intermitente",
           "new_abstract": "Flujo natural de agua que sigue los desniveles del terreno, siendo arreico o desembocando en otra corriente de agua, en un espejo de agua o en el mar.",
           "new_keywords": "corriente de agua,río, torrente, riachuelo, riacho, afluente, caudal"
         },
@@ -625,7 +643,7 @@
         "ign:lineas_de_aguas_continentales_BH020",
         "ign:areas_de_aguas_continentales_BH130",
         "ign:areas_de_aguas_continentales_041101",
-        "ign:puntos_de_aguas_continentales_BH090"
+        "ign:areas_de_aguas_continentales_BH090"
       ],
       "customize_layers": {
         "ign:lineas_de_aguas_continentales_BH010": {
@@ -633,7 +651,7 @@
           "new_abstract": "Conducto artificial que transporta agua en forma de flujo continuo con el objetivo de que esta sea accesible para su consumo u otros usos."
         },
         "ign:lineas_de_aguas_continentales_BH020": {
-          "new_title": "Corriente",
+          "new_title": "Canal",
           "new_abstract": "Excavación artificial sin flujo o con flujo controlado, construido con el objetivo de transportar agua."
         },
         "ign:areas_de_aguas_continentales_BH130": {
@@ -645,7 +663,7 @@
           "new_abstract": "Excavación descubierta destinada al depósito de agua en zonas rurales. Incluye meandro de una corriente de agua utilizado para almacenar agua y las reservas de agua para cultivos.",
           "new_keywords": "embalse rural, dique rural, presa, represa"
         },
-        "ign:puntos_de_aguas_continentales_BH090": {
+        "ign:areas_de_aguas_continentales_BH090": {
           "new_title": "Humedal",
           "new_abstract": "Zona inundada con un régimen prácticamente permanente, regulada por factores climáticos. Incluye las extensiones de marismas, pantanos y turberas, o superficies cubiertas de aguas, sean éstas de régimen natural o artificial, permanentes o temporales, estancadas o corrientes, dulces, salobres o saladas, incluidas las extensiones de agua marina cuya profundidad en marea baja no exceda de seis metros.",
           "new_keywords": "humedal, terreno humedo"
@@ -1047,7 +1065,7 @@
       "seccion": "catastro",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geo.arba.gov.ar/geoserver/idera",
+      "host": "src/config/proxy/proxy.php?http://geo.arba.gov.ar/geoserver/idera/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "Parcela",
@@ -1113,12 +1131,13 @@
       "seccion": "unidades-geoestadisticas",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoservicios.indec.gob.ar/geoserver/wms",
+      "host": "src/config/proxy/proxy.php?https://geoservicios.indec.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "geocenso2010:localidades_codigo",
         "desarrollo:envolventes",
-        "sig:vias"
+        "sig:vias",
+        "eph:radios_eph"
       ],
       "customize_layers": {
         "geocenso2010:localidades_codigo": {
@@ -1132,6 +1151,10 @@
         "sig:vias": {
           "new_title": "Vias de circulación censal",
           "new_abstract": "Trazado que permite la circulación en el interior de una área urbana y que no es parte del acceso a la misma. Determina los límites de manzanas (INDEC, 2018)."
+        },
+        "eph:radios_eph": {
+          "new_title": "Radio censal",
+          "new_abstract": "Unidad censal que forma parte de una fracción, definida por un espacio territorial con límites geográficos y una determinada cantidad de unidades de análisis a relevar (INDEC, 2018)."
         }
       }
     },
@@ -1229,49 +1252,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Secretaría de Gobierno de Ambiente y Desarrollo Sustentable (SAyDS)",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-medio-ambiente",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geo2.ambiente.gob.ar/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Autoridad Interjuridiccional de Cuencas de la Provincia de Neuquén",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-cuencas-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://aicsig.neuquen.gov.ar:8080/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Comisión Nacional de Actividades Espaciales (CONAE) - Landsat",
+      "nombre": "Ministerio de Ciencia, Tecnología e Innovación Productiva - Comisión Nacional de Actividades Espaciales (CONAE) - Landsat",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-conae-landsat",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoservicios.conae.gov.ar/geoserver/Landsat8/wms",
+      "host": "src/config/proxy/proxy.php?http://geoservicios.conae.gov.ar/geoserver/Landsat8/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1283,7 +1270,7 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Comisión Nacional de Actividades Espaciales (CONAE) - Dengue",
+      "nombre": "Ministerio de Ciencia, Tecnología e Innovación Productiva - Comisión Nacional de Actividades Espaciales (CONAE) - Dengue",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-conae-dengue",
@@ -1301,403 +1288,7 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Catastro Mendoza",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-catastro-mendoza",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://atmgis.mendoza.gov.ar/geoserver/cartografia/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Chubut - Catastro",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-catastro-chubut",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://catastro.chubut.gov.ar/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Ciudad de Buenos Aires",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-caba-est",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://idecaba.estadisticaciudad.gob.ar/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Defensa Civil - Provincia de Neuquén",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-defensa-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sigdefensacivil.neuquen.gov.ar:8080/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Dirección Provincial de Estadística y Censos - Neuquen",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-estadistica-censos-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://gisestadisticanqn.neuquen.gov.ar/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Dirección Provincial de Vialidad del Neuquén",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-vialidad-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://redvial.neuquen.gov.ar:8080/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Dirección de Estadística - Tucumán",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-estadistica-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://181.88.186.115:8080/geoserver/servidor/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Dirección de Vialidad de la Provincia de Tucumán",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-vialidad-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idet.tucuman.gob.ar/geoserver/Dir_Prov_Vialidad/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Dirección de geodesia y Catastro de la Provincia de San Juan",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-catastro-sanjuan",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoserver.sgis.com.ar/geoserver/dgc_sj/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Dirección de geodesia y Catastro de la Provincia de San Luis",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-catastro-sanluis",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "EBISA (WMS)",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ebisa",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.ebisa.com.ar/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "ETISIG Chaco",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-etidig-chaco",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idechaco.gob.ar/geoserver/IDEChaco/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": " IDE Chubut - Estadísticas y Censos",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-estadistica-chubut",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.estadistica.chubut.gov.ar/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Tucumán -  Secretaría de Gestión Pública y Planeamiento",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-geosplan-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geosplan.tucuman.gob.ar/geoserver/SGPyP/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Catamarca",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ide-catamarca",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://200.43.169.149/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Conurbano",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ungs-conourbano",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ideconurbano.ungs.edu.ar/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Corrientes",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ide-corrientes",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoportal.corrientes.gov.ar/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Mendoza",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ide-mendoza",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idemza2.mendoza.gov.ar/geoserver/IDEMendoza/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Pergamino",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ide-pergamino",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.pergamino.gob.ar:8080/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Río Negro",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ide-rionegro",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.extranet.rionegro.gov.ar/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE  Tucumán",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ide-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idet.tucuman.gob.ar/geoserver/idet/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "IDE Salta",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-idesa",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoportal.idesa.gob.ar/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Instituto Nacional de Estadística y Censos (INDEC)",
+      "nombre": "Ministerio de Economía - Instituto Nacional de Estadística y Censos (INDEC)",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-indec",
@@ -1715,13 +1306,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Instituto Nacional de Tecnología Agropecuaria (INTA)",
+      "nombre": "Ministerio de Agricultura, Ganadería y Pesca - Instituto Nacional de Tecnología Agropecuaria (INTA)",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-inta",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://geointa.inta.gov.ar/geoserver/ows",
+      "host": "src/config/proxy/proxy.php?http://geointa.inta.gov.ar/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
@@ -1733,7 +1324,7 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Instituto Nacional de Tecnología Agropecuaria (INTA) - NODO  Anguil",
+      "nombre": "Ministerio de Agricultura, Ganadería y Pesca - Instituto Nacional de Tecnología Agropecuaria (INTA) - Nodo  Anguil",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-inta-eea-anguil",
@@ -1751,7 +1342,7 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Instituto Nacional de Tecnología Agropecuaria (INTA) - Nodo  Bariloche",
+      "nombre": "Ministerio de Agricultura, Ganadería y Pesca - Instituto Nacional de Tecnología Agropecuaria (INTA) - Nodo Bariloche",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-inta-eea-bariloche",
@@ -1769,13 +1360,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Instituto Nacional de Tecnología Agropecuaria (INTA)- Nodo  Manfredi",
+      "nombre": "Ministerio de Agricultura, Ganadería y Pesca - Instituto Nacional de Tecnología Agropecuaria (INTA) - Nodo Manfredi",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-inta-eea-manfredi",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://wms.geointa.inta.gob.ar/geocordoba/wms",
+      "host": "src/config/proxy/proxy.php?https://wms.geointa.inta.gob.ar/geocordoba/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1787,13 +1378,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Instituto Nacional de Tecnología Agropecuaria (INTA)- Nodo  Paraná",
+      "nombre": "Ministerio de Agricultura, Ganadería y Pesca - Instituto Nacional de Tecnología Agropecuaria (INTA) - Nodo Paraná",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-inta-eea-parana",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://geointa.inta.gob.ar/geoparana/wms",
+      "host": "src/config/proxy/proxy.php?http://geointa.inta.gob.ar/geoparana/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1805,13 +1396,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Instituto Nacional de Tecnología Agropecuaria (INTA) - Nodo  Rafaela",
+      "nombre": "Ministerio de Agricultura, Ganadería y Pesca - Instituto Nacional de Tecnología Agropecuaria (INTA) - Nodo Rafaela",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-inta-eea-rafaela",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://geointa.inta.gov.ar/geoserversf/wms",
+      "host": "src/config/proxy/proxy.php?http://geointa.inta.gov.ar/geoserversf/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1823,43 +1414,7 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Imágenes Procesadas por el Ministerio de Desarrollo Productivo - Tucumán",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-productivo-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/ImagenesMDP/mapserver/WMSServer",
-      "feature_info_format": "text/html"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Infraestructura de Datos Espaciales de Santa Fe",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-ide-santafe",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://aswe.santafe.gov.ar/idesf/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Instituto Geográfico Nacional (IGN)",
+      "nombre": "Ministerio de Defensa - Instituto Geográfico Nacional (IGN)",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-ide-ign",
@@ -1877,13 +1432,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Universidad de La Pampa - geografía",
+      "nombre": "Ministerio de Desarrollo Productivo - Secretaría de Gobierno de Energía",
       "short_abstract": "",
       "class": "",
-      "seccion": "organismos-unlpam",
+      "seccion": "organismos-secretaria-energia",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://170.210.123.219/geoserver/wms",
+      "host": "src/config/proxy/proxy.php?https://sig.se.gob.ar/wmspubmap",
       "feature_info_format": "application/json"
     },
     {
@@ -1895,229 +1450,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Tucumán - Instituto provincial de Vivienda y desarrollo Urbano",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-vivienda-desarrollo-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://190.226.54.180:8080/geoserver/IPVyDU/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Mapa Educativo",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-mapa-educativo",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://www.mapaeducativo.edu.ar/geoserver/ogc/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Mapa Escolar de la Provincia",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-mapa-escolar-provincia",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://mapaescolar.dyndns.org/geoserver/mapa/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Neuquen - Ministerio de Producción y Ambiente",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-produccion-ambiente-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sigproduccion.neuquen.gov.ar:8080/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Municipalidad de San Miguel de Tucumán",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-municipalidad-sanmigueltucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sigcap.no-ip.org:8082/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Oficina Provincial de TICs (OPTIC) - Neuquén",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-oficina-provincia-tic-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://opticgis.neuquen.gov.ar:8080/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "UBA - (FFyL)(PIRNA)",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-pirna-ffyl-uba",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://pirna.com.ar:8080/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Policía del Neuquén",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-policia-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://200.85.183.85:8084/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Tucuman - Proyecto Sistema de Riego Río Choromoro",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-riego-rio-choromoro-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Choromoro/MapServer/WMSServer",
-      "feature_info_format": "text/html"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Red de Información Para el Desarrollo Productivo",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-rides",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/RIDES_WMS/MapServer/WMSServer",
-      "feature_info_format": "text/html"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Neuquén - Recursos Hídricos",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-recursos-hidricos-neuquen",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://rechidr.neuquen.gov.ar:8080/geoserver/ows",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Rosario",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-rosario",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://www.rosario.gov.ar/wms/planobase",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wmslayer",
-      "nombre": "Secretaría de Programación para la Prevención de la Drogadicción y Lucha contra el Narcotráfico (SEDRONAR)",
+      "nombre": "Jefatura de Gabinete de Ministros - Secretaría de Programación para la Prevención de la Drogadicción y Lucha contra el Narcotráfico (SEDRONAR)",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-sedronar",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://mapa.sedronar.gov.ar/geoserver/wms",
+      "host": "src/config/proxy/proxy.php?http://ide.sedronar.gov.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2129,7 +1468,7 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Servicio Nacional de Sanidad y Calidad Agroalimentaria (SENASA)",
+      "nombre": "Ministerio de Agricultura, Ganadería y Pesca - Servicio Nacional de Sanidad y Calidad Agroalimentaria (SENASA)",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-senasa",
@@ -2147,13 +1486,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "IDE  Neuquen - Capacitación",
+      "nombre": "Ministerio de Ambiente y Desarrollo Sostenible - IDE Ambiente",
       "short_abstract": "",
       "class": "",
-      "seccion": "organismos-ideneu-neuquen",
+      "seccion": "organismos-medio-ambiente",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ideneu.neuquen.gov.ar:8080/geoserver/ows",
+      "host": "src/config/proxy/proxy.php?http://geo.ambiente.gob.ar/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
@@ -2165,13 +1504,319 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "SIG Hidráulica - BA",
+      "nombre": "Ministerio de Educación - Programa Nacional Mapa Educativo",
       "short_abstract": "",
       "class": "",
-      "seccion": "organismos-hidraulica-ba",
+      "seccion": "organismos-mapa-educativo",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://mapa.educacion.gob.ar/geoserver/ows?",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Buenos Aires - Mapa Escolar D.G.C.y E.",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-IDE-Buenos-Aires-Mapa-Escolar",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://mapaescolar.abc.gob.ar/geodie/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Buenos Aires -  Dirección Provincial de Obra Hidráulica",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-IDE-Buenso-Aires-Dirección-Provincial-Obra-Hidráulica",
       "servicio": "wms",
       "version": "1.3.0",
       "host": "src/config/proxy/proxy.php?http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Catamarca - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-catamarca",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://nodoide.catamarca.gob.ar/geoserver/idecat/ows?",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Chaco - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-etidig-chaco",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://idechaco.gob.ar/geoserver/IDEChaco/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Chubut - Estadísticas y Censos",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-estadistica-chubut",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://ide.estadistica.chubut.gov.ar/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Chubut - Catastro",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-catastro-chubut",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://catastro.chubut.gov.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Ciudad de Buenos Aires - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-caba-est",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?https://idecaba.estadisticaciudad.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Conurbano - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ungs-conourbano",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://ideconurbano.ungs.edu.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Corrientes - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-corrientes",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://geoportal.corrientes.gov.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Formosa - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-Formosa",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://idef.formosa.gob.ar/servicios/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Mendoza - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-mendoza",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://idemza2.mendoza.gov.ar/geoserver/IDEMendoza/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Mendoza - Dirección General de Catastro ",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-catastro-mendoza",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://atmgis.mendoza.gov.ar/geoserver/cartografia/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Córdoba - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-IDE-Córdoba",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Neuquén - Autoridad Interjuridiccional de Cuencas",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-cuencas-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://aicsig.neuquen.gov.ar:8080/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Neuquén - Defensa Civil ",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-defensa-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://sigdefensacivil.neuquen.gov.ar:8080/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Neuquén - Dirección Provincial de Estadística y Censos",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-estadistica-censos-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://gisestadisticanqn.neuquen.gov.ar/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Neuquén - Dirección Provincial de Vialidad",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-vialidad-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://redvial.neuquen.gov.ar:8080/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
@@ -2237,13 +1882,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Secretaría de Energía",
+      "nombre": "Neuquén - Policía",
       "short_abstract": "",
       "class": "",
-      "seccion": "organismos-secretaria-energia",
+      "seccion": "organismos-policia-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://sig.se.gob.ar/wmspubmap",
+      "host": "src/config/proxy/proxy.php?http://200.85.183.85:8084/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
@@ -2255,13 +1900,283 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Sistema de Riego de Lules - Tucuman",
+      "nombre": "Neuquén - Recursos Hídricos",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-recursos-hidricos-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://rechidr.neuquen.gov.ar:8080/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Neuquén - Ministerio de Producción y Ambiente",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-produccion-ambiente-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://sigproduccion.neuquen.gov.ar:8080/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Neuquén - Capacitación",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ideneu-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://ideneu.neuquen.gov.ar:8080/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Neuquén - Oficina Provincial de TICs (OPTIC)",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-oficina-provincia-tic-neuquen",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://opticgis.neuquen.gov.ar:8080/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Río Negro - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-rionegro",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://ide.extranet.rionegro.gov.ar/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Salta - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-idesa",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://geoportal.idesa.gob.ar/geoserver/ows",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Santa Fe - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-santafe",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?https://aswe.santafe.gov.ar/idesf/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-tucuman",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://idet.tucuman.gob.ar/geoserver/idet/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - Dirección de Estadística",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-estadistica-tucuman",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://181.88.186.115:8080/geoserver/servidor/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - Dirección de Vialidad",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-vialidad-tucuman",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://idet.tucuman.gob.ar/geoserver/Dir_Prov_Vialidad/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán -  Secretaría de Gestión Pública y Planeamiento",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-geosplan-tucuman",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://geosplan.tucuman.gob.ar/geoserver/SGPyP/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - Imágenes Procesadas por el Ministerio de Desarrollo Productivo",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-productivo-tucuman",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/ImagenesMDP/mapserver/WMSServer",
+      "feature_info_format": "text/html"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - Instituto provincial de Vivienda y desarrollo Urbano",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-vivienda-desarrollo-tucuman",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://190.226.54.180:8080/geoserver/IPVyDU/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - Municipalidad de San Miguel de Tucumán",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-municipalidad-sanmigueltucuman",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://sigcap.no-ip.org:8082/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - Red de Información Para el Desarrollo Productivo",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-rides",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/RIDES_WMS/MapServer/WMSServer",
+      "feature_info_format": "text/html"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Tucumán - Sistema de Riego de Lules",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-riego-lules-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Lules/MapServer/WMSServer",
+      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/Lules/MapServer/WMSServer",
       "feature_info_format": "application/json"
     },
     {
@@ -2273,13 +2188,13 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Sistema de Riego de Tafí del Valle - Tucuman",
+      "nombre": "Tucumán - Sistema de Riego de Tafí del Valle",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-riego-tafidelvalle-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/TafidelValle/MapServer/WMSServer",
+      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/TafidelValle/MapServer/WMSServer",
       "feature_info_format": "application/json"
     },
     {
@@ -2291,13 +2206,157 @@
       },
       "peso": 9999,
       "type": "wmslayer",
-      "nombre": "Universidad Nacional de La Pampa",
+      "nombre": "Tucuman - Proyecto Sistema de Riego Río Choromoro",
       "short_abstract": "",
       "class": "",
-      "seccion": "organismos-universidad-nacional-lapampa",
+      "seccion": "organismos-riego-rio-choromoro-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://170.210.123.219/geoserver/ows",
+      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/Choromoro/MapServer/WMSServer",
+      "feature_info_format": "text/html"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Municipalidad de Pergamino - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-pergamino",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://ide.pergamino.gob.ar:8080/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Municipalidad de Posadas - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-posadas",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?https://www.ide.posadas.gob.ar/geoserver/ows?",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Municipalidad de Rosario - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-rosario",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://www.rosario.gov.ar/wms/planobase",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "San Juan - Dirección de geodesia y Catastro",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-catastro-sanjuan",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://geoserver.sgis.com.ar/geoserver/dgc_sj/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "San Luis - Dirección de geodesia y Catastro",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-catastro-sanluis",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Universidad Nacional de La Pampa - Instituto de geografía",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-unlpam",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://170.210.123.219/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Universidad de Buenos Aires - Programa de Investigaciones en Recursos Naturales y Ambiente(PIRNA)",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-pirna-ffyl-uba",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://pirna.com.ar:8080/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wmslayer",
+      "nombre": "Integración Energética Argentina S.A. (IEASA)",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ebisa",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "src/config/proxy/proxy.php?http://ide.ieasa.com.ar/geoserver/wms",
       "feature_info_format": "application/json"
     }
   ],
