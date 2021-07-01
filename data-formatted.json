@@ -86,7 +86,7 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://sig.se.gob.ar/wmspubmap",
+      "host": "https://sig.se.gob.ar/wmspubmap",
       "feature_info_format": "text/html",
       "allowed_layers": [
         "planosbase_yacimientos",
@@ -191,7 +191,7 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sig.segemar.gov.ar/wms",
+      "host": "http://sig.segemar.gov.ar/wms",
       "feature_info_format": "text/html",
       "allowed_layers": [
         "Met_Depositos_Metalogeneticos",
@@ -224,7 +224,7 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.1.1",
-      "host": "src/config/proxy/proxy.php?http://ide.agroindustria.gob.ar/geoserver/agroindustria",
+      "host": "http://ide.agroindustria.gob.ar/geoserver/agroindustria",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "alto_valle_vitivinicultura_4326",
@@ -388,7 +388,7 @@
       "seccion": "geografia-social",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sig.planificacion.gob.ar/layers/public_wxs/",
+      "host": "http://sig.planificacion.gob.ar/layers/public_wxs/",
       "feature_info_format": "application/json",
       "allowed_layers": ["renaper_20_12"],
       "customize_layers": {
@@ -413,7 +413,7 @@
       "seccion": "geografia-social",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://mapa.educacion.gob.ar/geoserver",
+      "host": "http://mapa.educacion.gob.ar/geoserver",
       "feature_info_format": "application/json",
       "allowed_layers": ["publico:unidades_servicio", "publico:universidades"],
       "customize_layers": {
@@ -443,7 +443,7 @@
       "seccion": "transporte",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://ide.transporte.gob.ar/geoserver",
+      "host": "https://ide.transporte.gob.ar/geoserver",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "idera:Ferrocarril",
@@ -524,7 +524,7 @@
       "seccion": "transporte",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sig.planificacion.gob.ar/layers/public_wxs/",
+      "host": "http://sig.planificacion.gob.ar/layers/public_wxs/",
       "feature_info_format": "application/json",
       "allowed_layers": ["arg_fa125", "centros_de_frontera_arg"],
       "customize_layers": {
@@ -768,7 +768,7 @@
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sig.segemar.gov.ar/wms",
+      "host": "http://sig.segemar.gov.ar/wms",
       "feature_info_format": "text/html",
       "allowed_layers": [
         "Volcanes",
@@ -810,7 +810,7 @@
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sig.planificacion.gob.ar/layers/public_wxs/",
+      "host": "http://sig.planificacion.gob.ar/layers/public_wxs/",
       "feature_info_format": "application/json",
       "allowed_layers": ["red_nac_estaciones_sismologicas"],
       "customize_layers": {
@@ -834,7 +834,7 @@
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geo2.ambiente.gob.ar/geoserver",
+      "host": "http://geo2.ambiente.gob.ar/geoserver",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "ordenamiento:OTBN_SIG250nov2017",
@@ -1172,7 +1172,7 @@
       "seccion": "otros-biota",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.agroindustria.gob.ar/geoserver/agroindustria/",
+      "host": "http://ide.agroindustria.gob.ar/geoserver/agroindustria/",
       "feature_info_format": "application/json",
       "allowed_layers": ["a010303a003"],
       "customize_layers": {
@@ -1197,7 +1197,7 @@
       "seccion": "otros-biota",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geo2.ambiente.gob.ar/geoserver",
+      "host": "http://geo2.ambiente.gob.ar/geoserver",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "ordenamiento:AreasdePastizal_ARG_2004_lat_lon",
@@ -1230,7 +1230,7 @@
       "seccion": "otros-clima",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geo2.ambiente.gob.ar/geoserver",
+      "host": "http://geo2.ambiente.gob.ar/geoserver",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "indicadoresyestadistica:111a. Estaciones Meteorologicas"
@@ -1258,7 +1258,7 @@
       "seccion": "organismos-conae-landsat",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoservicios.conae.gov.ar/geoserver/Landsat8/wms",
+      "host": "http://geoservicios.conae.gov.ar/geoserver/Landsat8/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1276,7 +1276,7 @@
       "seccion": "organismos-conae-dengue",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://dengue.caearte.conae.gov.ar/geoserver",
+      "host": "http://dengue.caearte.conae.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1312,7 +1312,7 @@
       "seccion": "organismos-inta",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geointa.inta.gov.ar/geoserver",
+      "host": "http://geointa.inta.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1330,7 +1330,7 @@
       "seccion": "organismos-inta-eea-anguil",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geointa.inta.gov.ar/geoserverLP/wms",
+      "host": "http://geointa.inta.gov.ar/geoserverLP/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1348,7 +1348,7 @@
       "seccion": "organismos-inta-eea-bariloche",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sipan.inta.gov.ar/geoserver",
+      "host": "http://sipan.inta.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1366,7 +1366,7 @@
       "seccion": "organismos-inta-eea-manfredi",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://wms.geointa.inta.gob.ar/geocordoba/wms",
+      "host": "https://wms.geointa.inta.gob.ar/geocordoba/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1384,7 +1384,7 @@
       "seccion": "organismos-inta-eea-parana",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geointa.inta.gob.ar/geoparana/wms",
+      "host": "http://geointa.inta.gob.ar/geoparana/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1402,7 +1402,7 @@
       "seccion": "organismos-inta-eea-rafaela",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geointa.inta.gov.ar/geoserversf/wms",
+      "host": "http://geointa.inta.gov.ar/geoserversf/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1438,7 +1438,7 @@
       "seccion": "organismos-secretaria-energia",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://sig.se.gob.ar/wmspubmap",
+      "host": "https://sig.se.gob.ar/wmspubmap",
       "feature_info_format": "application/json"
     },
     {
@@ -1456,7 +1456,7 @@
       "seccion": "organismos-sedronar",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.sedronar.gov.ar/geoserver",
+      "host": "http://ide.sedronar.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1474,7 +1474,7 @@
       "seccion": "organismos-senasa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://geonode.senasa.gob.ar/geoserver",
+      "host": "https://geonode.senasa.gob.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1492,7 +1492,7 @@
       "seccion": "organismos-medio-ambiente",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geo.ambiente.gob.ar/geoserver",
+      "host": "http://geo.ambiente.gob.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1510,7 +1510,7 @@
       "seccion": "organismos-mapa-educativo",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://mapa.educacion.gob.ar/geoserver",
+      "host": "http://mapa.educacion.gob.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1528,7 +1528,7 @@
       "seccion": "organismos-IDE-Buenos-Aires-Mapa-Escolar",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://mapaescolar.abc.gob.ar/geodie/wms",
+      "host": "http://mapaescolar.abc.gob.ar/geodie/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1546,7 +1546,7 @@
       "seccion": "organismos-IDE-Buenso-Aires-Dirección-Provincial-Obra-Hidráulica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/wms",
+      "host": "http://www.mosp.gba.gov.ar/sig_hidraulica/ms/geoserver/dpohwms/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1564,7 +1564,7 @@
       "seccion": "organismos-ide-catamarca",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://nodoide.catamarca.gob.ar/geoserver/idecat",
+      "host": "http://nodoide.catamarca.gob.ar/geoserver/idecat",
       "feature_info_format": "application/json"
     },
     {
@@ -1582,7 +1582,7 @@
       "seccion": "organismos-etidig-chaco",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idechaco.gob.ar/geoserver/IDEChaco/wms",
+      "host": "http://idechaco.gob.ar/geoserver/IDEChaco/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1600,7 +1600,7 @@
       "seccion": "organismos-estadistica-chubut",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.estadistica.chubut.gov.ar/geoserver",
+      "host": "http://ide.estadistica.chubut.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1618,7 +1618,7 @@
       "seccion": "organismos-catastro-chubut",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://catastro.chubut.gov.ar/geoserver",
+      "host": "http://catastro.chubut.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1636,7 +1636,7 @@
       "seccion": "organismos-caba-est",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://idecaba.estadisticaciudad.gob.ar/geoserver",
+      "host": "https://idecaba.estadisticaciudad.gob.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1654,7 +1654,7 @@
       "seccion": "organismos-ungs-conourbano",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ideconurbano.ungs.edu.ar/geoserver",
+      "host": "http://ideconurbano.ungs.edu.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1672,7 +1672,7 @@
       "seccion": "organismos-ide-corrientes",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoportal.corrientes.gov.ar/geoserver",
+      "host": "http://geoportal.corrientes.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1690,7 +1690,7 @@
       "seccion": "organismos-ide-Formosa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idef.formosa.gob.ar/servicios/wms",
+      "host": "http://idef.formosa.gob.ar/servicios/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1708,7 +1708,7 @@
       "seccion": "organismos-ide-mendoza",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idemza2.mendoza.gov.ar/geoserver/IDEMendoza/wms",
+      "host": "http://idemza2.mendoza.gov.ar/geoserver/IDEMendoza/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1726,7 +1726,7 @@
       "seccion": "organismos-catastro-mendoza",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://atmgis.mendoza.gov.ar/geoserver/cartografia/wms",
+      "host": "http://atmgis.mendoza.gov.ar/geoserver/cartografia/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1744,7 +1744,7 @@
       "seccion": "organismos-IDE-Córdoba",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms",
+      "host": "http://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1762,7 +1762,7 @@
       "seccion": "organismos-cuencas-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://aicsig.neuquen.gov.ar:8080/geoserver",
+      "host": "http://aicsig.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1780,7 +1780,7 @@
       "seccion": "organismos-defensa-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sigdefensacivil.neuquen.gov.ar:8080/geoserver",
+      "host": "http://sigdefensacivil.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1798,7 +1798,7 @@
       "seccion": "organismos-estadistica-censos-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://gisestadisticanqn.neuquen.gov.ar/geoserver",
+      "host": "http://gisestadisticanqn.neuquen.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1816,7 +1816,7 @@
       "seccion": "organismos-vialidad-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://redvial.neuquen.gov.ar:8080/geoserver",
+      "host": "http://redvial.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1834,7 +1834,7 @@
       "seccion": "organismos-educacion-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoeducacion.neuquen.gov.ar/geoserver",
+      "host": "http://geoeducacion.neuquen.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1852,7 +1852,7 @@
       "seccion": "organismos-raster-vuelos-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sigraster.neuquen.gov.ar:8080/geoserver",
+      "host": "http://sigraster.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1870,7 +1870,7 @@
       "seccion": "organismos-san-martin-andes-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://smandes.neuquen.gov.ar:8080/geoserver",
+      "host": "http://smandes.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1888,7 +1888,7 @@
       "seccion": "organismos-policia-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://200.85.183.85:8084/geoserver",
+      "host": "http://200.85.183.85:8084/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1906,7 +1906,7 @@
       "seccion": "organismos-recursos-hidricos-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://rechidr.neuquen.gov.ar:8080/geoserver",
+      "host": "http://rechidr.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1924,7 +1924,7 @@
       "seccion": "organismos-produccion-ambiente-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sigproduccion.neuquen.gov.ar:8080/geoserver",
+      "host": "http://sigproduccion.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1942,7 +1942,7 @@
       "seccion": "organismos-ideneu-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ideneu.neuquen.gov.ar:8080/geoserver",
+      "host": "http://ideneu.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1960,7 +1960,7 @@
       "seccion": "organismos-oficina-provincia-tic-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://opticgis.neuquen.gov.ar:8080/geoserver",
+      "host": "http://opticgis.neuquen.gov.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1978,7 +1978,7 @@
       "seccion": "organismos-ide-rionegro",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.extranet.rionegro.gov.ar/geoserver",
+      "host": "http://ide.extranet.rionegro.gov.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -1996,7 +1996,7 @@
       "seccion": "organismos-idesa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoportal.idesa.gob.ar/geoserver",
+      "host": "http://geoportal.idesa.gob.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -2014,7 +2014,7 @@
       "seccion": "organismos-ide-santafe",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://aswe.santafe.gov.ar/idesf/wms",
+      "host": "https://aswe.santafe.gov.ar/idesf/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2032,7 +2032,7 @@
       "seccion": "organismos-ide-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idet.tucuman.gob.ar/geoserver/idet/wms",
+      "host": "http://idet.tucuman.gob.ar/geoserver/idet/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2050,7 +2050,7 @@
       "seccion": "organismos-estadistica-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://181.88.186.115:8080/geoserver/servidor/wms",
+      "host": "http://181.88.186.115:8080/geoserver/servidor/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2068,7 +2068,7 @@
       "seccion": "organismos-vialidad-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://idet.tucuman.gob.ar/geoserver/Dir_Prov_Vialidad/wms",
+      "host": "http://idet.tucuman.gob.ar/geoserver/Dir_Prov_Vialidad/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2086,7 +2086,7 @@
       "seccion": "organismos-geosplan-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geosplan.tucuman.gob.ar/geoserver/SGPyP/wms",
+      "host": "http://geosplan.tucuman.gob.ar/geoserver/SGPyP/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2104,7 +2104,7 @@
       "seccion": "organismos-productivo-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/ImagenesMDP/mapserver/WMSServer",
+      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/ImagenesMDP/mapserver/WMSServer",
       "feature_info_format": "text/html"
     },
     {
@@ -2122,7 +2122,7 @@
       "seccion": "organismos-vivienda-desarrollo-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://190.226.54.180:8080/geoserver/IPVyDU/wms",
+      "host": "http://190.226.54.180:8080/geoserver/IPVyDU/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2140,7 +2140,7 @@
       "seccion": "organismos-municipalidad-sanmigueltucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://sigcap.no-ip.org:8082/geoserver",
+      "host": "http://sigcap.no-ip.org:8082/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -2158,7 +2158,7 @@
       "seccion": "organismos-rides",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/RIDES_WMS/MapServer/WMSServer",
+      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/RIDES_WMS/MapServer/WMSServer",
       "feature_info_format": "text/html"
     },
     {
@@ -2176,7 +2176,7 @@
       "seccion": "organismos-riego-lules-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/Lules/MapServer/WMSServer",
+      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Lules/MapServer/WMSServer",
       "feature_info_format": "application/json"
     },
     {
@@ -2194,7 +2194,7 @@
       "seccion": "organismos-riego-tafidelvalle-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/TafidelValle/MapServer/WMSServer",
+      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/TafidelValle/MapServer/WMSServer",
       "feature_info_format": "application/json"
     },
     {
@@ -2212,7 +2212,7 @@
       "seccion": "organismos-riego-rio-choromoro-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://rides.producciontucuman.gov.ar/ArcGIS/services/Choromoro/MapServer/WMSServer",
+      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Choromoro/MapServer/WMSServer",
       "feature_info_format": "text/html"
     },
     {
@@ -2248,7 +2248,7 @@
       "seccion": "organismos-ide-posadas",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?https://www.ide.posadas.gob.ar/geoserver",
+      "host": "https://www.ide.posadas.gob.ar/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -2266,7 +2266,7 @@
       "seccion": "organismos-rosario",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://www.rosario.gov.ar/wms/planobase",
+      "host": "http://www.rosario.gov.ar/wms/planobase",
       "feature_info_format": "application/json"
     },
     {
@@ -2284,7 +2284,7 @@
       "seccion": "organismos-catastro-sanjuan",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://geoserver.sgis.com.ar/geoserver/dgc_sj/wms",
+      "host": "http://geoserver.sgis.com.ar/geoserver/dgc_sj/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2302,7 +2302,7 @@
       "seccion": "organismos-catastro-sanluis",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
+      "host": "http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -2320,7 +2320,7 @@
       "seccion": "organismos-unlpam",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://170.210.123.219/geoserver",
+      "host": "http://170.210.123.219/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -2338,7 +2338,7 @@
       "seccion": "organismos-pirna-ffyl-uba",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://pirna.com.ar:8080/geoserver",
+      "host": "http://pirna.com.ar:8080/geoserver",
       "feature_info_format": "application/json"
     },
     {
@@ -2356,7 +2356,7 @@
       "seccion": "organismos-ebisa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "src/config/proxy/proxy.php?http://ide.ieasa.com.ar/geoserver",
+      "host": "http://ide.ieasa.com.ar/geoserver",
       "feature_info_format": "application/json"
     }
   ],
