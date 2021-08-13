@@ -24,5 +24,36 @@
       "max": 21
     }
   },
-  "showSearchBar": true
+  "showSearchBar": true,
+  "referencias": {
+    "show": false,
+    "src": "src/styles/images/referencias_icono.png",
+    "width":"25px",
+    "height":"31px"
+  },
+  "theme": {
+    "bodyBackground": "#008dc9",
+    "headerBackground": "#008dc9",
+    "menuBackground": "#008dc9",
+    "activeLayer": "#33b560",
+    "textMenu":"white",
+    "textMenuStyle":"",
+    "textLegendMenu":"#dddddd",
+    "textLegendMenuStyle":"",
+    "iconBar":"#4f4f4f"
+    },
+  "logo": {
+    "title":"Infraestructura de Datos Espaciales de la República Argentina",
+    "src": "src/config/styles/images/logo.png",
+    "height": "28%",
+    "width": "",
+    "style": "",
+    "srcLogoMini": "src/config/styles/images/logo.png",
+    "miniHeight": "30%",
+    "miniWidth": "",
+    "ministyle": ""
+  },
+  "title": "IDERA - Argenmap",
+  "website": "https://www.idera.gob.ar/",
+  "favicon": "src/styles/images/favicon.ico"
 }
