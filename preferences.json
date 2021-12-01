@@ -11,7 +11,7 @@
     "description": "",
     "image": ""
   },
-  "analytics_ids": ["G-EJ3L82BD2J", "UA-136146579-7"],
+  "analytics_ids": [],
   "excluded_plugins": ["minimap"],
   "mapConfig": {
     "center": {
