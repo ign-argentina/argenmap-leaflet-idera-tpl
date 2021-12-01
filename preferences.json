@@ -55,5 +55,5 @@
   },
   "title": "IDERA - Argenmap",
   "website": "https://www.idera.gob.ar/",
-  "favicon": "src/styles/images/favicon.ico"
+  "favicon": "src/config/styles/images/favicon.ico"
 }
