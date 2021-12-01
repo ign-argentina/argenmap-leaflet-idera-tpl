@@ -42,6 +42,25 @@
     "textLegendMenuStyle":"",
     "iconBar":"#4f4f4f"
     },
+    "searchbar": {
+      "isActive": true,
+      "top": "5px",
+      "left": "40%",
+      "color_focus": "#008dc9",
+      "background_color": "rgba(255, 255, 255, 0.7)",
+      "strings": {
+        "placeholder": "Buscar lugar..."
+      }
+    },
+    "geocoder": {
+      "url": "https://api.ign.gob.ar/buscador/",
+      "search": "search",
+      "url_by_id": "places",
+      "query": "q",
+      "lang": "es",
+      "limit": 5,
+      "key": ""
+    },
   "logo": {
     "title":"Infraestructura de Datos Espaciales de la República Argentina",
     "src": "src/config/styles/images/logo.png",
