@@ -89,7 +89,7 @@
       "host": "https://sig.se.gob.ar/wmspubmap",
       "feature_info_format": "text/html",
       "allowed_layers": [
-        "planosbase_yacimientos",
+        "visor_yacimientos_2019",
         "electrica_generacion_visor_centrales",
         "electrica_transporte_visor_lineas",
         "electrica_transporte_visor_eett",
@@ -97,7 +97,7 @@
         "hidtransp_gasoductos_proyectados_nea",
         "res1460_ductos",
         "enargas_gasoductos_distribucion",
-        "enargas_visor_gasoductos_troncales",
+        "enargas_visor_gasoductos_transporte",
         "hid_area_vacamuerta",
         "shale_gas_basins",
         "pozos_noconvencionales_shale",
@@ -105,7 +105,7 @@
         "pozos_noinformados"
       ],
       "customize_layers": {
-        "planosbase_yacimientos": {
+        "visor_yacimientos_2019": {
           "new_title": "Área de explotación hidrocarburífera",
           "new_abstract": "Área donde se efectúa una actividad extractiva de origen hidrocarburífera para su aprovechamiento económico.",
           "new_keywords": "pozo, gasoducto, zigueña, crudo"
@@ -145,7 +145,7 @@
           "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
           "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
         },
-        "enargas_visor_gasoductos_troncales": {
+        "enargas_visor_gasoductos_transporte": {
           "new_title": "Ductos de gas troncales",
           "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
           "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
@@ -223,81 +223,6 @@
       "class": "",
       "seccion": "industria-servicios",
       "servicio": "wms",
-      "version": "1.1.1",
-      "host": "http://ide.agroindustria.gob.ar/geoserver/agroindustria",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-        "alto_valle_vitivinicultura_4326",
-        "forestacion_macizos",
-        "forestacion_macizos_08",
-        "forestacion_macizos__",
-        "Matadero-Frigorifico_bovinos",
-        "Matadero-Frigorifico_caprino",
-        "Matadero-Frigorifico_equinos",
-        "Matadero-Frigorifico_ovinos",
-        "Matadero-Frigorifico_porcinos"
-      ],
-      "customize_layers": {
-        "alto_valle_vitivinicultura_4326": {
-          "new_title": "Área de actividad agrícola",
-          "new_abstract": "Área donde se realizan actividades productivas con el fin de obtener materias primas de origen vegetal a través de los cultivos sembrados.",
-          "new_keywords": "viñedos, vitivinicultura, viticultura, bodegas"
-        },
-        "forestacion_macizos": {
-          "new_title": "Rodal forestal (Macizo forestal - Agroindustria 2017)",
-          "new_abstract": "Unidad forestal establecida mediante plantación y / o siembra durante el proceso de forestación o reforestación. Puede estar formado por:especies introducidas (todos los rodales plantados) o masas de especies autóctonas sujetas a una explotación intensiva, que cumplen los siguientes requisitos:una o dos especies en el momento de la plantación, clase de edad homogénea y espaciamiento regular.",
-          "new_keywords": "forestal, rodal forestal, actividad agropecuaria, agroindustria"
-        },
-        "forestacion_macizos_08": {
-          "new_title": "Rodal forestal (Macizo forestal - Agroindustria 2017)",
-          "new_abstract": "Unidad forestal establecida mediante plantación y / o siembra durante el proceso de forestación o reforestación. Puede estar formado por:especies introducidas (todos los rodales plantados) o masas de especies autóctonas sujetas a una explotación intensiva, que cumplen los siguientes requisitos:una o dos especies en el momento de la plantación, clase de edad homogénea y espaciamiento regular.",
-          "new_keywords": "forestal, rodal forestal, actividad agropecuaria, agroindustria"
-        },
-        "forestacion_macizos__": {
-          "new_title": "Rodal forestal (Macizos forestales)",
-          "new_abstract": "Unidad forestal establecida mediante plantación y / o siembra durante el proceso de forestación o reforestación. Puede estar formado por:especies introducidas (todos los rodales plantados) o masas de especies autóctonas sujetas a una explotación intensiva, que cumplen los siguientes requisitos:una o dos especies en el momento de la plantación, clase de edad homogénea y espaciamiento regular.",
-          "new_keywords": "forestal, rodal forestal, actividad agropecuaria, agroindustria"
-        },
-        "Matadero-Frigorifico_bovinos": {
-          "new_title": "Frigorífico, matadero (bovinos)",
-          "new_abstract": "Establecimiento donde se lleva a cabo la faena de animales y / o el proceso productivo posterior a la matanza. Cuenta con cámara frigorífica en el predio en el que funciona y en él se pueden efectuar o no tareas de elaboración y / o industrialización.",
-          "new_keywords": "matadero,frigorifico, bovinos,caprino,equino,ovino, porcino"
-        },
-        "Matadero-Frigorifico_caprino": {
-          "new_title": "Frigorífico, matadero (caprinos)",
-          "new_abstract": "Establecimiento donde se lleva a cabo la faena de animales y / o el proceso productivo posterior a la matanza. Cuenta con cámara frigorífica en el predio en el que funciona y en él se pueden efectuar o no tareas de elaboración y / o industrialización.",
-          "new_keywords": "matadero,frigorifico, bovinos,caprino,equino,ovino, porcino"
-        },
-        "Matadero-Frigorifico_equinos": {
-          "new_title": "Frigorífico, matadero (equinos)",
-          "new_abstract": "Establecimiento donde se lleva a cabo la faena de animales y / o el proceso productivo posterior a la matanza. Cuenta con cámara frigorífica en el predio en el que funciona y en él se pueden efectuar o no tareas de elaboración y / o industrialización.",
-          "new_keywords": "matadero,frigorifico, bovinos,caprino,equino,ovino, porcino"
-        },
-        "Matadero-Frigorifico_ovinos": {
-          "new_title": "Frigorífico, matadero (ovinos)",
-          "new_abstract": "Establecimiento donde se lleva a cabo la faena de animales y / o el proceso productivo posterior a la matanza. Cuenta con cámara frigorífica en el predio en el que funciona y en él se pueden efectuar o no tareas de elaboración y / o industrialización.",
-          "new_keywords": "matadero,frigorifico, bovinos,caprino,equino,ovino, porcino"
-        },
-        "Matadero-Frigorifico_porcinos": {
-          "new_title": "Frigorífico, matadero (porcinos)",
-          "new_abstract": "Establecimiento donde se lleva a cabo la faena de animales y / o el proceso productivo posterior a la matanza. Cuenta con cámara frigorífica en el predio en el que funciona y en él se pueden efectuar o no tareas de elaboración y / o industrialización.",
-          "new_keywords": "matadero,frigorifico, bovinos,caprino,equino,ovino, porcino"
-        }
-      }
-    },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 210,
-      "nombre": "Industria y Servicios",
-      "short_abstract": "Industrias, producción agropecuaria, minería, energía, comunicaciones, etc.",
-      "class": "",
-      "seccion": "industria-servicios",
-      "servicio": "wms",
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
@@ -343,33 +268,6 @@
           "new_title": "Asentamientos Humanos de la República Argentina (BAHRA)",
           "new_abstract": "La Base de Asentamientos Humanos de la República Argentina (BAHRA) es producto del trabajo conjunto entre el Ministerio de Educación, a través del Programa Nacional Mapa Educativo, el Instituto Nacional de Estadística y Censos (INDEC) y el Instituto Geográfico Nacional (IGN).",
           "new_keywords": "localidad, base antártica, entidad, aglomerado, paraje"
-        }
-      }
-    },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 20,
-      "nombre": "Geografía social",
-      "short_abstract": "Asentamientos humanos, edificaciones, etc.",
-      "class": "",
-      "seccion": "geografia-social",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://sig.planificacion.gob.ar/layers/public_wxs/wms",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-        "renaper_20_12"
-      ],
-      "customize_layers": {
-        "renaper_20_12": {
-          "new_title": "Registro del estado civil y capacidad de las personas",
-          "new_abstract": "Organismo donde se asientan las actividades inherentes al registro del estado civil y la capacidad de las personas, de acuerdo a las disposiciones de leyes y decretos nacionales, provinciales y sus reglamentaciones, a fin de obtener su registración e identificación. Registra hechos vinculados al estado civil o la capacidad de las personas, como inscripción de nacimientos, matrimonios, defunciones, toma razón de aquellos hechos y actos jurídicos de carácter complementario, como adopciones, reconocimientos, divorcios, rectificaciones, anulaciones de registros y toda otra situación jurídicamente relevante que incida en las constancias registrales.",
-          "new_keywords": "registro civil, registro nacional, registro de las personas"
         }
       }
     },
@@ -484,39 +382,6 @@
           "new_title": "Puente",
           "new_abstract": "Estructura que asegura la continuidad de una vía de transporte (red vial, calle, ferrocarril, entre otros) sobre un obstáculo natural o artificial del terreno (corriente de agua, canal, entre otros).",
           "new_keywords": "puente, pasarela, viaducto"
-        }
-      }
-    },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 30,
-      "nombre": "Transporte",
-      "short_abstract": "Aeropuertos, aeródromos, red vial, red ferroviaria, etc.",
-      "class": "",
-      "seccion": "transporte",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://sig.planificacion.gob.ar/layers/public_wxs/wms",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-        "arg_fa125",
-        "centros_de_frontera_arg"
-      ],
-      "customize_layers": {
-        "arg_fa125": {
-          "new_title": "Puesto de control (pasos de frontera)",
-          "new_abstract": "Lugar con instalaciones para controlar el paso, declarar y/o inspeccionar los bienes, vehículos y/o personas.",
-          "new_keywords": "frontera, paso, límite, aduana, paso fronterizo"
-        },
-        "centros_de_frontera_arg": {
-          "new_title": "Puesto de control (centros de frontera)",
-          "new_abstract": "Lugar con instalaciones para controlar el paso, declarar y/o inspeccionar los bienes, vehículos y/o personas.",
-          "new_keywords": "frontera, paso, límite, aduana, paso fronterizo"
         }
       }
     },
@@ -699,62 +564,30 @@
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://sig.planificacion.gob.ar/layers/public_wxs/wms",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-        "red_nac_estaciones_sismologicas"
-      ],
-      "customize_layers": {
-        "red_nac_estaciones_sismologicas": {
-          "new_title": "Estación sismológica",
-          "new_abstract": "Recinto especialmente diseñado para albergar al sismógrafo. Lo ideal es que se encuentre alejado de ruidos naturales y culturales para aumentar su sensibilidad. Incluye acelerómetro."
-        }
-      }
-    },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 210,
-      "nombre": "Geografía física",
-      "short_abstract": "Objetos geográficos que se relacionan con las formas del relieve terrestre, los suelos y su cobertura",
-      "class": "",
-      "seccion": "geografia-fisica",
-      "servicio": "wms",
-      "version": "1.3.0",
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "ordenamiento:OTBN_SIG250nov2017",
-        "dgarh:ing_ias",
+        "ordenamiento:OTBN_SIG250",
         "dgarh:ing_sin_ias",
-        "ordenamiento:EcorregionesGEPAMA_oct2016",
+        "areas_protegidas:eco-regiones_Arg",
         "suelos:indice_aridez_",
-        "suelos:grado_degrada",
-        "ordenamiento:apn_sifal2016",
-        "ordenamiento:app_polig_2016b",
-        "ordenamiento:reservas_mab_2016",
-        "areas_protegidas:sitios_ramsar",
-        "ordenamiento:OTBN_SIG250nov2017"
+        "suelos:extension_degradacion",
+        "areas_protegidas:APN_actualizacion_junio2019",
+        "areas_protegidas:APP280_nov2020",
+        "areas_protegidas:ReservasdeBiosfera_ago2020",
+        "areas_protegidas:sitios_ramsar_2019"
       ],
       "customize_layers": {
-        "ordenamiento:OTBN_SIG250nov2017": {
+        "ordenamiento:OTBN_SIG250": {
           "new_title": "Ordenamiento Territorial de Bosques Nativos",
           "new_abstract": "Áreas de protección ambiental a los bosques nativos según lo establecido en la Ley de 26.331.",
           "new_keywords": "bosque nativo, ordenamiento, deforestación"
         },
-        "dgarh:ing_ias": {
-          "new_title": "Glaciar (IAS)",
-          "new_abstract": "Masa de hielo permanente y en movimiento, alimentada desde un ventisquero y que en forma de lengua ocupa un valle moviéndose cuesta abajo. También incluye glaciar de circo, entre otros."
-        },
         "dgarh:ing_sin_ias": {
-          "new_title": "Glaciar (sin IAS)",
-          "new_abstract": "Masa de hielo permanente y en movimiento, alimentada desde un ventisquero y que en forma de lengua ocupa un valle moviéndose cuesta abajo. También incluye glaciar de circo, entre otros."
+          "new_title": "Glaciar (continental)",
+          "new_abstract": "Relevamiento y monitoreo de Glaciares realizado de acuerdo a la Ley 26693. No se incluye lo inventariado en las islas del Atlántico Sur."
         },
-        "ordenamiento:EcorregionesGEPAMA_oct2016": {
+        "areas_protegidas:eco-regiones_Arg": {
           "new_title": "Ecorregión",
           "new_abstract": "Zona en las que dominan determinadas condiciones geomorfológicas y climáticas relativamente uniformes o recurrentes, caracterizada por una fisonomía vegetal de comunidades naturales y seminaturales que comparten un grupo considerable de especies dominantes, una dinámica y condiciones ecológicas generales cuyas interacciones son indispensables para su persistencia a largo plazo.",
           "new_keywords": "ecorregiones, regiones, ecología"
@@ -764,27 +597,27 @@
           "new_abstract": "Área clasificada según la escasez estacional y / o anual de los recursos hídricos. Se define comúnmente como la insuficiencia de agua en el suelo y en la atmósfera.",
           "new_keywords": "tierras áridas, índice de aridez, degradación, desertificación, tierras degradadas"
         },
-        "suelos:grado_degrada": {
+        "suelos:extension_degradacion": {
           "new_title": "Tierras degradadas",
           "new_abstract": "Área que sufre un cambio en la salud del suelo, resultando en una disminución de la capacidad del ecosistema para producir bienes o prestar servicios para sus beneficiarios. Las tierras degradadas cubren todos los cambios negativos en la capacidad del ecosistema para prestar bienes y servicios (incluso biológicos y servicios y bienes relacionados con el agua, y también su relación con bienes y servicios sociales y económicos).",
           "new_keywords": "tierras secas, degradación, desertificación, tierras degradadas"
         },
-        "ordenamiento:apn_sifal2016": {
+        "areas_protegidas:APN_actualizacion_junio2019": {
           "new_title": "Área protegida (nacionales)",
           "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
           "new_keywords": "área protegida, conservación, reserva natural, reserva ecológica"
         },
-        "ordenamiento:app_polig_2016b": {
+        "areas_protegidas:APP280_nov2020": {
           "new_title": "Área protegida (provinciales)",
           "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
           "new_keywords": "área protegida, conservación, reserva natural, reserva ecológica"
         },
-        "ordenamiento:reservas_mab_2016": {
-          "new_title": "Reserva de la Biosfera",
+        "areas_protegidas:ReservasdeBiosfera_ago2020": {
+          "new_title": "Reserva de Biosfera",
           "new_abstract": "Ecosistema terrestre o costero/ marino, o una combinación de los mismos, reconocido como tal en un plano internacional en el marco del Programa MAB (Hombre y la Atmósfera) de la UNESCO.",
           "new_keywords": "reserva de biosfera, hábitat"
         },
-        "areas_protegidas:sitios_ramsar": {
+        "areas_protegidas:sitios_ramsar_2019": {
           "new_title": "Sitio Ramsar",
           "new_abstract": "Sitio de humedal que se enmarca dentro de La Convención sobre los Humedales de Importancia Internacional, llamada Convención de Ramsar, que incluye pantanos y marismas, lagos y ríos, pastizales húmedos y turberas, oasis, estuarios, deltas y bajos de marea, zonas marinas próximas a las costas, manglares y arrecifes de coral, así como sitios artificiales como estanques piscícolas, arrozales, embalses y salinas.",
           "new_keywords": "samsar, humedal, humedales, conservación, pantanos, marismas, turberas, estuario"
@@ -1023,42 +856,15 @@
       "seccion": "otros-biota",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://ide.agroindustria.gob.ar/geoserver/agroindustria/",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-        "a010303a003"
-      ],
-      "customize_layers": {
-        "a010303a003": {
-          "new_title": "Área de cultivo de especies arbóreas",
-          "new_abstract": "Área de cultivo de especies arbóreas",
-          "new_keywords": "coltivo de árboles, cultivo forestal"
-        }
-      }
-    },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 210,
-      "nombre": "Biota",
-      "short_abstract": "Áreas de cultivo y vegetación",
-      "class": "",
-      "seccion": "otros-biota",
-      "servicio": "wms",
-      "version": "1.3.0",
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "ordenamiento:AreasdePastizal_ARG_2004_lat_lon",
+        "biodiversidad:areas_pastizal",
         "bosque_nativo:cobertura_bn"
       ],
       "customize_layers": {
-        "ordenamiento:AreasdePastizal_ARG_2004_lat_lon": {
-          "new_title": "Vegetación natural herbácea cerrada",
+        "biodiversidad:areas_pastizal": {
+          "new_title": "Áreas de pastizal",
           "new_abstract": "Área de vegetación natural cubierta por pastizal cerrado, sea de cobertura simple, con árboles, con arbustos, o con árboles y arbustos.",
           "new_keywords": "pastizales, vegetación natural"
         },
