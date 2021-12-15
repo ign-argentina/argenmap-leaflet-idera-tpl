@@ -361,7 +361,8 @@
         "idera:Puertos": {
           "new_title": "Puerto",
           "new_abstract": "Lugar dotado de instalaciones de terminales y de transferencia para la carga y descarga de mercaderías o pasajeros. Incluye atracadero para balsas, clubes deportivos y cualquier otra instalación para transferencia de pasajeros y / o mercaderías. No incluye puerto natural.",
-          "new_keywords": "puerto, desembarcadero, embarcadero, dársena, terminal fluvial, muelle, terminal maritima, ensenada"
+          "new_keywords": "puerto, desembarcadero, embarcadero, dársena, terminal fluvial, muelle, terminal maritima, ensenada",
+          "legend": "src/config/styles/images/legends/barco.svg"
         },
         "orsna:_3.4.4.6.Predios_Aeroportuarios_jun17.view": {
           "new_title": "Aeródromo (predios aeroportuarios)",
@@ -371,7 +372,8 @@
         "orsna:_3.4.4.5_SNA_jun17.view": {
           "new_title": "Aeródromo (aeropuertos)",
           "new_abstract": "Zona definida sobre tierra o agua (incluidos eventuales edificios, instalaciones y equipos), cuyo propósito es ser utilizada total o parcialmente para la llegada, salida y movimiento en superficie de aeronaves y / o helicópteros.",
-          "new_keywords": "aeropuertos, aerodromos, base aérea, campo de aviación"
+          "new_keywords": "aeropuertos, aerodromos, base aérea, campo de aviación",
+          "legend": "src/config/styles/images/legends/avion.svg"
         },
         "observ:_3.4.4.1.2.aerodromos_ont_a_view": {
           "new_title": "Aeródromo",
