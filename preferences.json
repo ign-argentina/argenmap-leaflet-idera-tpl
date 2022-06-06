@@ -74,5 +74,27 @@
   },
   "title": "IDERA - Argenmap",
   "website": "https://www.idera.gob.ar/",
-  "favicon": "src/config/styles/images/favicon.ico"
+  "favicon": "src/config/styles/images/favicon.ico",
+  "geoprocessing": {
+    "isActive": true,
+    "strings": {
+      "bounds": "Areas a procesar"
+    },
+    "availableProcesses": [
+      {
+        "name": "Curvas de Nivel",
+        "geoprocess": "contour",
+        "baseUrl": "https://imagenes.ign.gob.ar/geoserver/geoprocesos/ows?service=WPS&version=1.0.0",
+        "layer": "alos_unificado",
+        "styles": {
+          "line_color": "#e0b44c",
+          "line_weight": 0.8,
+          "d_line_m": 500,
+          "d_line_color": "#967529",
+          "d_weigth": 1,
+          "smoothFactor": 1.7
+        }
+      }
+    ]
+  }
 }
