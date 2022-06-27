@@ -77,9 +77,9 @@
   "favicon": "src/config/styles/images/favicon.ico",
   "geoprocessing": {
     "isActive": true,
-    "buttonTitle": "Curvas de nivel",
+    "buttonTitle": "Curvas de nivel y cota",
     "buttonIcon": "fa fa-cog",
-    "dialogTitle": "Curvas de nivel",
+    "dialogTitle": "",
     "strings": {
       "bounds": "Areas a procesar"
     },
@@ -97,6 +97,12 @@
           "d_weigth": 1,
           "smoothFactor": 1.7
         }
+      },
+      {
+        "name": "Cota",
+        "geoprocess": "waterRise",
+        "baseUrl": "https://imagenes.ign.gob.ar/geoserver/geoprocesos/ows?service=WPS&version=1.0.0",
+        "layer": "alos_unificado"
       }
     ]
   },
