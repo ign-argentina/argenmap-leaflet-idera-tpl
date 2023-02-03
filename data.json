@@ -62,7 +62,7 @@
           }
           },
           {
-            "titulo": "Argenmap topográfico",
+            "titulo": "Argenmap Topográfico",
             "nombre": "argenmap-topo",
             "servicio": "tms",
             "version": "1.0.0",
