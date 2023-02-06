@@ -16,7 +16,7 @@
           "version": "1.0.0",
           "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
-          "legendImg": "src/styles/images/argenmap.webp",
+          "legendImg": "src/styles/images/argenmap.png",
           "legend": "src/config/styles/images/legends/argenmap.jpg",
           "peso": 10,
           "selected": true,
@@ -32,7 +32,7 @@
           "version": "1.0.0",
           "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",
-          "legendImg": "src/styles/images/argenmap-gris.webp",
+          "legendImg": "src/styles/images/argenmap-gris.png",
           "legend": "src/config/styles/images/legends/argenmap-gris.jpg",
           "peso": 20,
           "zoom": {
@@ -47,7 +47,7 @@
           "version": "1.0.0",
           "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/argenmap_oscuro@EPSG%3A3857@png/{z}/{x}/{-y}.png",
-          "legendImg": "src/styles/images/argenmap-oscuro.webp",
+          "legendImg": "src/styles/images/argenmap-oscuro.png",
           "legend": "src/config/styles/images/legends/argenmap-oscuro.jpg",
           "peso": 25,
           "zoom": {
@@ -62,7 +62,7 @@
           "version": "1.0.0",
           "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_topo@EPSG%3A3857@png/{z}/{x}/{-y}.png",
-          "legendImg": "src/styles/images/argenmap-topo.webp",
+          "legendImg": "src/styles/images/argenmap-topo.png",
           "legend": "src/config/styles/images/legends/argenmap-topografico.jpg",
           "peso": 27,
           "selected": true,
@@ -78,7 +78,7 @@
           "version": "1.0.0",
           "attribution": "Imágenes satelitales © Esri",
           "host": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
-          "legendImg": "src/styles/images/esri.webp",
+          "legendImg": "src/styles/images/esri.png",
           "peso": 30
         },
         {
@@ -88,7 +88,7 @@
           "version": "1.0.0",
           "attribution": "Mapa topográfico © Esri",
           "host": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
-          "legendImg": "src/styles/images/esrit.webp",
+          "legendImg": "src/styles/images/esrit.png",
           "peso": 40
         },
         {
@@ -98,7 +98,7 @@
           "version": "1.0.0",
           "attribution": "Imágenes satelitales © here",
           "host": "https://2.aerial.maps.api.here.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8?app_id=XiMlA4JwMurUFFYUWYe3&app_code=oTsmqovbl2YudG3E0UlxDA",
-          "legendImg": "src/styles/images/here.webp",
+          "legendImg": "src/styles/images/here.png",
           "peso": 50
         },
         {
@@ -108,7 +108,7 @@
           "version": "1.0.0",
           "attribution": "Imágenes satelitales © Bing",
           "key": "AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L",
-          "legendImg": "src/styles/images/bing.webp",
+          "legendImg": "src/styles/images/bing.png",
           "peso": 60
         }
       ]
