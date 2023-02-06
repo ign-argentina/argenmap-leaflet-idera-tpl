@@ -3,9 +3,7 @@
   "charts": {
     "isActive": false
   },
-  "excluded_plugins": [
-    "minimap"
-  ],
+  "excluded_plugins": ["minimap"],
   "favicon": "src/config/styles/images/favicon.ico",
   "geocoder": {
     "key": "",
@@ -48,7 +46,7 @@
       {
         "geoprocess": "elevationProfile",
         "name": "Perfil de Elevación",
-        "namePrefix": "profile_"
+        "namePrefix": "perfil_de_elevacion_"
       }
     ],
     "buttonIcon": "fa fa-cog",
@@ -60,10 +58,7 @@
     }
   },
   "hillshade": {
-    "addTo": [
-      "argenmap",
-      "argenmap_gris"
-    ],
+    "addTo": ["argenmap", "argenmap_gris"],
     "attribution": "sombra de montaña <a target='_blank' href='https://www.arcgis.com/home/item.html?id=1b243539f4514b6ba35e7d995890db1d'>©Esri</a>",
     "icon": "src/styles/images/mountains.svg",
     "name": "hillshade",
