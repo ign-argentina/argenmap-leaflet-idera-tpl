@@ -151,7 +151,7 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://sig.se.gob.ar/wmspubmap",
+      "host": "https://sig.se.gob.ar/cgi-bin/mapserv6?map=/var/www/html/visor/geofiles/map/mapase.map&service=wms&version=1.3.0&request=GetCapabilities",
       "feature_info_format": "text/html",
       "allowed_layers": [
         "planosbase_concesiones_explotacion",
@@ -283,13 +283,11 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "host": "https://wms.ign.gob.ar/geoserver/industria-servicios/wms?",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "ign:puntos_de_fabricacion_y_procesamiento_BH220"
-      ],
+      "allowed_layers": ["planta_potabilizadora_de_agua"],
       "customize_layers": {
-        "ign:puntos_de_fabricacion_y_procesamiento_BH220": {
+        "planta_potabilizadora_de_agua": {
           "new_title": "Planta potabilizadora de agua",
           "new_abstract": "Conjunto de instalaciones cuya función es la producción de agua para consumo humano.",
           "new_keywords": "Planta potabilizadora "
@@ -312,9 +310,7 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/idera/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "bahra"
-      ],
+      "allowed_layers": ["bahra"],
       "customize_layers": {
         "bahra": {
           "new_title": "Asentamientos Humanos de la República Argentina (BAHRA)",
@@ -337,18 +333,35 @@
       "seccion": "geografia-social",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "host": "https://wms.ign.gob.ar/geoserver/infraestructura-social/wms?",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "ign:salud_020801",
-        "ign:areas_de_asentamientos_y_edificios_020105"
-      ],
+      "allowed_layers": ["salud_020801"],
       "customize_layers": {
-        "ign:salud_020801": {
+        "salud_020801": {
           "new_title": "Edificio de salud",
           "new_abstract": "Construcción destinada a la asistencia de personas. Incluye hospital, sala de primeros auxilios, puesto asistencial, dispensario, entre otros.",
           "new_keywords": "hospital, sala de primeros auxilios, puesto asistencial, dispensario, sanitario"
-        },
+        }
+      }
+    },
+    {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 20,
+      "nombre": "Geografía social",
+      "short_abstract": "Asentamientos humanos, edificaciones, etc.",
+      "class": "",
+      "seccion": "geografia-social",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": ["ign:areas_de_asentamientos_y_edificios_020105"],
+      "customize_layers": {
         "ign:areas_de_asentamientos_y_edificios_020105": {
           "new_title": "Planta urbana",
           "new_abstract": "Área urbana aproximada que incluye la zona contigua de amanzanamiento edificado, cuyos límites son reconocibles.",
@@ -372,10 +385,7 @@
       "version": "1.3.0",
       "host": "https://mapa.educacion.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "publico:unidades_servicio",
-        "publico:universidades"
-      ],
+      "allowed_layers": ["publico:unidades_servicio", "publico:universidades"],
       "customize_layers": {
         "publico:unidades_servicio": {
           "new_title": "Establecimiento educativo",
@@ -405,10 +415,7 @@
       "version": "1.3.0",
       "host": "https://mapa.educacion.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "publico:unidades_servicio",
-        "publico:universidades"
-      ],
+      "allowed_layers": ["publico:unidades_servicio", "publico:universidades"],
       "customize_layers": {
         "publico:unidades_servicio": {
           "new_title": "Establecimiento educativo",
@@ -521,9 +528,7 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "ign:infraestructura_de_transporte_AQ125"
-      ],
+      "allowed_layers": ["ign:infraestructura_de_transporte_AQ125"],
       "customize_layers": {
         "ign:infraestructura_de_transporte_AQ125": {
           "new_title": "Estación de ómnibus",
@@ -599,9 +604,7 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "ign:puntos_de_aguas_continentales_BH051"
-      ],
+      "allowed_layers": ["ign:puntos_de_aguas_continentales_BH051"],
       "customize_layers": {
         "ign:puntos_de_aguas_continentales_BH051": {
           "new_title": "Dique",
@@ -626,17 +629,34 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/idera/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "curva_de_nivel",
-        "cerro"
-      ],
+      "allowed_layers": ["curva_de_nivel"],
       "customize_layers": {
         "curva_de_nivel": {
           "new_title": "Curva de nivel",
           "new_abstract": "Línea que une puntos que tienen el mismo valor de altitud respecto al nivel medio del mar. También se la denomina isohipsa o curva hipsométrica.",
           "new_keywords": "altimetría, curvas, alturas"
-        },
-        "cerro": {
+        }
+      }
+    },
+    {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 50,
+      "nombre": "Geografía física",
+      "short_abstract": "Objetos geográficos que se relacionan con las formas del relieve terrestre, los suelos y su cobertura",
+      "class": "",
+      "seccion": "geografia-fisica",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://wms.ign.gob.ar/geoserver/relieve-suelo/wms?",
+      "feature_info_format": "application/json",
+      "allowed_layers": ["puntos_de_geomorfologia_NA100"],
+      "customize_layers": {
+        "puntos_de_geomorfologia_NA100": {
           "new_title": "Cerro",
           "new_abstract": "Elevación que sobresale de los lineamientos serranos o montañosos. Incluye monte, morro, nevado, pico, entre otros. No incluye volcán. El nevado es un cerro de gran altura que posee nieves perpetuas en su cumbre y permanece blanco durante todo el año. Un pico es una elevación montañosa, de cumbre aguda y puntiaguda con flancos escarpados.",
           "new_keywords": "geomorfologia, cerro, pico, monte, volcan, alto"
@@ -985,7 +1005,7 @@
       "seccion": "defensa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "host": "https://wms.ign.gob.ar/geoserver/defensa-seguridad/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "ign:estructuras_operativas_y_defensivas_FA517",
@@ -1020,9 +1040,7 @@
       "version": "1.3.0",
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "bosque_nativo:cobertura_bn"
-      ],
+      "allowed_layers": ["bosque_nativo:cobertura_bn"],
       "customize_layers": {
         "bosque_nativo:cobertura_bn": {
           "new_title": "Área de vegetación natural arbórea cerrada",
@@ -1045,13 +1063,11 @@
       "seccion": "otros-clima",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geo.ambiente.gob.ar/geoserver/wms",
+      "host": "https://riesgo.ign.gob.ar/geoserver/amenazas_fenomenos_de_origen_hidrometeorologico/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "indicadoresyestadistica:estaciones_meteorologicas"
-      ],
+      "allowed_layers": ["smn_estaciones_meteorologicas"],
       "customize_layers": {
-        "indicadoresyestadistica:estaciones_meteorologicas": {
+        "smn_estaciones_meteorologicas": {
           "new_title": "Estación meteorológica",
           "new_abstract": "Instalación destinada a medir y registrar regularmente diversas variables meteorológicas.",
           "new_keywords": "estación meteorológica, clima, meteorología, condiciones climáticas"
@@ -1073,7 +1089,7 @@
       "seccion": "organismos-conae-landsat",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoservicios.conae.gov.ar/geoserver/Landsat8/wms",
+      "host": "https://geoservicios2.conae.gov.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1235,8 +1251,26 @@
       "seccion": "organismos-secretaria-energia",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://sig.se.gob.ar/cgi-bin/mapserv6?map=/var/www/html/visor/geofiles/map/mapase.map&amp",
-      "feature_info_format": "text/html"
+      "host": "https://sig.se.gob.ar/cgi-bin/mapserv6?map=/var/www/html/visor/geofiles/map/mapase.map&service=wms&version=1.3.0&request=GetCapabilities",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Ministerio de Transporte - IDE Transporte",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-transporte",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://ide.transporte.gob.ar/geoserver/wms?",
+      "feature_info_format": "application/json"
     },
     {
       "tab": {
@@ -1271,7 +1305,7 @@
       "seccion": "organismos-senasa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geonode.senasa.gob.ar/geoserver/wms",
+      "host": "https://geonode.senasa.gob.ar/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
