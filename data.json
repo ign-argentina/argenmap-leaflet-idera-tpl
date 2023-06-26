@@ -151,15 +151,14 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://sig.se.gob.ar/cgi-bin/mapserv6?map=/var/www/html/visor/geofiles/map/mapase.map&service=wms&version=1.3.0&request=GetCapabilities",
+      "host": "https://sig.energia.gob.ar/wmsenergia?",
       "feature_info_format": "text/html",
       "allowed_layers": [
         "planosbase_concesiones_explotacion",
-        "electrica_generacion_visor_centrales",
+        "visor_centrales_unificacion",
         "union_cammesa_lineas_transporte",
         "electrica_transporte_visor_eett",
         "planosbase_ductos",
-        "res1460_ductos",
         "enargas_gasoductos_distribucion",
         "enargas_visor_gasoductos_transporte",
         "hid_area_vacamuerta",
@@ -174,7 +173,7 @@
           "new_abstract": "Área donde se efectúa una actividad extractiva de origen hidrocarburífera para su aprovechamiento económico.",
           "new_keywords": "pozo, gasoducto, zigueña, crudo"
         },
-        "electrica_generacion_visor_centrales": {
+        "visor_centrales_unificacion": {
           "new_title": "Central eléctrica",
           "new_abstract": "Edificio y equipamiento necesario para la generación de energía eléctrica.",
           "new_keywords": "energía eléctrica, infraestructura eléctrica, tendidos eléctricos, estaciones transformadoras, centrales generadoras, ministerio de energía"
@@ -191,11 +190,6 @@
         },
         "planosbase_ductos": {
           "new_title": "Ductos de hidrocarburos y agua",
-          "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
-          "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
-        },
-        "res1460_ductos": {
-          "new_title": "Ductos de hidrocarburos",
           "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
           "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
         },
@@ -613,32 +607,8 @@
         }
       }
     },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 50,
-      "nombre": "Geografía física",
-      "short_abstract": "Objetos geográficos que se relacionan con las formas del relieve terrestre, los suelos y su cobertura",
-      "class": "",
-      "seccion": "geografia-fisica",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://wms.ign.gob.ar/geoserver/idera/wms",
-      "feature_info_format": "application/json",
-      "allowed_layers": ["curva_de_nivel"],
-      "customize_layers": {
-        "curva_de_nivel": {
-          "new_title": "Curva de nivel",
-          "new_abstract": "Línea que une puntos que tienen el mismo valor de altitud respecto al nivel medio del mar. También se la denomina isohipsa o curva hipsométrica.",
-          "new_keywords": "altimetría, curvas, alturas"
-        }
-      }
-    },
-    {
+	{
+	
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -719,7 +689,7 @@
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geo.ambiente.gob.ar/geoserver/wms",
+      "host": "https://geo.ambiente.gob.ar/geoserver/ows?",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "ordenamiento:OTBN_SIG250",
@@ -727,8 +697,8 @@
         "areas_protegidas:eco-regiones_Arg",
         "suelos:indice_aridez_",
         "suelos:extension_degradacion",
-        "indicadoresyestadistica:APN_mayo2020",
-        "areas_protegidas:ReservasdeBiosfera_ago2020",
+        "areas_protegidas:APN_limite_areas_wgs84",
+        "areas_protegidas:ReservasBiosferaMab_ago2022",
         "areas_protegidas:sitiosramsar_2022"
       ],
       "customize_layers": {
@@ -756,12 +726,12 @@
           "new_abstract": "Área que sufre un cambio en la salud del suelo, resultando en una disminución de la capacidad del ecosistema para producir bienes o prestar servicios para sus beneficiarios. Las tierras degradadas cubren todos los cambios negativos en la capacidad del ecosistema para prestar bienes y servicios (incluso biológicos y servicios y bienes relacionados con el agua, y también su relación con bienes y servicios sociales y económicos).",
           "new_keywords": "tierras secas, degradación, desertificación, tierras degradadas"
         },
-        "indicadoresyestadistica:APN_mayo2020": {
+        "areas_protegidas:APN_limite_areas_wgs84": {
           "new_title": "Áreas protegidas Nacionales",
           "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
           "new_keywords": "área protegida, conservación, reserva natural, reserva ecológica"
         },
-        "areas_protegidas:ReservasdeBiosfera_ago2020": {
+        "areas_protegidas:ReservasBiosferaMab_ago2022": {
           "new_title": "Reserva de Biosfera",
           "new_abstract": "Ecosistema terrestre o costero/ marino, o una combinación de los mismos, reconocido como tal en un plano internacional en el marco del Programa MAB (Hombre y la Atmósfera) de la UNESCO.",
           "new_keywords": "reserva de biosfera, hábitat"
@@ -1063,11 +1033,13 @@
       "seccion": "otros-clima",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://riesgo.ign.gob.ar/geoserver/amenazas_fenomenos_de_origen_hidrometeorologico/wms",
+      "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["smn_estaciones_meteorologicas"],
+      "allowed_layers": [
+        "indicadoresyestadistica:estaciones_meteorologicas"
+      ],
       "customize_layers": {
-        "smn_estaciones_meteorologicas": {
+        "indicadoresyestadistica:estaciones_meteorologicas": {
           "new_title": "Estación meteorológica",
           "new_abstract": "Instalación destinada a medir y registrar regularmente diversas variables meteorológicas.",
           "new_keywords": "estación meteorológica, clima, meteorología, condiciones climáticas"
@@ -1083,13 +1055,31 @@
       },
       "peso": 9999,
       "type": "wms",
+      "nombre": "Ministerio de Ambiente y Desarrollo Sostenible - IDE Ambiente",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-medio-ambiente",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geo.ambiente.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
       "nombre": "Ministerio de Ciencia, Tecnología e Innovación Productiva - Comisión Nacional de Actividades Espaciales (CONAE) - Landsat",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-conae-landsat",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoservicios2.conae.gov.ar/geoserver/wms",
+      "host": "https://geoservicios.conae.gov.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1245,13 +1235,13 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Ministerio de Desarrollo Productivo - Secretaría de Gobierno de Energía",
+      "nombre": "Ministerio de Economía - Secretaría de Gobierno de Energía",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-secretaria-energia",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://sig.se.gob.ar/cgi-bin/mapserv6?map=/var/www/html/visor/geofiles/map/mapase.map&service=wms&version=1.3.0&request=GetCapabilities",
+      "host": "https://sig.energia.gob.ar/wmsenergia?",
       "feature_info_format": "application/json"
     },
     {
@@ -1522,6 +1512,24 @@
       "servicio": "wms",
       "version": "1.3.0",
       "host": "http://idef.formosa.gob.ar/servicios/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "La Pampa - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-lapampa",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoidelp.lapampa.gob.ar/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
@@ -2055,6 +2063,114 @@
       },
       "peso": 9999,
       "type": "wms",
+      "nombre": "Municipalidad de Balcarce",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-balcarce",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/balcarce/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Benito Juarez",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-benito",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/benitojuarez/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Concordia",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-concordia",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://ide.concordia.gob.ar/geoserver/wms?",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Fray Mamerto Esquiú ",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-FrayMamertoEsquiú",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://nodoide.catamarca.gob.ar/geoserver/fme/wms?",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Lujan",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-lujan",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/lujan/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Moreno - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-moreno",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://mapas.moreno.gob.ar/cgi-bin/mapserv?map=ide",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
       "nombre": "Municipalidad de Pergamino - IDE",
       "short_abstract": "",
       "class": "",
@@ -2097,10 +2213,82 @@
       "seccion": "organismos-rosario",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://www.rosario.gov.ar/wms/planobase",
+      "host": "https://www.rosario.gob.ar/wms/planobase",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de San Benito - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-sanbenito",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver.sanbenito.gob.ar/geoserver/wms?service=wms&version=1.3.0&request=GetCapabilities",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Santa Rosa - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-santarosa",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geonodeide.santarosa.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
     {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Tandil - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-tandil",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://mapa.tandil.gov.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "San Luis - Dirección de geodesia y Catastro",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-catastro-sanluis",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
+      "feature_info_format": "application/json"
+    },
+	{
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2127,31 +2315,13 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "San Luis - Dirección de geodesia y Catastro",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-catastro-sanluis",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
       "nombre": "Universidad Nacional de La Pampa - Instituto de geografía",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-unlpam",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://170.210.123.219/geoserver/wms",
+      "host": "https://ideigunlpam.humanas.unlpam.edu.ar/geoserver/ows?",
       "feature_info_format": "application/json"
     },
     {
@@ -2181,13 +2351,13 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Integración Energética Argentina S.A. (IEASA)",
+      "nombre": "Energía Argentina S.A",
       "short_abstract": "",
       "class": "",
-      "seccion": "organismos-ebisa",
+      "seccion": "organismos-energia-argentina",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://ide.ieasa.com.ar/geoserver/wms",
+      "host": "https://observatorio.energia-argentina.com.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     }
   ],
