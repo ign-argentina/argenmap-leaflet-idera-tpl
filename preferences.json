@@ -1,135 +1,142 @@
 {
-  "analytics_ids": [],
-  "charts": {
-    "isActive": false
-  },
-  "excluded_plugins": ["minimap"],
-  "favicon": "src/config/styles/images/favicon.ico",
-  "geocoder": {
-    "key": "",
-    "lang": "es",
-    "limit": 5,
-    "query": "q",
-    "search": "search",
-    "url": "https://api.ign.gob.ar/buscador/",
-    "url_by_id": "places"
-  },
-  "geoprocessing": {
-    "availableProcesses": [
-      {
-        "baseUrl": "https://imagenes.ign.gob.ar/geoserver/geoprocesos/ows?service=WPS&version=1.0.0",
-        "geoprocess": "contour",
-        "layer": "alos_unificado",
-        "name": "Curvas de Nivel",
-        "namePrefix": "curvas_de_nivel_",
-        "styles": {
-          "d_line_color": "#967529",
-          "d_line_m": 500,
-          "d_weigth": 1,
-          "line_color": "#e0b44c",
-          "line_weight": 0.8,
-          "smoothFactor": 1.7
-        }
-      },
-      {
-        "baseUrl": "https://imagenes.ign.gob.ar/geoserver/ows?service=WPS&version=1.0.0",
-        "geoprocess": "waterRise",
-        "layer": "geoprocesos:alos_unificado",
-        "name": "Cota",
-        "namePrefix": "cota_"
-      },
-      {
-        "geoprocess": "buffer",
-        "name": "Área de influencia",
-        "namePrefix": "area_de_influencia_"
-      },
-      {
-        "geoprocess": "elevationProfile",
-        "name": "Perfil de Elevación",
-        "namePrefix": "perfil_de_elevacion_"
-      }
+    "analytics_ids": [
+        "G-M2RMF70D2Y"
     ],
-    "buttonIcon": "fa fa-cog",
-    "buttonTitle": "Geoprocesos",
-    "dialogTitle": "Geoprocesos",
-    "isActive": true,
-    "strings": {
-      "bounds": "Areas a procesar"
-    }
-  },
-  "hillshade": {
-    "addTo": ["argenmap", "argenmap_gris"],
-    "attribution": "sombra de montaña <a target='_blank' href='https://www.arcgis.com/home/item.html?id=1b243539f4514b6ba35e7d995890db1d'>©Esri</a>",
-    "icon": "src/styles/images/mountains.svg",
-    "name": "hillshade",
-    "switchLabel": "Agregar sombra de montaña Esri",
-    "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png"
-  },
-  "logo": {
-    "height": "",
-    "link": "https://www.idera.gob.ar/",
-    "miniHeight": "50%",
-    "miniWidth": "",
-    "ministyle": "",
-    "src": "src/config/styles/images/logo.png",
-    "srcLogoMini": "src/config/styles/images/logo.png",
-    "style": "margin-left: 25px; background-size: 50%; resize: both;",
-    "title": "Infraestructura de Datos Espaciales de la República Argentina",
-    "width": ""
-  },
-  "mapConfig": {
-    "center": {
-      "latitude": -40,
-      "longitude": -59
+    "charts": {
+        "isActive": false
     },
-    "zoom": {
-      "initial": 4,
-      "max": 21,
-      "min": 3
-    }
-  },
-  "metaTags": {
-    "description": "",
-    "image": "",
-    "title": ""
-  },
-  "referencias": {
-    "height": "31px",
-    "show": false,
-    "src": "src/styles/images/referencias_icono.png",
-    "width": "25px"
-  },
-  "searchbar": {
-    "background_color": "rgba(255, 255, 255, 0.7)",
-    "color_focus": "#008dc9",
-    "isActive": true,
-    "left": "40%",
-    "strings": {
-      "placeholder": "Buscar lugar..."
+    "excluded_plugins": [
+        "minimap"
+    ],
+    "favicon": "src/config/styles/images/favicon.ico",
+    "geocoder": {
+        "key": "",
+        "lang": "es",
+        "limit": 5,
+        "query": "q",
+        "search": "search",
+        "url": "https://api.ign.gob.ar/buscador/",
+        "url_by_id": "places"
     },
-    "top": "5px"
-  },
-  "showSearchBar": true,
-  "strings": {
-    "basemap_legend_button_text": "Ver leyenda del mapa",
-    "basemap_max_zoom": " y máximo de ",
-    "basemap_min_zoom": "Zoom mínimo de "
-  },
-  "table": {
-    "isActive": false,
-    "rowsLimit": 5
-  },
-  "theme": {
-    "activeLayer": "#33b560",
-    "bodyBackground": "#008dc9",
-    "headerBackground": "#008dc9",
-    "iconBar": "#4f4f4f",
-    "menuBackground": "#008dc9",
-    "textLegendMenu": "#dddddd",
-    "textLegendMenuStyle": "",
-    "textMenu": "white",
-    "textMenuStyle": ""
-  },
-  "title": "IDERA - Argenmap",
-  "website": "https://www.idera.gob.ar/"
+    "geoprocessing": {
+        "availableProcesses": [
+            {
+                "baseUrl": "https://imagenes.ign.gob.ar/geoserver/geoprocesos/ows?service=WPS&version=1.0.0",
+                "geoprocess": "contour",
+                "layer": "alos_unificado",
+                "name": "Curvas de Nivel",
+                "namePrefix": "curvas_de_nivel_",
+                "styles": {
+                    "d_line_color": "#967529",
+                    "d_line_m": 500,
+                    "d_weigth": 1,
+                    "line_color": "#e0b44c",
+                    "line_weight": 0.8,
+                    "smoothFactor": 1.7
+                }
+            },
+            {
+                "baseUrl": "https://imagenes.ign.gob.ar/geoserver/ows?service=WPS&version=1.0.0",
+                "geoprocess": "waterRise",
+                "layer": "geoprocesos:alos_unificado",
+                "name": "Cota",
+                "namePrefix": "cota_"
+            },
+            {
+                "geoprocess": "buffer",
+                "name": "Área de influencia",
+                "namePrefix": "area_de_influencia_"
+            },
+            {
+                "geoprocess": "elevationProfile",
+                "name": "Perfil de Elevación",
+                "namePrefix": "perfil_de_elevacion_"
+            }
+        ],
+        "buttonIcon": "fa fa-cog",
+        "buttonTitle": "Geoprocesos",
+        "dialogTitle": "Geoprocesos",
+        "isActive": true,
+        "strings": {
+            "bounds": "Areas a procesar"
+        }
+    },
+    "hillshade": {
+        "addTo": [
+            "argenmap",
+            "argenmap_gris"
+        ],
+        "attribution": "sombra de montaña <a target='_blank' href='https://www.arcgis.com/home/item.html?id=1b243539f4514b6ba35e7d995890db1d'>©Esri</a>",
+        "icon": "src/styles/images/mountains.svg",
+        "name": "hillshade",
+        "switchLabel": "Agregar sombra de montaña Esri",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png"
+    },
+    "logo": {
+        "height": "",
+        "link": "https://www.idera.gob.ar/",
+        "miniHeight": "50%",
+        "miniWidth": "",
+        "ministyle": "",
+        "src": "src/config/styles/images/logo.png",
+        "srcLogoMini": "src/config/styles/images/logo.png",
+        "style": "margin-left: 25px; background-size: 50%; resize: both;",
+        "title": "Infraestructura de Datos Espaciales de la República Argentina",
+        "width": ""
+    },
+    "mapConfig": {
+        "center": {
+            "latitude": -40,
+            "longitude": -59
+        },
+        "zoom": {
+            "initial": 4,
+            "max": 21,
+            "min": 3
+        }
+    },
+    "metaTags": {
+        "description": "",
+        "image": "",
+        "title": ""
+    },
+    "referencias": {
+        "height": "31px",
+        "show": false,
+        "src": "src/styles/images/referencias_icono.png",
+        "width": "25px"
+    },
+    "searchbar": {
+        "background_color": "rgba(255, 255, 255, 0.7)",
+        "color_focus": "#008dc9",
+        "isActive": true,
+        "left": "40%",
+        "strings": {
+            "placeholder": "Buscar lugar..."
+        },
+        "top": "5px"
+    },
+    "showSearchBar": true,
+    "strings": {
+        "basemap_legend_button_text": "Ver leyenda del mapa",
+        "basemap_max_zoom": " y máximo de ",
+        "basemap_min_zoom": "Zoom mínimo de "
+    },
+    "table": {
+        "isActive": false,
+        "rowsLimit": 5
+    },
+    "theme": {
+        "activeLayer": "#33b560",
+        "bodyBackground": "#008dc9",
+        "headerBackground": "#008dc9",
+        "iconBar": "#4f4f4f",
+        "menuBackground": "#008dc9",
+        "textLegendMenu": "#dddddd",
+        "textLegendMenuStyle": "",
+        "textMenu": "white",
+        "textMenuStyle": ""
+    },
+    "title": "IDERA - Argenmap",
+    "website": "https://www.idera.gob.ar/"
 }
