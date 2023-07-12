@@ -73,16 +73,16 @@
         "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer/tile/{z}/{y}/{x}.png"
     },
     "logo": {
-        "height": "",
-        "link": "https://www.idera.gob.ar/",
-        "miniHeight": "50%",
-        "miniWidth": "",
-        "ministyle": "",
-        "src": "src/config/styles/images/logo.png",
-        "srcLogoMini": "src/config/styles/images/logo.png",
-        "style": "margin-left: 25px; background-size: 50%; resize: both;",
         "title": "Infraestructura de Datos Espaciales de la República Argentina",
-        "width": ""
+        "link": "https://www.idera.gob.ar/",
+        "src": "src/config/styles/images/logo.png",
+        "width": "85px",
+        "height": "",
+        "style": "margin-left: 25px; background-size: contain; resize: both;",
+        "srcLogoMini": "src/config/styles/images/logo.png",
+        "miniWidth": "",
+        "miniHeight": "50%",
+        "ministyle": "width: 85px; background-size: contain;"
     },
     "mapConfig": {
         "center": {
