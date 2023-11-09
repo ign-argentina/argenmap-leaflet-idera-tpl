@@ -17,13 +17,8 @@
           "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap.png",
-          "legend": "src/config/styles/images/legends/argenmap.jpg",
           "peso": 10,
-          "selected": true,
-          "zoom": {
-            "min": 3,
-            "max": 19
-          }
+          "selected": true
         },
         {
           "titulo": "Argenmap gris",
@@ -33,12 +28,7 @@
           "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap-gris.png",
-          "legend": "src/config/styles/images/legends/argenmap-gris.jpg",
-          "peso": 20,
-          "zoom": {
-            "min": 3,
-            "max": 19
-          }
+          "peso": 20
         },
         {
           "titulo": "Argenmap oscuro",
@@ -48,27 +38,10 @@
           "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/argenmap_oscuro@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap-oscuro.png",
-          "legend": "src/config/styles/images/legends/argenmap-oscuro.jpg",
           "peso": 25,
           "zoom": {
             "min": 3,
             "max": 19
-          }
-        },
-        {
-          "titulo": "Argenmap topográfico",
-          "nombre": "argenmap-topo",
-          "servicio": "tms",
-          "version": "1.0.0",
-          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
-          "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_topo@EPSG%3A3857@png/{z}/{x}/{-y}.png",
-          "legendImg": "src/styles/images/argenmap-topo.png",
-          "legend": "src/config/styles/images/legends/argenmap-topografico.jpg",
-          "peso": 27,
-          "selected": true,
-          "zoom": {
-            "min": 3,
-            "max": 13
           }
         },
         {
@@ -113,7 +86,7 @@
         }
       ]
     },
-    {
+	{
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -279,12 +252,45 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/industria-servicios/wms?",
       "feature_info_format": "application/json",
-      "allowed_layers": ["planta_potabilizadora_de_agua"],
+      "allowed_layers": [
+		"planta_potabilizadora_de_agua"
+		
+      ],
       "customize_layers": {
-        "planta_potabilizadora_de_agua": {
+        
+		"planta_potabilizadora_de_agua": {
           "new_title": "Planta potabilizadora de agua",
           "new_abstract": "Conjunto de instalaciones cuya función es la producción de agua para consumo humano.",
           "new_keywords": "Planta potabilizadora "
+        }
+      }
+    },
+	{
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 210,
+      "nombre": "Industria y Servicios",
+      "short_abstract": "Industrias, producción agropecuaria, minería, energía, comunicaciones, etc.",
+      "class": "",
+      "seccion": "industria-servicios",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://mapas.produccion.gob.ar/geoserver/wms?service=wms&version=1.3.0&request=GetCapabilities",
+      "feature_info_format": "application/json",
+      "allowed_layers": [
+		"GIS:parques_industriales"
+		
+      ],
+      "customize_layers": {
+        
+		"GIS:parques_industriales": {
+          "new_title": "Área de fabricación y procesamiento",
+          "new_abstract": "Localización de Parques Industriales inscriptos en el Registro Nacional de Parques Industriales (RENPI). Corresponde a predios planificados y diseñados para la radicación de industrias y servicios",
+          "new_keywords": "fabrica, parques industriales"
         }
       }
     },
@@ -304,7 +310,9 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/idera/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["bahra"],
+      "allowed_layers": [
+        "bahra"
+      ],
       "customize_layers": {
         "bahra": {
           "new_title": "Asentamientos Humanos de la República Argentina (BAHRA)",
@@ -313,7 +321,7 @@
         }
       }
     },
-    {
+	{
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -329,7 +337,9 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/infraestructura-social/wms?",
       "feature_info_format": "application/json",
-      "allowed_layers": ["salud_020801"],
+      "allowed_layers": [
+        "salud_020801"
+      ],
       "customize_layers": {
         "salud_020801": {
           "new_title": "Edificio de salud",
@@ -338,7 +348,7 @@
         }
       }
     },
-    {
+	{
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -354,14 +364,16 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["ign:areas_de_asentamientos_y_edificios_020105"],
+      "allowed_layers": [
+		"ign:areas_de_asentamientos_y_edificios_020105"
+      ],
       "customize_layers": {
-        "ign:areas_de_asentamientos_y_edificios_020105": {
-          "new_title": "Planta urbana",
+		"ign:areas_de_asentamientos_y_edificios_020105": {
+		  "new_title": "Planta urbana",
           "new_abstract": "Área urbana aproximada que incluye la zona contigua de amanzanamiento edificado, cuyos límites son reconocibles.",
           "new_keywords": "planta, manzana"
-        }
-      }
+		}
+	  }
     },
     {
       "tab": {
@@ -379,7 +391,10 @@
       "version": "1.3.0",
       "host": "https://mapa.educacion.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["publico:unidades_servicio", "publico:universidades"],
+      "allowed_layers": [
+        "publico:unidades_servicio",
+        "publico:universidades"
+      ],
       "customize_layers": {
         "publico:unidades_servicio": {
           "new_title": "Establecimiento educativo",
@@ -393,7 +408,7 @@
         }
       }
     },
-    {
+	{
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -409,7 +424,10 @@
       "version": "1.3.0",
       "host": "https://mapa.educacion.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["publico:unidades_servicio", "publico:universidades"],
+      "allowed_layers": [
+        "publico:unidades_servicio",
+        "publico:universidades"
+      ],
       "customize_layers": {
         "publico:unidades_servicio": {
           "new_title": "Establecimiento educativo",
@@ -422,8 +440,8 @@
           "new_keywords": "educación, educación superior"
         }
       }
-    },
-    {
+     },
+	{
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -522,7 +540,9 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["ign:infraestructura_de_transporte_AQ125"],
+      "allowed_layers": [
+        "ign:infraestructura_de_transporte_AQ125"
+      ],
       "customize_layers": {
         "ign:infraestructura_de_transporte_AQ125": {
           "new_title": "Estación de ómnibus",
@@ -579,10 +599,10 @@
           "new_title": "Corriente de agua áreas",
           "new_abstract": "Flujo natural de agua que sigue los desniveles del terreno, siendo arreico o desembocando en otra corriente de agua, en un espejo de agua o en el mar.",
           "new_keywords": "corriente de agua, río, arroyo, cauce, intermitente, estacional, cañada"
-        }
+		}
       }
     },
-    {
+	{
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -598,7 +618,9 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["ign:puntos_de_aguas_continentales_BH051"],
+      "allowed_layers": [
+		"ign:puntos_de_aguas_continentales_BH051"
+      ],
       "customize_layers": {
         "ign:puntos_de_aguas_continentales_BH051": {
           "new_title": "Dique",
@@ -624,7 +646,9 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/relieve-suelo/wms?",
       "feature_info_format": "application/json",
-      "allowed_layers": ["puntos_de_geomorfologia_NA100"],
+      "allowed_layers": [
+        "puntos_de_geomorfologia_NA100"
+      ],
       "customize_layers": {
         "puntos_de_geomorfologia_NA100": {
           "new_title": "Cerro",
@@ -692,17 +716,23 @@
       "host": "https://geo.ambiente.gob.ar/geoserver/ows?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "ordenamiento:OTBN_SIG250",
+	    "areas_protegidas:app280_noviembre2020",
+        "bosques:OTBN Nacional_2023",
         "dgarh:ing_sin_ias",
         "areas_protegidas:eco-regiones_Arg",
         "suelos:indice_aridez_",
         "suelos:extension_degradacion",
         "areas_protegidas:APN_limite_areas_wgs84",
         "areas_protegidas:ReservasBiosferaMab_ago2022",
-        "areas_protegidas:sitiosramsar_2022"
+        "areas_protegidas:ramsar"
       ],
       "customize_layers": {
-        "ordenamiento:OTBN_SIG250": {
+		 "areas_protegidas:app280_noviembre2020": {
+         "new_title": "Reservas Provinciales",
+         "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
+         "new_keywords": "reservas, ordenamiento, deforestación"
+        },
+        "bosques:OTBN Nacional_2023": {
           "new_title": "Ordenamiento Territorial de Bosques Nativos",
           "new_abstract": "Áreas de protección ambiental a los bosques nativos según lo establecido en la Ley de 26.331.",
           "new_keywords": "bosque nativo, ordenamiento, deforestación"
@@ -736,7 +766,7 @@
           "new_abstract": "Ecosistema terrestre o costero/ marino, o una combinación de los mismos, reconocido como tal en un plano internacional en el marco del Programa MAB (Hombre y la Atmósfera) de la UNESCO.",
           "new_keywords": "reserva de biosfera, hábitat"
         },
-        "areas_protegidas:sitiosramsar_2022": {
+        "areas_protegidas:ramsar": {
           "new_title": "Sitio Ramsar",
           "new_abstract": "Sitio de humedal que se enmarca dentro de La Convención sobre los Humedales de Importancia Internacional, llamada Convención de Ramsar, que incluye pantanos y marismas, lagos y ríos, pastizales húmedos y turberas, oasis, estuarios, deltas y bajos de marea, zonas marinas próximas a las costas, manglares y arrecifes de coral, así como sitios artificiales como estanques piscícolas, arrozales, embalses y salinas.",
           "new_keywords": "samsar, humedal, humedales, conservación, pantanos, marismas, turberas, estuario"
@@ -772,9 +802,8 @@
         "red_gravimetrica",
         "red_ramsac",
         "zona_de_frontera",
-        "area_de_desarrollo_de_fronteras",
         "linea_limite_maritimos",
-        "gobiernoslocales_2020"
+        "gobiernoslocales_2022"
       ],
       "customize_layers": {
         "departamento": {
@@ -833,21 +862,16 @@
           "new_keywords": "red, geodesia"
         },
         "zona_de_frontera": {
-          "new_title": "Zona de Frontera área",
+          "new_title": "Zona de Frontera",
           "new_abstract": "Zona adyacente al límite internacional, que constituye una zona de seguridad destinada a complementar las previsiones territoriales de la defensa nacional y / o un área prioritaria para su desarrollo.",
           "new_keywords": "frontera, seguridad, limites, defensa"
-        },
-        "area_de_desarrollo_de_fronteras": {
-          "new_title": "Área de Desarrollo de Fronteras",
-          "new_abstract": "Área destinada a su desarrollo adyacente al límite internacional.",
-          "new_keywords": "frontera, seguridad, limites, defensa, desarrollo"
         },
         "linea_limite_maritimos": {
           "new_title": "Límites de espacios marítimos",
           "new_abstract": "Líneas que representan los diferentes espacíos marítimos en su límite exterior.",
           "new_keywords": "limites, maritimo, mar territorial, limite zona economica exclusiva, limite zona contigua, limite de plataforma"
         },
-        "gobiernoslocales_2020": {
+        "gobiernoslocales_2022": {
           "new_title": "Gobierno Local",
           "new_abstract": "Jurisdicción político-administrativa de tercer o cuarto orden. Incluye Municipios, Comunas, Juntas y Comisiones.",
           "new_keywords": "limites, area administrativa, gobierno local"
@@ -961,7 +985,7 @@
         }
       }
     },
-    {
+	{
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -988,9 +1012,9 @@
           "new_keywords": "seguridad"
         },
         "ign:estructuras_operativas_y_defensivas_090102": {
-          "new_title": "Cuartel de bomberos",
-          "new_abstract": "Construcción destinada al asiento de la autoridad encargada de la seguridad.",
-          "new_keywords": "seguridad"
+            "new_title": "Cuartel de bomberos",
+            "new_abstract": "Construcción destinada al asiento de la autoridad encargada de la seguridad.",
+            "new_keywords": "seguridad"
         }
       }
     },
@@ -1010,8 +1034,12 @@
       "version": "1.3.0",
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["bosque_nativo:cobertura_bn"],
+      "allowed_layers": [
+        
+        "bosque_nativo:cobertura_bn"
+      ],
       "customize_layers": {
+        
         "bosque_nativo:cobertura_bn": {
           "new_title": "Área de vegetación natural arbórea cerrada",
           "new_abstract": "Área de vegetación natural cubierta por bosque cerrado, sea de un estrato arbóreo o de más de un estrato arbóreo, sin emergentes o con emergentes.",
@@ -1046,7 +1074,7 @@
         }
       }
     },
-    {
+	{
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1244,7 +1272,7 @@
       "host": "https://sig.energia.gob.ar/wmsenergia?",
       "feature_info_format": "application/json"
     },
-    {
+	{
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1514,7 +1542,7 @@
       "host": "http://idef.formosa.gob.ar/servicios/wms",
       "feature_info_format": "application/json"
     },
-    {
+	{
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2054,7 +2082,7 @@
       "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Choromoro/MapServer/WMSServer",
       "feature_info_format": "text/html"
     },
-    {
+	{
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2252,7 +2280,7 @@
       "host": "https://geonodeide.santarosa.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-    {
+	{
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2351,7 +2379,7 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Energía Argentina S.A",
+      "nombre": " Energía Argentina S.A",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-energia-argentina",
