@@ -22,9 +22,7 @@
           "selected": true,
           "zoom": {
             "min": 3,
-            "max": 19,
-            "nativeMin": 3,
-            "nativeMax": 19
+            "max": 19
           }
         },
         {
@@ -39,9 +37,7 @@
           "peso": 20,
           "zoom": {
             "min": 3,
-            "max": 19,
-            "nativeMin": 3,
-            "nativeMax": 19
+            "max": 19
           }
         },
         {
@@ -56,9 +52,7 @@
           "peso": 25,
           "zoom": {
             "min": 3,
-            "max": 19,
-            "nativeMin": 3,
-            "nativeMax": 19
+            "max": 19
           }
         },
         {
@@ -85,13 +79,7 @@
           "attribution": "Imágenes satelitales © Esri",
           "host": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
           "legendImg": "src/styles/images/esri.png",
-          "peso": 30,
-          "zoom": {
-            "min": 3,
-            "max": 21,
-            "nativeMin": 3,
-            "nativeMax": 18
-          }
+          "peso": 30
         },
         {
           "titulo": "Mapa topográfico Esri",
@@ -101,13 +89,7 @@
           "attribution": "Mapa topográfico © Esri",
           "host": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
           "legendImg": "src/styles/images/esrit.png",
-          "peso": 40,
-          "zoom": {
-            "min": 3,
-            "max": 8,
-            "nativeMin": 3,
-            "nativeMax": 8
-          }
+          "peso": 40
         },
         {
           "titulo": "Imágenes satelitales Here",
@@ -117,13 +99,7 @@
           "attribution": "Imágenes satelitales © here",
           "host": "https://2.aerial.maps.api.here.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8?app_id=XiMlA4JwMurUFFYUWYe3&app_code=oTsmqovbl2YudG3E0UlxDA",
           "legendImg": "src/styles/images/here.png",
-          "peso": 50,
-          "zoom": {
-            "min": 3,
-            "max": 21,
-            "nativeMin": 3,
-            "nativeMax": 20
-          }
+          "peso": 50
         },
         {
           "titulo": "Imágenes satelitales Bing",
@@ -145,22 +121,44 @@
       },
       "type": "wms",
       "peso": 10,
-      "nombre": "Industria y servicios",
+      "nombre": "Industria y Servicios",
       "short_abstract": "Industrias, producción agropecuaria, minería, energía, comunicaciones, etc.",
       "class": "",
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://sig.se.gob.ar/wmspubmap",
+      "host": "https://www.idecom.gob.ar/geoserver/idera/ows",
+      "feature_info_format": "application/json",
+      "customize_layers": {
+        "a010502-ANTENAS": {
+          "new_title": "Antena",
+          "new_abstract": "Dispositivo diseñado con el objetivo de emitir o recibir ondas electromagnéticas. Está ubicado sobre el suelo.",
+          "new_keywords": "idecom, antena"
+        }
+      }
+    },
+    {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 10,
+      "nombre": "Industria y Servicios",
+      "short_abstract": "Industrias, producción agropecuaria, minería, energía, comunicaciones, etc.",
+      "class": "",
+      "seccion": "industria-servicios",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://sig.energia.gob.ar/wmsenergia?",
       "feature_info_format": "text/html",
       "allowed_layers": [
-        "visor_yacimientos_2019",
-        "electrica_generacion_visor_centrales",
-        "electrica_transporte_visor_lineas",
+        "planosbase_concesiones_explotacion",
+        "visor_centrales_unificacion",
+        "union_cammesa_lineas_transporte",
         "electrica_transporte_visor_eett",
         "planosbase_ductos",
-        "hidtransp_gasoductos_proyectados_nea",
-        "res1460_ductos",
         "enargas_gasoductos_distribucion",
         "enargas_visor_gasoductos_transporte",
         "hid_area_vacamuerta",
@@ -170,17 +168,17 @@
         "pozos_noinformados"
       ],
       "customize_layers": {
-        "visor_yacimientos_2019": {
+        "planosbase_concesiones_explotacion": {
           "new_title": "Área de explotación hidrocarburífera",
           "new_abstract": "Área donde se efectúa una actividad extractiva de origen hidrocarburífera para su aprovechamiento económico.",
           "new_keywords": "pozo, gasoducto, zigueña, crudo"
         },
-        "electrica_generacion_visor_centrales": {
+        "visor_centrales_unificacion": {
           "new_title": "Central eléctrica",
           "new_abstract": "Edificio y equipamiento necesario para la generación de energía eléctrica.",
           "new_keywords": "energía eléctrica, infraestructura eléctrica, tendidos eléctricos, estaciones transformadoras, centrales generadoras, ministerio de energía"
         },
-        "electrica_transporte_visor_lineas": {
+        "union_cammesa_lineas_transporte": {
           "new_title": "Línea de transmisión eléctrica",
           "new_abstract": "Sistema de cableado que transmite o distribuye energía eléctrica.",
           "new_keywords": "línea de alta tensión, alta tensión, transporte de energía, transmisión de energía eléctrica, ministerio de energía"
@@ -192,16 +190,6 @@
         },
         "planosbase_ductos": {
           "new_title": "Ductos de hidrocarburos y agua",
-          "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
-          "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
-        },
-        "hidtransp_gasoductos_proyectados_nea": {
-          "new_title": "Ductos de gas proyectados NEA",
-          "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
-          "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
-        },
-        "res1460_ductos": {
-          "new_title": "Ductos de hidrocarburos",
           "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
           "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
         },
@@ -249,7 +237,7 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 10,
+      "peso": 210,
       "nombre": "Industria y Servicios",
       "short_abstract": "Industrias, producción agropecuaria, minería, energía, comunicaciones, etc.",
       "class": "",
@@ -282,30 +270,21 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 10,
+      "peso": 210,
       "nombre": "Industria y Servicios",
       "short_abstract": "Industrias, producción agropecuaria, minería, energía, comunicaciones, etc.",
       "class": "",
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "host": "https://wms.ign.gob.ar/geoserver/industria-servicios/wms?",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "ign:areas_de_actividad_agropecuaria_AL270",
-        "ign:puntos_de_almacenamiento_y_logistica_AM020",
-        "ign:areas_de_gestion_de_residuos_AB000"
-      ],
+      "allowed_layers": ["planta_potabilizadora_de_agua"],
       "customize_layers": {
-        "ign:areas_de_actividad_agropecuaria_AL270": {
-          "new_title": "Silo",
-          "new_abstract": "Construcción en la cual se almacenan grandes cantidades de granos secos. Construcción de estructura cilíndrica, destinada al almacenamiento de granos, semillas, harinas, etc. Puede ser de chapa, hormigón, mampostería o cualquier otro material. (INDEC, CNA 2002)",
-          "new_keywords": "silo, depósito, granero, depósito de granos"
-        },
-        "ign:areas_de_gestion_de_residuos_AB000": {
-          "new_title": "Vertedero, basurero",
-          "new_abstract": "Área destinada al depósito de materiales de desecho, sin tratamiento previo.",
-          "new_keywords": "basural, basurero, vertedero, basura, desechos, contaminación, degradación"
+        "planta_potabilizadora_de_agua": {
+          "new_title": "Planta potabilizadora de agua",
+          "new_abstract": "Conjunto de instalaciones cuya función es la producción de agua para consumo humano.",
+          "new_keywords": "Planta potabilizadora "
         }
       }
     },
@@ -331,6 +310,86 @@
           "new_title": "Asentamientos Humanos de la República Argentina (BAHRA)",
           "new_abstract": "La Base de Asentamientos Humanos de la República Argentina (BAHRA) es producto del trabajo conjunto entre el Ministerio de Educación, a través del Programa Nacional Mapa Educativo, el Instituto Nacional de Estadística y Censos (INDEC) y el Instituto Geográfico Nacional (IGN).",
           "new_keywords": "localidad, base antártica, entidad, aglomerado, paraje"
+        }
+      }
+    },
+    {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 20,
+      "nombre": "Geografía social",
+      "short_abstract": "Asentamientos humanos, edificaciones, etc.",
+      "class": "",
+      "seccion": "geografia-social",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://wms.ign.gob.ar/geoserver/infraestructura-social/wms?",
+      "feature_info_format": "application/json",
+      "allowed_layers": ["salud_020801"],
+      "customize_layers": {
+        "salud_020801": {
+          "new_title": "Edificio de salud",
+          "new_abstract": "Construcción destinada a la asistencia de personas. Incluye hospital, sala de primeros auxilios, puesto asistencial, dispensario, entre otros.",
+          "new_keywords": "hospital, sala de primeros auxilios, puesto asistencial, dispensario, sanitario"
+        }
+      }
+    },
+    {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 20,
+      "nombre": "Geografía social",
+      "short_abstract": "Asentamientos humanos, edificaciones, etc.",
+      "class": "",
+      "seccion": "geografia-social",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": ["ign:areas_de_asentamientos_y_edificios_020105"],
+      "customize_layers": {
+        "ign:areas_de_asentamientos_y_edificios_020105": {
+          "new_title": "Planta urbana",
+          "new_abstract": "Área urbana aproximada que incluye la zona contigua de amanzanamiento edificado, cuyos límites son reconocibles.",
+          "new_keywords": "planta, manzana"
+        }
+      }
+    },
+    {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 20,
+      "nombre": "Geografía social",
+      "short_abstract": "Asentamientos humanos, edificaciones, etc.",
+      "class": "",
+      "seccion": "geografia-social",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://mapa.educacion.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": ["publico:unidades_servicio", "publico:universidades"],
+      "customize_layers": {
+        "publico:unidades_servicio": {
+          "new_title": "Establecimiento educativo",
+          "new_abstract": "Unidad organizacional que contiene en su interior a la/s unidades educativas, las cuales forman parte del establecimiento y se corresponden con cada uno de los niveles de enseñanza para los cuales se imparte educación. Un establecimiento puede funcionar en una o varias localizaciones geográficas, en caso de ser varias se compone de sede/s y anexo/s.",
+          "new_keywords": "escuelas, colegios, educación, educación primaria"
+        },
+        "publico:universidades": {
+          "new_title": "Institución universitaria",
+          "new_abstract": "Institución de enseñanza superior que otorga distintos grados académicos. Incluye Universidades e Institutos Universitarios.",
+          "new_keywords": "educación, educación superior"
         }
       }
     },
@@ -463,26 +522,12 @@
       "version": "1.3.0",
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "ign:ayuda_a_la_navegacion_BC050",
-        "ign:ayuda_a_la_navegacion_BC101",
-        "ign:ayuda_a_la_navegacion_BC020"
-      ],
+      "allowed_layers": ["ign:infraestructura_de_transporte_AQ125"],
       "customize_layers": {
-        "ign:ayuda_a_la_navegacion_BC050": {
-          "new_title": "Ayuda a la navegación (faro)",
-          "new_abstract": "Objeto flotante o terrestre instalado en un lugar en particular cuya finalidad es servir como una ayuda a la navegación o para otros fines específicos. Incluye faro, boya, baliza, semáforo de costa, señal de niebla, luces, radiofaro, señal de enfilación, sistemas de posicionamiento fijo, entre otros.",
-          "new_keywords": "faro, torre, baliza"
-        },
-        "ign:ayuda_a_la_navegacion_BC101": {
-          "new_title": "Ayuda a la navegación (baliza)",
-          "new_abstract": "Objeto flotante o terrestre instalado en un lugar en particular cuya finalidad es servir como una ayuda a la navegación o para otros fines específicos. Incluye faro, boya, baliza, semáforo de costa, señal de niebla, luces, radiofaro, señal de enfilación, sistemas de posicionamiento fijo, entre otros.",
-          "new_keywords": "señal"
-        },
-        "ign:ayuda_a_la_navegacion_BC020": {
-          "new_title": "Ayuda a la navegación (boya)",
-          "new_abstract": "Objeto flotante o terrestre instalado en un lugar en particular cuya finalidad es servir como una ayuda a la navegación o para otros fines específicos. Incluye faro, boya, baliza, semáforo de costa, señal de niebla, luces, radiofaro, señal de enfilación, sistemas de posicionamiento fijo, entre otros.",
-          "new_keywords": "señal"
+        "ign:infraestructura_de_transporte_AQ125": {
+          "new_title": "Estación de ómnibus",
+          "new_abstract": "Predio destinado a la maniobra de ómnibus nacionales e internacionales, carga, ascenso y descenso de pasajeros. Puede o no tener aduana.",
+          "new_keywords": "ómnibus, pasajeros"
         }
       }
     },
@@ -494,113 +539,6 @@
       },
       "type": "wms",
       "peso": 40,
-      "nombre": "Catastro",
-      "short_abstract": "Objetos territoriales legales y catastrales",
-      "class": "",
-      "seccion": "catastro",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://geo.arba.gov.ar/geoserver/idera/wms",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-        "Parcela",
-        "Manzana",
-        "Seccion catastral",
-        "Chacra",
-        "Quinta",
-        "Fraccion",
-        "Circunscripcion",
-        "Subparcela",
-        "Lado catastral"
-      ],
-      "customize_layers": {
-        "Parcela": {
-          "new_title": "Parcela",
-          "new_abstract": "Extensión territorial continua, deslindada por un polígono de límites conocidos, perteneciente a un propietario."
-        },
-        "Manzana": {
-          "new_title": "Manzana",
-          "new_abstract": "Superficie de terreno delimitada por vía pública y / o deslinde de corredor ferroviario y / o registrada como tal por la Dirección General de Catastro."
-        },
-        "Seccion catastral": {
-          "new_title": "Sección",
-          "new_abstract": "Registro administrativo dependiente del Estado en el que se describen los bienes inmuebles."
-        },
-        "Chacra": {
-          "new_title": "Chacra",
-          "new_abstract": "Extensión de territorio cuya superficie es superior a 12 hectáreas y no excede 120 hectáreas, totalmente rodeadas de vías de comunicación."
-        },
-        "Quinta": {
-          "new_title": "Quinta",
-          "new_abstract": "Extensión de territorio cuya superficie es mayor a 1.5 hectáreas y no supere las 12 hectáreas."
-        },
-        "Fraccion": {
-          "new_title": "Fracción catastral",
-          "new_abstract": "No tienen especificaciones de ningún tipo dentro de la Ley 10707, es por ello que podemos encontrarlas como macizos puros, o como subdivisiones de algún macizo puro."
-        },
-        "Circunscripcion": {
-          "new_title": "Circunscripción",
-          "new_abstract": "Polígonos en los que un Partido (Departamento) se subdivide, pudiendo contener en conjunto o separadamente plantas urbanas, suburbanas y rurales (ARBA,2018)."
-        },
-        "Subparcela": {
-          "new_title": "Subparcela",
-          "new_abstract": "La propiedad de la unidad funcional o subparcela comprende la parte indivisa del terreno, de las cosas y partes de uso común del inmueble o indispensables para mantener su seguridad, y puede abarcar una o más unidades complementarias destinadas a servirla (ARBA, 2018)."
-        },
-        "Lado catastral": {
-          "new_title": "Lado catastral",
-          "new_abstract": "Valor numérico del lado de un polígono (referido a un objeto catastral) que representa su longitud (ARBA, 2018)."
-        }
-      }
-    },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 50,
-      "nombre": "Unidades geoestadísticas",
-      "short_abstract": "Áreas estadísticas de desagregación del territotio nacional, provincial y de áreas de gobierno local",
-      "class": "",
-      "seccion": "unidades-geoestadisticas",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://geoservicios.indec.gob.ar/geoserver/wms",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-        "geocenso2010:localidades_codigo",
-        "desarrollo:envolventes",
-        "sig:vias",
-        "eph:radios_eph"
-      ],
-      "customize_layers": {
-        "geocenso2010:localidades_codigo": {
-          "new_title": "Localidad Censal",
-          "new_abstract": "Concentración espacial de objetos físicos artificiales fijos conectados entre sí por medio de una red de calles, en una determinada porción del territorio. Está determinado por la continuidad espacial de los mismos y es independiente de los límites jurisdiccionales (INDEC, 2018)."
-        },
-        "desarrollo:envolventes": {
-          "new_title": "Envolvente urbana",
-          "new_abstract": "Área comprendida por una o varias localidades censales cuya continuidad espacial determina que sean consideradas como una unidad o aglomerado urbano (INDEC, 2018)."
-        },
-        "sig:vias": {
-          "new_title": "Vias de circulación censal",
-          "new_abstract": "Trazado que permite la circulación en el interior de una área urbana y que no es parte del acceso a la misma. Determina los límites de manzanas (INDEC, 2018)."
-        },
-        "eph:radios_eph": {
-          "new_title": "Radio censal",
-          "new_abstract": "Unidad censal que forma parte de una fracción, definida por un espacio territorial con límites geográficos y una determinada cantidad de unidades de análisis a relevar (INDEC, 2018)."
-        }
-      }
-    },
-    {
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 60,
       "nombre": "Hidrografía y oceanografía",
       "short_abstract": "Ríos, lagos, humedales, embalses, islas, etc.",
       "class": "",
@@ -651,23 +589,44 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 70,
+      "peso": 40,
+      "nombre": "Hidrografía y oceanografía",
+      "short_abstract": "Ríos, lagos, humedales, embalses, islas, etc.",
+      "class": "",
+      "seccion": "hidrografia-oceanografia",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": ["ign:puntos_de_aguas_continentales_BH051"],
+      "customize_layers": {
+        "ign:puntos_de_aguas_continentales_BH051": {
+          "new_title": "Dique",
+          "new_abstract": "Terraplén natural o artificial destinado a detener o estancar el escurrimiento del agua en su curso, a los efectos de su almacenamiento para fines rurales o industriales.",
+          "new_keywords": "dique, terraplén"
+        }
+      }
+    },
+	{
+	
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 50,
       "nombre": "Geografía física",
       "short_abstract": "Objetos geográficos que se relacionan con las formas del relieve terrestre, los suelos y su cobertura",
       "class": "",
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://wms.ign.gob.ar/geoserver/idera/wms",
+      "host": "https://wms.ign.gob.ar/geoserver/relieve-suelo/wms?",
       "feature_info_format": "application/json",
-      "allowed_layers": ["curva_de_nivel", "cerro"],
+      "allowed_layers": ["puntos_de_geomorfologia_NA100"],
       "customize_layers": {
-        "curva_de_nivel": {
-          "new_title": "Curva de nivel",
-          "new_abstract": "Línea que une puntos que tienen el mismo valor de altitud respecto al nivel medio del mar. También se la denomina isohipsa o curva hipsométrica.",
-          "new_keywords": "altimetría, curvas, alturas"
-        },
-        "cerro": {
+        "puntos_de_geomorfologia_NA100": {
           "new_title": "Cerro",
           "new_abstract": "Elevación que sobresale de los lineamientos serranos o montañosos. Incluye monte, morro, nevado, pico, entre otros. No incluye volcán. El nevado es un cerro de gran altura que posee nieves perpetuas en su cumbre y permanece blanco durante todo el año. Un pico es una elevación montañosa, de cumbre aguda y puntiaguda con flancos escarpados.",
           "new_keywords": "geomorfologia, cerro, pico, monte, volcan, alto"
@@ -681,7 +640,7 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 70,
+      "peso": 210,
       "nombre": "Geografía física",
       "short_abstract": "Objetos geográficos que se relacionan con las formas del relieve terrestre, los suelos y su cobertura",
       "class": "",
@@ -723,14 +682,14 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 70,
+      "peso": 210,
       "nombre": "Geografía física",
       "short_abstract": "Objetos geográficos que se relacionan con las formas del relieve terrestre, los suelos y su cobertura",
       "class": "",
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geo.ambiente.gob.ar/geoserver/wms",
+      "host": "https://geo.ambiente.gob.ar/geoserver/ows?",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "ordenamiento:OTBN_SIG250",
@@ -738,10 +697,9 @@
         "areas_protegidas:eco-regiones_Arg",
         "suelos:indice_aridez_",
         "suelos:extension_degradacion",
-        "areas_protegidas:APN_actualizacion_junio2019",
-        "areas_protegidas:APP280_nov2020",
-        "areas_protegidas:ReservasdeBiosfera_ago2020",
-        "areas_protegidas:sitios_ramsar_2019"
+        "areas_protegidas:APN_limite_areas_wgs84",
+        "areas_protegidas:ReservasBiosferaMab_ago2022",
+        "areas_protegidas:sitiosramsar_2022"
       ],
       "customize_layers": {
         "ordenamiento:OTBN_SIG250": {
@@ -753,7 +711,7 @@
           "new_title": "Glaciar (continental)",
           "new_abstract": "Relevamiento y monitoreo de Glaciares realizado de acuerdo a la Ley 26693. No se incluye lo inventariado en las islas del Atlántico Sur."
         },
-        "areas_protegidas:eco-regiones_Arg": {
+        "areas_protegidas:ecoregiones2021": {
           "new_title": "Ecorregión",
           "new_abstract": "Zona en las que dominan determinadas condiciones geomorfológicas y climáticas relativamente uniformes o recurrentes, caracterizada por una fisonomía vegetal de comunidades naturales y seminaturales que comparten un grupo considerable de especies dominantes, una dinámica y condiciones ecológicas generales cuyas interacciones son indispensables para su persistencia a largo plazo.",
           "new_keywords": "ecorregiones, regiones, ecología"
@@ -768,22 +726,17 @@
           "new_abstract": "Área que sufre un cambio en la salud del suelo, resultando en una disminución de la capacidad del ecosistema para producir bienes o prestar servicios para sus beneficiarios. Las tierras degradadas cubren todos los cambios negativos en la capacidad del ecosistema para prestar bienes y servicios (incluso biológicos y servicios y bienes relacionados con el agua, y también su relación con bienes y servicios sociales y económicos).",
           "new_keywords": "tierras secas, degradación, desertificación, tierras degradadas"
         },
-        "areas_protegidas:APN_actualizacion_junio2019": {
-          "new_title": "Área protegida (nacionales)",
+        "areas_protegidas:APN_limite_areas_wgs84": {
+          "new_title": "Áreas protegidas Nacionales",
           "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
           "new_keywords": "área protegida, conservación, reserva natural, reserva ecológica"
         },
-        "areas_protegidas:APP280_nov2020": {
-          "new_title": "Área protegida (provinciales)",
-          "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
-          "new_keywords": "área protegida, conservación, reserva natural, reserva ecológica"
-        },
-        "areas_protegidas:ReservasdeBiosfera_ago2020": {
+        "areas_protegidas:ReservasBiosferaMab_ago2022": {
           "new_title": "Reserva de Biosfera",
           "new_abstract": "Ecosistema terrestre o costero/ marino, o una combinación de los mismos, reconocido como tal en un plano internacional en el marco del Programa MAB (Hombre y la Atmósfera) de la UNESCO.",
           "new_keywords": "reserva de biosfera, hábitat"
         },
-        "areas_protegidas:sitios_ramsar_2019": {
+        "areas_protegidas:sitiosramsar_2022": {
           "new_title": "Sitio Ramsar",
           "new_abstract": "Sitio de humedal que se enmarca dentro de La Convención sobre los Humedales de Importancia Internacional, llamada Convención de Ramsar, que incluye pantanos y marismas, lagos y ríos, pastizales húmedos y turberas, oasis, estuarios, deltas y bajos de marea, zonas marinas próximas a las costas, manglares y arrecifes de coral, así como sitios artificiales como estanques piscícolas, arrozales, embalses y salinas.",
           "new_keywords": "samsar, humedal, humedales, conservación, pantanos, marismas, turberas, estuario"
@@ -797,7 +750,7 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 80,
+      "peso": 60,
       "nombre": "Demarcación",
       "short_abstract": "Provincias, departamentos, municipios, áreas protegidas, etc.",
       "class": "",
@@ -908,20 +861,103 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 10,
-      "nombre": "Industria y Servicios",
-      "short_abstract": "Industrias, producción agropecuaria, minería, energía, comunicaciones, etc.",
+      "peso": 30,
+      "nombre": "Catastro",
+      "short_abstract": "Objetos territoriales legales y catastrales",
       "class": "",
-      "seccion": "industria-servicios",
+      "seccion": "catastro",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://www.idecom.gob.ar/geoserver/idera/ows",
+      "host": "https://geo.arba.gov.ar/geoserver/idera/wms",
       "feature_info_format": "application/json",
+      "allowed_layers": [
+        "Parcela",
+        "Manzana",
+        "Seccion catastral",
+        "Chacra",
+        "Quinta",
+        "Fraccion",
+        "Circunscripcion",
+        "Subparcela",
+        "Lado catastral"
+      ],
       "customize_layers": {
-        "a010502-ANTENAS": {
-          "new_title": "Antena",
-          "new_abstract": "Dispositivo diseñado con el objetivo de emitir o recibir ondas electromagnéticas. Está ubicado sobre el suelo.",
-          "new_keywords": "idecom, antena"
+        "Parcela": {
+          "new_title": "Parcela",
+          "new_abstract": "Extensión territorial continua, deslindada por un polígono de límites conocidos, perteneciente a un propietario."
+        },
+        "Manzana": {
+          "new_title": "Manzana",
+          "new_abstract": "Superficie de terreno delimitada por vía pública y / o deslinde de corredor ferroviario y / o registrada como tal por la Dirección General de Catastro."
+        },
+        "Seccion catastral": {
+          "new_title": "Sección",
+          "new_abstract": "Registro administrativo dependiente del Estado en el que se describen los bienes inmuebles."
+        },
+        "Chacra": {
+          "new_title": "Chacra",
+          "new_abstract": "Extensión de territorio cuya superficie es superior a 12 hectáreas y no excede 120 hectáreas, totalmente rodeadas de vías de comunicación."
+        },
+        "Quinta": {
+          "new_title": "Quinta",
+          "new_abstract": "Extensión de territorio cuya superficie es mayor a 1.5 hectáreas y no supere las 12 hectáreas."
+        },
+        "Fraccion": {
+          "new_title": "Fracción catastral",
+          "new_abstract": "No tienen especificaciones de ningún tipo dentro de la Ley 10707, es por ello que podemos encontrarlas como macizos puros, o como subdivisiones de algún macizo puro."
+        },
+        "Circunscripcion": {
+          "new_title": "Circunscripción",
+          "new_abstract": "Polígonos en los que un Partido (Departamento) se subdivide, pudiendo contener en conjunto o separadamente plantas urbanas, suburbanas y rurales (ARBA,2018)."
+        },
+        "Subparcela": {
+          "new_title": "Subparcela",
+          "new_abstract": "La propiedad de la unidad funcional o subparcela comprende la parte indivisa del terreno, de las cosas y partes de uso común del inmueble o indispensables para mantener su seguridad, y puede abarcar una o más unidades complementarias destinadas a servirla (ARBA, 2018)."
+        },
+        "Lado catastral": {
+          "new_title": "Lado catastral",
+          "new_abstract": "Valor numérico del lado de un polígono (referido a un objeto catastral) que representa su longitud (ARBA, 2018)."
+        }
+      }
+    },
+    {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 30,
+      "nombre": "Unidades geoestadísticas",
+      "short_abstract": "Áreas estadísticas de desagregación del territotio nacional, provincial y de áreas de gobierno local",
+      "class": "",
+      "seccion": "unidades-geoestadisticas",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoservicios.indec.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": [
+        "geocenso2010:localidades_codigo",
+        "desarrollo:envolventes",
+        "sig:vias",
+        "eph:radios_eph"
+      ],
+      "customize_layers": {
+        "geocenso2010:localidades_codigo": {
+          "new_title": "Localidad Censal",
+          "new_abstract": "Concentración espacial de objetos físicos artificiales fijos conectados entre sí por medio de una red de calles, en una determinada porción del territorio. Está determinado por la continuidad espacial de los mismos y es independiente de los límites jurisdiccionales (INDEC, 2018)."
+        },
+        "desarrollo:envolventes": {
+          "new_title": "Envolvente urbana",
+          "new_abstract": "Área comprendida por una o varias localidades censales cuya continuidad espacial determina que sean consideradas como una unidad o aglomerado urbano (INDEC, 2018)."
+        },
+        "sig:vias": {
+          "new_title": "Vias de circulación censal",
+          "new_abstract": "Trazado que permite la circulación en el interior de una área urbana y que no es parte del acceso a la misma. Determina los límites de manzanas (INDEC, 2018)."
+        },
+        "eph:radios_eph": {
+          "new_title": "Radio censal",
+          "new_abstract": "Unidad censal que forma parte de una fracción, definida por un espacio territorial con límites geográficos y una determinada cantidad de unidades de análisis a relevar (INDEC, 2018)."
         }
       }
     },
@@ -939,7 +975,7 @@
       "seccion": "defensa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://wms.ign.gob.ar/geoserver/wms",
+      "host": "https://wms.ign.gob.ar/geoserver/defensa-seguridad/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "ign:estructuras_operativas_y_defensivas_FA517",
@@ -965,7 +1001,7 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 100,
+      "peso": 210,
       "nombre": "Biota",
       "short_abstract": "Áreas de cultivo y vegetación",
       "class": "",
@@ -974,16 +1010,8 @@
       "version": "1.3.0",
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": [
-        "biodiversidad:areas_pastizal",
-        "bosque_nativo:cobertura_bn"
-      ],
+      "allowed_layers": ["bosque_nativo:cobertura_bn"],
       "customize_layers": {
-        "biodiversidad:areas_pastizal": {
-          "new_title": "Áreas de pastizal",
-          "new_abstract": "Área de vegetación natural cubierta por pastizal cerrado, sea de cobertura simple, con árboles, con arbustos, o con árboles y arbustos.",
-          "new_keywords": "pastizales, vegetación natural"
-        },
         "bosque_nativo:cobertura_bn": {
           "new_title": "Área de vegetación natural arbórea cerrada",
           "new_abstract": "Área de vegetación natural cubierta por bosque cerrado, sea de un estrato arbóreo o de más de un estrato arbóreo, sin emergentes o con emergentes.",
@@ -998,7 +1026,7 @@
         "content": "Datos"
       },
       "type": "wms",
-      "peso": 110,
+      "peso": 210,
       "nombre": "Clima y meteorología",
       "short_abstract": "Información climática y meteorológica",
       "class": "",
@@ -1007,7 +1035,9 @@
       "version": "1.3.0",
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
-      "allowed_layers": ["indicadoresyestadistica:estaciones_meteorologicas"],
+      "allowed_layers": [
+        "indicadoresyestadistica:estaciones_meteorologicas"
+      ],
       "customize_layers": {
         "indicadoresyestadistica:estaciones_meteorologicas": {
           "new_title": "Estación meteorológica",
@@ -1025,13 +1055,31 @@
       },
       "peso": 9999,
       "type": "wms",
+      "nombre": "Ministerio de Ambiente y Desarrollo Sostenible - IDE Ambiente",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-medio-ambiente",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geo.ambiente.gob.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
       "nombre": "Ministerio de Ciencia, Tecnología e Innovación Productiva - Comisión Nacional de Actividades Espaciales (CONAE) - Landsat",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-conae-landsat",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoservicios.conae.gov.ar/geoserver/Landsat8/wms",
+      "host": "https://geoservicios.conae.gov.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1187,13 +1235,31 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Ministerio de Desarrollo Productivo - Secretaría de Gobierno de Energía",
+      "nombre": "Ministerio de Economía - Secretaría de Gobierno de Energía",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-secretaria-energia",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://sig.se.gob.ar/wmspubmap",
+      "host": "https://sig.energia.gob.ar/wmsenergia?",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Ministerio de Transporte - IDE Transporte",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-transporte",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://ide.transporte.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
     {
@@ -1229,7 +1295,7 @@
       "seccion": "organismos-senasa",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geonode.senasa.gob.ar/geoserver/wms",
+      "host": "https://geonode.senasa.gob.ar/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
@@ -1446,6 +1512,24 @@
       "servicio": "wms",
       "version": "1.3.0",
       "host": "http://idef.formosa.gob.ar/servicios/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "La Pampa - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-lapampa",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoidelp.lapampa.gob.ar/geoserver/ows",
       "feature_info_format": "application/json"
     },
     {
@@ -1979,6 +2063,114 @@
       },
       "peso": 9999,
       "type": "wms",
+      "nombre": "Municipalidad de Balcarce",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-balcarce",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/balcarce/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Benito Juarez",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-benito",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/benitojuarez/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Concordia",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-concordia",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://ide.concordia.gob.ar/geoserver/wms?",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Fray Mamerto Esquiú ",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-FrayMamertoEsquiú",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://nodoide.catamarca.gob.ar/geoserver/fme/wms?",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Lujan",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-lujan",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/lujan/wms",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Moreno - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-ide-moreno",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://mapas.moreno.gob.ar/cgi-bin/mapserv?map=ide",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
       "nombre": "Municipalidad de Pergamino - IDE",
       "short_abstract": "",
       "class": "",
@@ -2021,10 +2213,82 @@
       "seccion": "organismos-rosario",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://www.rosario.gov.ar/wms/planobase",
+      "host": "https://www.rosario.gob.ar/wms/planobase",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de San Benito - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-sanbenito",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geoserver.sanbenito.gob.ar/geoserver/wms?service=wms&version=1.3.0&request=GetCapabilities",
+      "feature_info_format": "application/json"
+    },
+	{
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Santa Rosa - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-santarosa",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://geonodeide.santarosa.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
     {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "Municipalidad de Tandil - IDE",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-tandil",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://mapa.tandil.gov.ar/geoserver/wms",
+      "feature_info_format": "application/json"
+    },
+    {
+      "tab": {
+        "id": "Organismos",
+        "searcheable": false,
+        "content": "Organismos",
+        "list_type": "combobox"
+      },
+      "peso": 9999,
+      "type": "wms",
+      "nombre": "San Luis - Dirección de geodesia y Catastro",
+      "short_abstract": "",
+      "class": "",
+      "seccion": "organismos-catastro-sanluis",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
+      "feature_info_format": "application/json"
+    },
+	{
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2051,31 +2315,13 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "San Luis - Dirección de geodesia y Catastro",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-catastro-sanluis",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
       "nombre": "Universidad Nacional de La Pampa - Instituto de geografía",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-unlpam",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://170.210.123.219/geoserver/wms",
+      "host": "https://ideigunlpam.humanas.unlpam.edu.ar/geoserver/ows?",
       "feature_info_format": "application/json"
     },
     {
@@ -2105,13 +2351,13 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Integración Energética Argentina S.A. (IEASA)",
+      "nombre": "Energía Argentina S.A",
       "short_abstract": "",
       "class": "",
-      "seccion": "organismos-ebisa",
+      "seccion": "organismos-energia-argentina",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://ide.ieasa.com.ar/geoserver/wms",
+      "host": "https://observatorio.energia-argentina.com.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     }
   ],
