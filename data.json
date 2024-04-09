@@ -1009,7 +1009,7 @@
       "allowed_layers": [
         "geocenso2010:localidades_codigo",
         "desarrollo:envolventes",
-        "sig:vias",
+        "desarrollo:vias",
         "eph:radios_eph"
       ],
       "customize_layers": {
@@ -1021,7 +1021,7 @@
           "new_title": "Envolvente urbana",
           "new_abstract": "Área comprendida por una o varias localidades censales cuya continuidad espacial determina que sean consideradas como una unidad o aglomerado urbano (INDEC, 2018)."
         },
-        "sig:vias": {
+        "desarrollo:vias": {
           "new_title": "Vias de circulación censal",
           "new_abstract": "Trazado que permite la circulación en el interior de una área urbana y que no es parte del acceso a la misma. Determina los límites de manzanas (INDEC, 2018)."
         },
