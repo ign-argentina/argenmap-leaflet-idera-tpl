@@ -701,26 +701,26 @@
       "host": "https://sigam.segemar.gov.ar/geoserver217/ows?SERVICE=WMS&REQUEST=GetCapabilities",
       "feature_info_format": "text/html",
       "allowed_layers": [
-        "Volcanes",
-        "Amb_Sismos",
-        ".2.500.000_Fallas_Argentina",
-        ".2.500.000_Geologia_Argentina"
+        "sigam:PeligroVolcanes",
+        "sigam:PeligroSismos",
+        "sigam:e250K.Fallas",
+        "sigam:e5M.UnidadesGeologicas"
       ],
       "customize_layers": {
-        "Volcanes": {
+        "Vsigam:PeligroVolcanes": {
           "new_title": "Volcán",
           "new_abstract": "Conducto en la superficie de la Tierra, a través del cual asciende magma y gases asociados; también, se denomina a la estructura o forma (usualmente cónica) que se produce a partir del material eyectado (SEGEMAR, 2019)."
         },
-        "Amb_Sismos": {
+        "sigam:PeligroSismos": {
           "new_title": "Epicentro de sismo",
           "new_abstract": "Punto de la superficie de la tierra que está directamente sobre el hipocentro de un sismo."
         },
-        ".2.500.000_Fallas_Argentina": {
+        "sigam:e250K.Fallas": {
           "new_title": "Falla",
           "new_abstract": "Fractura macroscópica de los materiales de la corteza terrestre acompañada por el desplazamiento de los bloques.",
           "new_keywords": "Falla, Brecha de falla, espejo de falla, fractura, falla de inflexión, salto de falla, tectónica"
         },
-        ".2.500.000_Geologia_Argentina": {
+        "sigam:e5M.UnidadesGeologicas": {
           "new_title": "Unidad geológica",
           "new_abstract": "Área cuyo volumen de roca es identificable de acuerdo a su origen y edad."
         }
