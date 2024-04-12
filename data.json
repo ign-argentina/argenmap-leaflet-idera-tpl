@@ -134,7 +134,6 @@
         "planosbase_ductos",
         "enargas_gasoductos_distribucion",
         "enargas_visor_gasoductos_transporte",
-        "hid_area_vacamuerta",
         "shale_gas_basins",
         "pozos_noconvencionales_shale",
         "pozos_noconvencionales_tight",
@@ -175,11 +174,6 @@
           "new_title": "Ductos de gas troncales",
           "new_abstract": "Serie de tubos conectados para el transporte de sólidos, líquidos o gases por bombeo. No incluye acueducto.",
           "new_keywords": "oil, gas, hidrocarburos, energía, petróleo, hidrocarburífera, upstream, downstream, petrolero, hidrocarburifera, ductos, pipeline, transporte"
-        },
-        "hid_area_vacamuerta": {
-          "new_title": "Yacimiento hidrocarburífero (área Vaca Muerta)",
-          "new_abstract": "Cuerpo geológico aproximado, constituido por petróleo y / o gas, económicamente explotable.",
-          "new_keywords": "yacimiento, yacimiento hidrocarburífero, yacimiento petrolero, hidrocarburos, vaca muerta, gas, reservas de gas, gas natural"
         },
         "shale_gas_basins": {
           "new_title": "Yacimiento hidrocarburífero (cuencas de shale gas)",
