@@ -707,7 +707,7 @@
         "sigam:e5M.UnidadesGeologicas"
       ],
       "customize_layers": {
-        "Vsigam:PeligroVolcanes": {
+        "sigam:PeligroVolcanes": {
           "new_title": "Volcán",
           "new_abstract": "Conducto en la superficie de la Tierra, a través del cual asciende magma y gases asociados; también, se denomina a la estructura o forma (usualmente cónica) que se produce a partir del material eyectado (SEGEMAR, 2019)."
         },
