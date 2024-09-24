@@ -518,6 +518,33 @@
         }
       }
     },
+	  {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 30,
+      "nombre": "Transporte",
+      "short_abstract": "Aeropuertos, aeródromos, red vial, red ferroviaria, etc.",
+      "class": "",
+      "seccion": "transporte",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://wms.ign.gob.ar/geoserver/transporte/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": [
+        "vial_provincial"
+      ],
+      "customize_layers": {
+        "vial_provincial": {
+          "new_title": "Red vial (Rutas Provinciales)",
+          "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
+          "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
+        }
+      }
+    },
 	{
       "tab": {
         "id": "Datos",
