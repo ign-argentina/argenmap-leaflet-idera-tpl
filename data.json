@@ -773,7 +773,7 @@
         "suelos:extension_degradacion",
         "areas_protegidas:APN_limite_areas_wgs84",
         "areas_protegidas:ReservasBiosferaMab_ago2022",
-        "areas_protegidas:sitio_ramsar"
+        "areas_protegidas:sitios_ramsar"
       ],
       "customize_layers": {
 		 "areas_protegidas:AMP-APN_limites_marzo2022": {
@@ -820,10 +820,10 @@
           "new_abstract": "Ecosistema terrestre o costero/ marino, o una combinación de los mismos, reconocido como tal en un plano internacional en el marco del Programa MAB (Hombre y la Atmósfera) de la UNESCO.",
           "new_keywords": "reserva de biosfera, hábitat"
         },
-        "areas_protegidas:sitio_ramsar": {
-          "new_title": "Sitio Ramsar",
+        "areas_protegidas:sitios_ramsar": {
+          "new_title": "Sitios RAMSAR",
           "new_abstract": "Sitio de humedal que se enmarca dentro de La Convención sobre los Humedales de Importancia Internacional, llamada Convención de Ramsar, que incluye pantanos y marismas, lagos y ríos, pastizales húmedos y turberas, oasis, estuarios, deltas y bajos de marea, zonas marinas próximas a las costas, manglares y arrecifes de coral, así como sitios artificiales como estanques piscícolas, arrozales, embalses y salinas.",
-          "new_keywords": "samsar, humedal, humedales, conservación, pantanos, marismas, turberas, estuario"
+          "new_keywords": "ramsar, humedal, humedales, conservación, pantanos, marismas, turberas, estuario"
         }
       }
     },
