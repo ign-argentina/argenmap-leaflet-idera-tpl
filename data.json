@@ -273,15 +273,15 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://mapas.produccion.gob.ar/geoserver/wms?service=wms&version=1.3.0&request=GetCapabilities",
+      "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-		"GIS:parques_industriales"
+		"ign:areas_de_fabricacion_y_procesamiento_AC070"
 		
       ],
       "customize_layers": {
         
-		"GIS:parques_industriales": {
+		"ign:areas_de_fabricacion_y_procesamiento_AC070": {
           "new_title": "Área de fabricación y procesamiento",
           "new_abstract": "Localización de Parques Industriales inscriptos en el Registro Nacional de Parques Industriales (RENPI). Corresponde a predios planificados y diseñados para la radicación de industrias y servicios",
           "new_keywords": "fabrica, parques industriales"
