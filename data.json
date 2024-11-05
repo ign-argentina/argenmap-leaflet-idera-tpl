@@ -772,7 +772,7 @@
         "suelos:indice_aridez_",
         "suelos:extension_degradacion",
         "areas_protegidas:APN_limite_areas_wgs84",
-        "areas_protegidas:ReservasBiosferaMab_ago2022",
+        "areas_protegidas:reservas_mab",
         "areas_protegidas:sitios_ramsar"
       ],
       "customize_layers": {
@@ -815,8 +815,8 @@
           "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
           "new_keywords": "área protegida, conservación, reserva natural, reserva ecológica"
         },
-        "areas_protegidas:ReservasBiosferaMab_ago2022": {
-          "new_title": "Reserva de Biosfera",
+        "areas_protegidas:reservas_mab": {
+          "new_title": "Reservas de Biosfera",
           "new_abstract": "Ecosistema terrestre o costero/ marino, o una combinación de los mismos, reconocido como tal en un plano internacional en el marco del Programa MAB (Hombre y la Atmósfera) de la UNESCO.",
           "new_keywords": "reserva de biosfera, hábitat"
         },
