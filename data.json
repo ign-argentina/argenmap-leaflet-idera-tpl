@@ -561,15 +561,21 @@
       "host": "https://sigvial.vialidad.gob.ar/geoserver/dnv/ows?SERVICE=WMS&REQUEST=GetCapabilities",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "Túneles"
+        "Túneles",
+	"dnv:RVN_2022"      
       ],
       "customize_layers": {
         "Túneles": {
           "new_title": "Túneles",
           "new_abstract": "Túneles. Dirección Nacional de Vialidad. Año Inventario 2020.",
           "new_keywords": "tunel,tuneles"
-        }
+        },
+	"dnv:RVN_2022": {
+        "new_title": "Red Vial (Rutas Nacionales)",
+        "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
+        "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios" 
       }
+      }     
     },
     {
       "tab": {
