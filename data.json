@@ -562,6 +562,7 @@
       "feature_info_format": "application/json",
       "allowed_layers": [
         "Túneles",
+	"dnv:Puentes_DNV_2022",     
 	"dnv:RVN_2022"      
       ],
       "customize_layers": {
@@ -570,6 +571,11 @@
           "new_abstract": "Túneles. Dirección Nacional de Vialidad. Año Inventario 2020.",
           "new_keywords": "tunel,tuneles"
         },
+	 "dnv:Puentes_DNV_2022": {
+          "new_title": "Puente",
+          "new_abstract": "Estructura que asegura la continuidad de una vía de transporte (red vial, calle, ferrocarril, entre otros) sobre un obstáculo natural o artificial del terreno (corriente de agua, canal, entre otros).",
+          "new_keywords": "puente, pasarela, viaducto"
+        },    
 	"dnv:RVN_2022": {
         "new_title": "Red Vial (Rutas Nacionales)",
         "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
