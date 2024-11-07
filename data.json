@@ -422,8 +422,6 @@
         "idera:Ferrocarril",
 		"observ:_3.4.4.8.rutas_cabotaje_2017.view",
         "idera:Estacion_Ferroviaria",
-        "observ:_3.4.1.7.red_vial_ign_ont_b_terc_view",
-        "observ:_3.4.1.7.red_vial_ign_ont_a_prov_view",
         "idera:Puertos",
         "orsna:_3.4.4.6.Predios_Aeroportuarios_jun17.view",
         "orsna:_3.4.4.5_SNA_jun17.view",
@@ -448,16 +446,6 @@
         },
         "observ:_3.4.1.7.red_vial_ign_ont_b_terc_view": {
           "new_title": "Red vial (caminos terciarios)",
-          "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
-          "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
-        },
-        "idera:Rutas_Nacionales": {
-          "new_title": "Red vial (rutas nacionales)",
-          "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
-          "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
-        },
-        "observ:_3.4.1.7.red_vial_ign_ont_a_prov_view": {
-          "new_title": "Red vial (rutas provinciales)",
           "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
           "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
         },
