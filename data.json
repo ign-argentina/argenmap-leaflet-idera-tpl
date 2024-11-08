@@ -676,6 +676,34 @@
         }
       }
     },
+	  {
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 40,
+      "nombre": "Hidrografía y oceanografía",
+      "short_abstract": "Ríos, lagos, humedales, embalses, islas, etc.",
+      "class": "",
+      "seccion": "hidrografia-oceanografia",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://geoportal.ddns.net/geoserver/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": [
+	"IDERA:curvas_batimetricas"
+      ],
+      "customize_layers": {
+        "IDERA:curvas_batimetricas": {
+          "new_title": "Curva batimétrica",
+          "new_abstract": "Línea trazada en un espejo de agua, corriente de agua, mar u océano, que une puntos de igual profundidad respecto de un nivel de referencia definido. También se la denomina isobata.",
+          "new_keywords": "curva, batimetria, batimetrica"
+        }
+      }
+    },
+
 	{
 	
       "tab": {
