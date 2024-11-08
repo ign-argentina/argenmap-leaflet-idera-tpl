@@ -986,6 +986,33 @@
         }
       }
 	},
+	{
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 60,
+      "nombre": "dmarcación",
+      "short_abstract": "Provincias, departamentos, municipios, áreas protegidas, etc.",
+      "class": "",
+      "seccion": "demarcacion",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "http://geoportal.ddns.net/geoserver/wms",
+      "feature_info_format": "application/json",
+      "allowed_layers": [
+	"IDERA:linea_de_costa"
+      ],
+      "customize_layers": {
+        "IDERA:linea_de_costa": {
+          "new_title": "Línea de costa",
+          "new_abstract": "Línea que marca el contacto entre una masa de tierra y un cuerpo de agua, establecida por la línea de las más bajas bajamares, ya sea en las aguas litorales o interiores.",
+          "new_keywords": "costa, linea de costa"
+        }
+      }
+    },
 	  
     {
       "tab": {
