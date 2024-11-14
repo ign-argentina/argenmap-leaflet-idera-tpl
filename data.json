@@ -690,7 +690,7 @@
       "seccion": "hidrografia-oceanografia",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://geoportal.ddns.net/geoserver/wms",
+      "host": "https://geoportal.ddns.net/geoserver/ows?version=2.0.0",
       "feature_info_format": "application/json",
       "allowed_layers": [
 	"IDERA:curvas_batimetricas"
