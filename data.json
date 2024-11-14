@@ -682,7 +682,7 @@
         "searcheable": true,
         "content": "Datos"
       },
-      "type": "wms",
+      "type": "ows",
       "peso": 40,
       "nombre": "Hidrografía y oceanografía",
       "short_abstract": "Ríos, lagos, humedales, embalses, islas, etc.",
