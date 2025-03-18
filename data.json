@@ -788,7 +788,7 @@
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geo.ambiente.gob.ar/geoserver/ows?",
+      "host": "https://geo.ambiente.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
 	    "areas_protegidas:AMP-APN_limites_marzo2022",
