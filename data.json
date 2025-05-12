@@ -65,16 +65,6 @@
           "peso": 40
         },
         {
-          "titulo": "Imágenes satelitales Here",
-          "nombre": "here_imagery",
-          "servicio": "tms",
-          "version": "1.0.0",
-          "attribution": "Imágenes satelitales © here",
-          "host": "https://2.aerial.maps.api.here.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8?app_id=XiMlA4JwMurUFFYUWYe3&app_code=oTsmqovbl2YudG3E0UlxDA",
-          "legendImg": "src/styles/images/here.png",
-          "peso": 50
-        },
-        {
           "titulo": "Imágenes satelitales Bing",
           "nombre": "bing_imagery",
           "servicio": "bing",
