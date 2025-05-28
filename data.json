@@ -990,7 +990,7 @@
       "seccion": "demarcacion",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://geoportal.ddns.net/geoserver/wms",
+      "host": "https://wms.shn.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
 	"IDERA:linea_de_costa"
