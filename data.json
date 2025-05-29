@@ -1281,7 +1281,7 @@
       "seccion": "organismos-indec",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoservicios.indec.gob.ar/geoserver/wms",
+      "host": "https://geonode.indec.gob.ar/geoserver/geonode/wms",
       "feature_info_format": "application/json"
     },
 	{
