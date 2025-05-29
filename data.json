@@ -639,33 +639,6 @@
         }
       }
     },
-	{
-      "tab": {
-        "id": "Datos",
-        "searcheable": true,
-        "content": "Datos"
-      },
-      "type": "wms",
-      "peso": 40,
-      "nombre": "Hidrografía y oceanografía",
-      "short_abstract": "Ríos, lagos, humedales, embalses, islas, etc.",
-      "class": "",
-      "seccion": "hidrografia-oceanografia",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://geoportal.obraspublicas.gob.ar/geoserver/ows",
-      "feature_info_format": "application/json",
-      "allowed_layers": [
-		"geonode:cuencas_ambiente_0322"
-      ],
-      "customize_layers": {
-        "geonode:cuencas_ambiente_0322": {
-          "new_title": "Cuencas Hidrográficas",
-          "new_abstract": "Territorio drenado por un único sistema de drenaje natural, es decir, que a través de un curso hídrico, sus aguas pueden dar a un cuerpo de agua, infiltrarse o evaporarse.​ Una cuenca hidrográfica es delimitada por la línea de las cumbres, también llamada divisoria de aguas.",
-          "new_keywords": "cuenca, cuencas"
-        }
-      }
-    },
 	  {
       "tab": {
         "id": "Datos",
