@@ -14,34 +14,61 @@
           "nombre": "argenmap",
           "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap.png",
+          "legend": "src/config/styles/images/legends/argenmap.jpg",
           "peso": 10,
-          "selected": true
+          "selected": true,
+          "zoom": {
+            "min": 3,
+            "max": 19
+          }
         },
         {
           "titulo": "Argenmap gris",
           "nombre": "argenmap_gris",
           "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap-gris.png",
-          "peso": 20
+          "legend": "src/config/styles/images/legends/argenmap-gris.jpg",
+          "peso": 20,
+          "zoom": {
+            "min": 3,
+            "max": 19
+          }
         },
         {
           "titulo": "Argenmap oscuro",
           "nombre": "argenmap_oscuro",
           "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/argenmap_oscuro@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap-oscuro.png",
+          "legend": "src/config/styles/images/legends/argenmap-oscuro.jpg",
           "peso": 25,
           "zoom": {
             "min": 3,
             "max": 19
+          }
+        },
+        {
+          "titulo": "Argenmap topográfico",
+          "nombre": "argenmap-topo",
+          "servicio": "tms",
+          "version": "1.0.0",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_topo@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+          "legendImg": "src/styles/images/argenmap-topo.png",
+          "legend": "src/config/styles/images/legends/argenmap-topografico.jpg",
+          "peso": 27,
+          "selected": true,
+          "zoom": {
+            "min": 3,
+            "max": 13
           }
         },
         {
@@ -52,7 +79,11 @@
           "attribution": "Imágenes satelitales © Esri",
           "host": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
           "legendImg": "src/styles/images/esri.png",
-          "peso": 30
+          "peso": 30,
+          "zoom": {
+            "min": 3,
+            "max": 19
+          }
         },
         {
           "titulo": "Mapa topográfico Esri",
@@ -62,17 +93,25 @@
           "attribution": "Mapa topográfico © Esri",
           "host": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
           "legendImg": "src/styles/images/esrit.png",
-          "peso": 40
+          "peso": 35,
+          "zoom": {
+            "min": 3,
+            "max": 8
+          }
         },
         {
-          "titulo": "Imágenes satelitales Bing",
-          "nombre": "bing_imagery",
-          "servicio": "bing",
+          "titulo": "Mapa Esri Fondo Oceánico",
+          "nombre": "esri_imagery-o",
+          "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "Imágenes satelitales © Bing",
-          "key": "AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L",
-          "legendImg": "src/styles/images/bing.png",
-          "peso": 60
+          "attribution": "Tiles &copy; Esri &mdash; Fuente: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, y Esri",
+          "host": "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}",
+          "legendImg": "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/0/0/0",
+          "peso": 37,
+          "zoom": {
+            "min": 3,
+            "max": 10
+          }
         }
       ]
     },
@@ -264,12 +303,10 @@
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-		"ign:areas_de_fabricacion_y_procesamiento_AC070"
-		
+        "ign:areas_de_fabricacion_y_procesamiento_AC070"
       ],
       "customize_layers": {
-        
-		"ign:areas_de_fabricacion_y_procesamiento_AC070": {
+        "ign:areas_de_fabricacion_y_procesamiento_AC070": {
           "new_title": "Área de fabricación y procesamiento",
           "new_abstract": "Localización de Parques Industriales inscriptos en el Registro Nacional de Parques Industriales (RENPI). Corresponde a predios planificados y diseñados para la radicación de industrias y servicios",
           "new_keywords": "fabrica, parques industriales"
@@ -538,8 +575,8 @@
       "feature_info_format": "application/json",
       "allowed_layers": [
         "Túneles",
-	"dnv:Puentes_DNV_2022",     
-	"dnv:RVN_2022"      
+        "dnv:Puentes_DNV_2022",
+        "dnv:RVN_2022"
       ],
       "customize_layers": {
         "Túneles": {
@@ -547,17 +584,17 @@
           "new_abstract": "Túneles. Dirección Nacional de Vialidad. Año Inventario 2020.",
           "new_keywords": "tunel,tuneles"
         },
-	 "dnv:Puentes_DNV_2022": {
+        "dnv:Puentes_DNV_2022": {
           "new_title": "Puente",
           "new_abstract": "Estructura que asegura la continuidad de una vía de transporte (red vial, calle, ferrocarril, entre otros) sobre un obstáculo natural o artificial del terreno (corriente de agua, canal, entre otros).",
           "new_keywords": "puente, pasarela, viaducto"
-        },    
-	"dnv:RVN_2022": {
-        "new_title": "Red Vial (Rutas Nacionales)",
-        "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
-        "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios" 
+        },
+        "dnv:RVN_2022": {
+          "new_title": "Red Vial (Rutas Nacionales)",
+          "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
+          "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
+        }
       }
-      }     
     },
     {
       "tab": {
@@ -637,7 +674,7 @@
         }
       }
     },
-	  {
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -654,7 +691,7 @@
       "host": "https://wms.shn.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-	"IDERA:curvas_batimetricas"
+        "IDERA:curvas_batimetricas"
       ],
       "customize_layers": {
         "IDERA:curvas_batimetricas": {
@@ -664,9 +701,7 @@
         }
       }
     },
-
-	{
-	
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -946,8 +981,8 @@
           "new_keywords": "municipio, limite departamental, partido, area administrastiva"
         }
       }
-	},
-	{
+    },
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -964,7 +999,7 @@
       "host": "https://wms.shn.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-	"IDERA:linea_de_costa"
+        "IDERA:linea_de_costa"
       ],
       "customize_layers": {
         "IDERA:linea_de_costa": {
@@ -974,7 +1009,6 @@
         }
       }
     },
-	  
     {
       "tab": {
         "id": "Datos",

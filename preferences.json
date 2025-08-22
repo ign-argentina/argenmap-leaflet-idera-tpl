@@ -136,8 +136,8 @@
     "bodyBackground": "#008dc9",
     "headerBackground": "#008dc9",
     "iconBar": "#4f4f4f",
-    "menuBackground": "#008dc9",
-    "textLegendMenu": "#dddddd",
+    "btnColor": "white",
+    "textLegendMenu": "white",
     "textLegendMenuStyle": "",
     "textMenu": "white",
     "textMenuStyle": ""
