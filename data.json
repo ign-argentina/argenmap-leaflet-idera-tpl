@@ -65,16 +65,6 @@
           "peso": 40
         },
         {
-          "titulo": "Imágenes satelitales Here",
-          "nombre": "here_imagery",
-          "servicio": "tms",
-          "version": "1.0.0",
-          "attribution": "Imágenes satelitales © here",
-          "host": "https://2.aerial.maps.api.here.com/maptile/2.1/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8?app_id=XiMlA4JwMurUFFYUWYe3&app_code=oTsmqovbl2YudG3E0UlxDA",
-          "legendImg": "src/styles/images/here.png",
-          "peso": 50
-        },
-        {
           "titulo": "Imágenes satelitales Bing",
           "nombre": "bing_imagery",
           "servicio": "bing",
@@ -271,13 +261,15 @@
       "seccion": "industria-servicios",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://mapas.produccion.gob.ar/geoserver/wms?service=wms&version=1.3.0&request=GetCapabilities",
+      "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "GIS:parques_industriales"
+		"ign:areas_de_fabricacion_y_procesamiento_AC070"
+		
       ],
       "customize_layers": {
-        "GIS:parques_industriales": {
+        
+		"ign:areas_de_fabricacion_y_procesamiento_AC070": {
           "new_title": "Área de fabricación y procesamiento",
           "new_abstract": "Localización de Parques Industriales inscriptos en el Registro Nacional de Parques Industriales (RENPI). Corresponde a predios planificados y diseñados para la radicación de industrias y servicios",
           "new_keywords": "fabrica, parques industriales"
@@ -418,9 +410,6 @@
         "idera:Ferrocarril",
         "observ:_3.4.4.8.rutas_cabotaje_2017.view",
         "idera:Estacion_Ferroviaria",
-        "observ:_3.4.1.7.red_vial_ign_ont_b_terc_view",
-        "idera:Rutas_Nacionales",
-        "observ:_3.4.1.7.red_vial_ign_ont_a_prov_view",
         "idera:Puertos",
         "orsna:_3.4.4.6.Predios_Aeroportuarios_jun17.view",
         "orsna:_3.4.4.5_SNA_jun17.view",
@@ -445,16 +434,6 @@
         },
         "observ:_3.4.1.7.red_vial_ign_ont_b_terc_view": {
           "new_title": "Red vial (caminos terciarios)",
-          "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
-          "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
-        },
-        "idera:Rutas_Nacionales": {
-          "new_title": "Red vial (rutas nacionales)",
-          "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
-          "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
-        },
-        "observ:_3.4.1.7.red_vial_ign_ont_a_prov_view": {
-          "new_title": "Red vial (rutas provinciales)",
           "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
           "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
         },
@@ -558,15 +537,27 @@
       "host": "https://sigvial.vialidad.gob.ar/geoserver/dnv/ows?SERVICE=WMS&REQUEST=GetCapabilities",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "Túneles"
+        "Túneles",
+	"dnv:Puentes_DNV_2022",     
+	"dnv:RVN_2022"      
       ],
       "customize_layers": {
         "Túneles": {
           "new_title": "Túneles",
           "new_abstract": "Túneles. Dirección Nacional de Vialidad. Año Inventario 2020.",
           "new_keywords": "tunel,tuneles"
-        }
+        },
+	 "dnv:Puentes_DNV_2022": {
+          "new_title": "Puente",
+          "new_abstract": "Estructura que asegura la continuidad de una vía de transporte (red vial, calle, ferrocarril, entre otros) sobre un obstáculo natural o artificial del terreno (corriente de agua, canal, entre otros).",
+          "new_keywords": "puente, pasarela, viaducto"
+        },    
+	"dnv:RVN_2022": {
+        "new_title": "Red Vial (Rutas Nacionales)",
+        "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
+        "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios" 
       }
+      }     
     },
     {
       "tab": {
@@ -646,7 +637,7 @@
         }
       }
     },
-    {
+	  {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -660,20 +651,22 @@
       "seccion": "hidrografia-oceanografia",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoportal.obraspublicas.gob.ar/geoserver/ows",
+      "host": "https://wms.shn.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        "geonode:cuencas_ambiente_0322"
+	"IDERA:curvas_batimetricas"
       ],
       "customize_layers": {
-        "geonode:cuencas_ambiente_0322": {
-          "new_title": "Cuencas Hidrográficas",
-          "new_abstract": "Territorio drenado por un único sistema de drenaje natural, es decir, que a través de un curso hídrico, sus aguas pueden dar a un cuerpo de agua, infiltrarse o evaporarse.​ Una cuenca hidrográfica es delimitada por la línea de las cumbres, también llamada divisoria de aguas.",
-          "new_keywords": "cuenca, cuencas"
+        "IDERA:curvas_batimetricas": {
+          "new_title": "Curva batimétrica",
+          "new_abstract": "Línea trazada en un espejo de agua, corriente de agua, mar u océano, que une puntos de igual profundidad respecto de un nivel de referencia definido. También se la denomina isobata.",
+          "new_keywords": "curva, batimetria, batimetrica"
         }
       }
     },
-    {
+
+	{
+	
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -756,7 +749,7 @@
       "seccion": "geografia-fisica",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geo.ambiente.gob.ar/geoserver/ows?",
+      "host": "https://geo.ambiente.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
         "areas_protegidas:AMP-APN_limites_marzo2022",
@@ -767,8 +760,8 @@
         "suelos:indice_aridez_",
         "suelos:extension_degradacion",
         "areas_protegidas:APN_limite_areas_wgs84",
-        "areas_protegidas:ReservasBiosferaMab_ago2022",
-        "areas_protegidas:ramsar"
+        "areas_protegidas:reservas_mab",
+        "areas_protegidas:sitios_ramsar"
       ],
       "customize_layers": {
         "areas_protegidas:AMP-APN_limites_marzo2022": {
@@ -810,15 +803,15 @@
           "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
           "new_keywords": "área protegida, conservación, reserva natural, reserva ecológica"
         },
-        "areas_protegidas:ReservasBiosferaMab_ago2022": {
-          "new_title": "Reserva de Biosfera",
+        "areas_protegidas:reservas_mab": {
+          "new_title": "Reservas de Biosfera",
           "new_abstract": "Ecosistema terrestre o costero/ marino, o una combinación de los mismos, reconocido como tal en un plano internacional en el marco del Programa MAB (Hombre y la Atmósfera) de la UNESCO.",
           "new_keywords": "reserva de biosfera, hábitat"
         },
-        "areas_protegidas:ramsar": {
-          "new_title": "Sitio Ramsar",
+        "areas_protegidas:sitios_ramsar": {
+          "new_title": "Sitios RAMSAR",
           "new_abstract": "Sitio de humedal que se enmarca dentro de La Convención sobre los Humedales de Importancia Internacional, llamada Convención de Ramsar, que incluye pantanos y marismas, lagos y ríos, pastizales húmedos y turberas, oasis, estuarios, deltas y bajos de marea, zonas marinas próximas a las costas, manglares y arrecifes de coral, así como sitios artificiales como estanques piscícolas, arrozales, embalses y salinas.",
-          "new_keywords": "samsar, humedal, humedales, conservación, pantanos, marismas, turberas, estuario"
+          "new_keywords": "ramsar, humedal, humedales, conservación, pantanos, marismas, turberas, estuario"
         }
       }
     },
@@ -953,7 +946,35 @@
           "new_keywords": "municipio, limite departamental, partido, area administrastiva"
         }
       }
+	},
+	{
+      "tab": {
+        "id": "Datos",
+        "searcheable": true,
+        "content": "Datos"
+      },
+      "type": "wms",
+      "peso": 60,
+      "nombre": "dmarcación",
+      "short_abstract": "Provincias, departamentos, municipios, áreas protegidas, etc.",
+      "class": "",
+      "seccion": "demarcacion",
+      "servicio": "wms",
+      "version": "1.3.0",
+      "host": "https://wms.shn.gob.ar/geoserver/wms?",
+      "feature_info_format": "application/json",
+      "allowed_layers": [
+	"IDERA:linea_de_costa"
+      ],
+      "customize_layers": {
+        "IDERA:linea_de_costa": {
+          "new_title": "Línea de costa",
+          "new_abstract": "Línea que marca el contacto entre una masa de tierra y un cuerpo de agua, establecida por la línea de las más bajas bajamares, ya sea en las aguas litorales o interiores.",
+          "new_keywords": "costa, linea de costa"
+        }
+      }
     },
+	  
     {
       "tab": {
         "id": "Datos",
@@ -1256,7 +1277,7 @@
       "seccion": "organismos-indec",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoservicios.indec.gob.ar/geoserver/wms?",
+      "host": "https://geonode.indec.gob.ar/geoserver/geonode/wms",
       "feature_info_format": "application/json"
     },
     {
@@ -1274,7 +1295,7 @@
       "seccion": "organismos-inta",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geo-backend.inta.gob.ar/geoserver/ows?service=wms&version=1.3.0",
+      "host": "https://geo-backend.inta.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
     {
