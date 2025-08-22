@@ -14,34 +14,61 @@
           "nombre": "argenmap",
           "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/capabaseargenmap@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap.png",
+          "legend": "src/config/styles/images/legends/argenmap.jpg",
           "peso": 10,
-          "selected": true
+          "selected": true,
+          "zoom": {
+            "min": 3,
+            "max": 19
+          }
         },
         {
           "titulo": "Argenmap gris",
           "nombre": "argenmap_gris",
           "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_gris@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap-gris.png",
-          "peso": 20
+          "legend": "src/config/styles/images/legends/argenmap-gris.jpg",
+          "peso": 20,
+          "zoom": {
+            "min": 3,
+            "max": 19
+          }
         },
         {
           "titulo": "Argenmap oscuro",
           "nombre": "argenmap_oscuro",
           "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/Introduccion' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
           "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/argenmap_oscuro@EPSG%3A3857@png/{z}/{x}/{-y}.png",
           "legendImg": "src/styles/images/argenmap-oscuro.png",
+          "legend": "src/config/styles/images/legends/argenmap-oscuro.jpg",
           "peso": 25,
           "zoom": {
             "min": 3,
             "max": 19
+          }
+        },
+        {
+          "titulo": "Argenmap topográfico",
+          "nombre": "argenmap-topo",
+          "servicio": "tms",
+          "version": "1.0.0",
+          "attribution": "<a href='https://www.ign.gob.ar/AreaServicios/Argenmap/IntroduccionV2' target='_blank'>Instituto Geográfico Nacional</a> + <a href='https://www.osm.org/copyright' target='_blank'>OpenStreetMap</a>",
+          "host": "https://wms.ign.gob.ar/geoserver/gwc/service/tms/1.0.0/mapabase_topo@EPSG%3A3857@png/{z}/{x}/{-y}.png",
+          "legendImg": "src/styles/images/argenmap-topo.png",
+          "legend": "src/config/styles/images/legends/argenmap-topografico.jpg",
+          "peso": 27,
+          "selected": true,
+          "zoom": {
+            "min": 3,
+            "max": 13
           }
         },
         {
@@ -52,7 +79,11 @@
           "attribution": "Imágenes satelitales © Esri",
           "host": "https://server.arcgisonline.com/arcgis/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
           "legendImg": "src/styles/images/esri.png",
-          "peso": 30
+          "peso": 30,
+          "zoom": {
+            "min": 3,
+            "max": 19
+          }
         },
         {
           "titulo": "Mapa topográfico Esri",
@@ -62,21 +93,29 @@
           "attribution": "Mapa topográfico © Esri",
           "host": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}",
           "legendImg": "src/styles/images/esrit.png",
-          "peso": 40
+          "peso": 35,
+          "zoom": {
+            "min": 3,
+            "max": 8
+          }
         },
         {
-          "titulo": "Imágenes satelitales Bing",
-          "nombre": "bing_imagery",
-          "servicio": "bing",
+          "titulo": "Mapa Esri Fondo Oceánico",
+          "nombre": "esri_imagery-o",
+          "servicio": "tms",
           "version": "1.0.0",
-          "attribution": "Imágenes satelitales © Bing",
-          "key": "AuhiCJHlGzhg93IqUH_oCpl_-ZUrIE6SPftlyGYUvr9Amx5nzA-WqGcPquyFZl4L",
-          "legendImg": "src/styles/images/bing.png",
-          "peso": 60
+          "attribution": "Tiles &copy; Esri &mdash; Fuente: GEBCO, NOAA, CHS, OSU, UNH, CSUMB, National Geographic, DeLorme, NAVTEQ, y Esri",
+          "host": "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/{z}/{y}/{x}",
+          "legendImg": "https://server.arcgisonline.com/ArcGIS/rest/services/Ocean/World_Ocean_Base/MapServer/tile/0/0/0",
+          "peso": 37,
+          "zoom": {
+            "min": 3,
+            "max": 10
+          }
         }
       ]
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -237,19 +276,17 @@
       "host": "https://wms.ign.gob.ar/geoserver/industria-servicios/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-		"planta_potabilizadora_de_agua"
-		
+        "planta_potabilizadora_de_agua"
       ],
       "customize_layers": {
-        
-		"planta_potabilizadora_de_agua": {
+        "planta_potabilizadora_de_agua": {
           "new_title": "Planta potabilizadora de agua",
           "new_abstract": "Conjunto de instalaciones cuya función es la producción de agua para consumo humano.",
           "new_keywords": "Planta potabilizadora "
         }
       }
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -266,12 +303,10 @@
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-		"ign:areas_de_fabricacion_y_procesamiento_AC070"
-		
+        "ign:areas_de_fabricacion_y_procesamiento_AC070"
       ],
       "customize_layers": {
-        
-		"ign:areas_de_fabricacion_y_procesamiento_AC070": {
+        "ign:areas_de_fabricacion_y_procesamiento_AC070": {
           "new_title": "Área de fabricación y procesamiento",
           "new_abstract": "Localización de Parques Industriales inscriptos en el Registro Nacional de Parques Industriales (RENPI). Corresponde a predios planificados y diseñados para la radicación de industrias y servicios",
           "new_keywords": "fabrica, parques industriales"
@@ -305,7 +340,7 @@
         }
       }
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -332,7 +367,7 @@
         }
       }
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -349,15 +384,15 @@
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-		"ign:areas_de_asentamientos_y_edificios_020105"
+        "ign:areas_de_asentamientos_y_edificios_020105"
       ],
       "customize_layers": {
-		"ign:areas_de_asentamientos_y_edificios_020105": {
-		  "new_title": "Planta urbana",
+        "ign:areas_de_asentamientos_y_edificios_020105": {
+          "new_title": "Planta urbana",
           "new_abstract": "Área urbana aproximada que incluye la zona contigua de amanzanamiento edificado, cuyos límites son reconocibles.",
           "new_keywords": "planta, manzana"
-		}
-	  }
+        }
+      }
     },
     {
       "tab": {
@@ -392,7 +427,7 @@
         }
       }
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -410,7 +445,7 @@
       "feature_info_format": "application/json",
       "allowed_layers": [
         "idera:Ferrocarril",
-		"observ:_3.4.4.8.rutas_cabotaje_2017.view",
+        "observ:_3.4.4.8.rutas_cabotaje_2017.view",
         "idera:Estacion_Ferroviaria",
         "idera:Puertos",
         "orsna:_3.4.4.6.Predios_Aeroportuarios_jun17.view",
@@ -424,7 +459,7 @@
           "new_abstract": "Vía férrea constituida por dos o tres rieles o carriles paralelos entre sí, sobre los cuales encajan y giran las ruedas de los trenes (incluye varios modos:ferrocarril, subterráneo, tranvía, entre otros).",
           "new_keywords": "trenes, red ferroviaria, ferrocarriles, línea ferrea, vias, ferrovias ,ffcc"
         },
-		"observ:_3.4.4.8.rutas_cabotaje_2017.view": {
+        "observ:_3.4.4.8.rutas_cabotaje_2017.view": {
           "new_title": "Rutas Aéreas Nacionales",
           "new_abstract": "Línea que representa el corredor aéreo definido entre el aeródromo de origen y el aeródromo de destino.",
           "new_keywords": "trenes, red ferroviaria, ferrocarriles, línea ferrea, vias, ferrovias ,ffcc"
@@ -495,7 +530,7 @@
         }
       }
     },
-	  {
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -522,7 +557,7 @@
         }
       }
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -540,8 +575,8 @@
       "feature_info_format": "application/json",
       "allowed_layers": [
         "Túneles",
-	"dnv:Puentes_DNV_2022",     
-	"dnv:RVN_2022"      
+        "dnv:Puentes_DNV_2022",
+        "dnv:RVN_2022"
       ],
       "customize_layers": {
         "Túneles": {
@@ -549,17 +584,17 @@
           "new_abstract": "Túneles. Dirección Nacional de Vialidad. Año Inventario 2020.",
           "new_keywords": "tunel,tuneles"
         },
-	 "dnv:Puentes_DNV_2022": {
+        "dnv:Puentes_DNV_2022": {
           "new_title": "Puente",
           "new_abstract": "Estructura que asegura la continuidad de una vía de transporte (red vial, calle, ferrocarril, entre otros) sobre un obstáculo natural o artificial del terreno (corriente de agua, canal, entre otros).",
           "new_keywords": "puente, pasarela, viaducto"
-        },    
-	"dnv:RVN_2022": {
-        "new_title": "Red Vial (Rutas Nacionales)",
-        "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
-        "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios" 
+        },
+        "dnv:RVN_2022": {
+          "new_title": "Red Vial (Rutas Nacionales)",
+          "new_abstract": "Trayecto diseñado con una superficie especialmente preparada, que se mantiene para ser usado por vehículos generalmente a motor.",
+          "new_keywords": "rutas, rutas nacionales, rutas provinciales, caminos, calles, caminos terciarios"
+        }
       }
-      }     
     },
     {
       "tab": {
@@ -609,10 +644,10 @@
           "new_title": "Corriente de agua áreas",
           "new_abstract": "Flujo natural de agua que sigue los desniveles del terreno, siendo arreico o desembocando en otra corriente de agua, en un espejo de agua o en el mar.",
           "new_keywords": "corriente de agua, río, arroyo, cauce, intermitente, estacional, cañada"
-		}
+        }
       }
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -629,7 +664,7 @@
       "host": "https://wms.ign.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-		"ign:puntos_de_aguas_continentales_BH051"
+        "ign:puntos_de_aguas_continentales_BH051"
       ],
       "customize_layers": {
         "ign:puntos_de_aguas_continentales_BH051": {
@@ -639,7 +674,7 @@
         }
       }
     },
-	  {
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -656,7 +691,7 @@
       "host": "https://wms.shn.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-	"IDERA:curvas_batimetricas"
+        "IDERA:curvas_batimetricas"
       ],
       "customize_layers": {
         "IDERA:curvas_batimetricas": {
@@ -666,9 +701,7 @@
         }
       }
     },
-
-	{
-	
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -754,8 +787,8 @@
       "host": "https://geo.ambiente.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-	    "areas_protegidas:AMP-APN_limites_marzo2022",
-		"areas_protegidas:app280_noviembre2020",
+        "areas_protegidas:AMP-APN_limites_marzo2022",
+        "areas_protegidas:app280_noviembre2020",
         "bosques:otbn_nacional",
         "dgarh:ing_sin_ias",
         "areas_protegidas:eco-regiones_Arg",
@@ -766,15 +799,15 @@
         "areas_protegidas:sitios_ramsar"
       ],
       "customize_layers": {
-		 "areas_protegidas:AMP-APN_limites_marzo2022": {
-         "new_title": "Área marina protegida",
-         "new_abstract": "capa de áreas marinas protegidas que corresponden a la plataforma continental argentina gestionadas y manejadas por la Administración de Parques Nacionales (APN)",
-         "new_keywords": "áreas protegidas"
-		 },
-		 "areas_protegidas:app280_noviembre2020": {
-         "new_title": "Reservas Provinciales",
-         "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
-         "new_keywords": "reservas, ordenamiento, deforestación"
+        "areas_protegidas:AMP-APN_limites_marzo2022": {
+          "new_title": "Área marina protegida",
+          "new_abstract": "capa de áreas marinas protegidas que corresponden a la plataforma continental argentina gestionadas y manejadas por la Administración de Parques Nacionales (APN)",
+          "new_keywords": "áreas protegidas"
+        },
+        "areas_protegidas:app280_noviembre2020": {
+          "new_title": "Reservas Provinciales",
+          "new_abstract": "Área de tierra y / o mar destinada a la protección y mantenimiento de la diversidad biológica y de los recursos naturales y culturales asociados.",
+          "new_keywords": "reservas, ordenamiento, deforestación"
         },
         "bosques:otbn_nacional": {
           "new_title": "Ordenamiento Territorial de Bosques Nativos",
@@ -922,8 +955,8 @@
         }
       }
     },
-	{
-	 "tab": {
+    {
+      "tab": {
         "id": "Datos",
         "searcheable": true,
         "content": "Datos"
@@ -948,8 +981,8 @@
           "new_keywords": "municipio, limite departamental, partido, area administrastiva"
         }
       }
-	},
-	{
+    },
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -966,7 +999,7 @@
       "host": "https://wms.shn.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json",
       "allowed_layers": [
-	"IDERA:linea_de_costa"
+        "IDERA:linea_de_costa"
       ],
       "customize_layers": {
         "IDERA:linea_de_costa": {
@@ -976,7 +1009,6 @@
         }
       }
     },
-	  
     {
       "tab": {
         "id": "Datos",
@@ -1069,7 +1101,7 @@
         }
       }
     },
-	{
+    {
       "tab": {
         "id": "Datos",
         "searcheable": true,
@@ -1096,9 +1128,9 @@
           "new_keywords": "seguridad"
         },
         "ign:estructuras_operativas_y_defensivas_090102": {
-            "new_title": "Cuartel de bomberos",
-            "new_abstract": "Construcción destinada al asiento de la autoridad encargada de la seguridad.",
-            "new_keywords": "seguridad"
+          "new_title": "Cuartel de bomberos",
+          "new_abstract": "Construcción destinada al asiento de la autoridad encargada de la seguridad.",
+          "new_keywords": "seguridad"
         }
       }
     },
@@ -1119,11 +1151,9 @@
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json",
       "allowed_layers": [
-        
         "bosque_nativo:cobertura_bn"
       ],
       "customize_layers": {
-        
         "bosque_nativo:cobertura_bn": {
           "new_title": "Área de vegetación natural arbórea cerrada",
           "new_abstract": "Área de vegetación natural cubierta por bosque cerrado, sea de un estrato arbóreo o de más de un estrato arbóreo, sin emergentes o con emergentes.",
@@ -1158,7 +1188,7 @@
         }
       }
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1176,7 +1206,7 @@
       "host": "https://geo.ambiente.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1194,7 +1224,7 @@
       "host": "https://wms.ign.gob.ar/geoserver/bahra/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1212,7 +1242,7 @@
       "host": "https://geoservicios.conae.gov.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1230,7 +1260,7 @@
       "host": "https://poblacion.idear.gov.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1248,7 +1278,7 @@
       "host": "https://sigvial.vialidad.gob.ar/geoserver/dnv/ows?SERVICE=WMS&REQUEST=GetCapabilities",
       "feature_info_format": "application/json"
     },
-	 {
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1284,7 +1314,7 @@
       "host": "https://geonode.indec.gob.ar/geoserver/geonode/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1302,7 +1332,7 @@
       "host": "https://geo-backend.inta.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1320,7 +1350,7 @@
       "host": "https://alerta.ina.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1338,7 +1368,7 @@
       "host": "https://idemindef.ign.gob.ar/geoserver/fuerzas_armadas/wfs?service=wms&version=2.0.0",
       "feature_info_format": "application/json"
     },
-	 {
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1356,7 +1386,7 @@
       "host": "https://mapa.educacion.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1374,7 +1404,7 @@
       "host": "https://geoportal.obraspublicas.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1428,7 +1458,7 @@
       "host": "https://sig.energia.gob.ar/wmsenergia?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1446,7 +1476,7 @@
       "host": "https://mapas.produccion.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1464,7 +1494,7 @@
       "host": "http://geoportal.ddns.net/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1482,7 +1512,7 @@
       "host": "https://geonode.senasa.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1518,7 +1548,7 @@
       "host": "https://sigam.segemar.gov.ar/geoserver217/ows?SERVICE=WMS&REQUEST=GetCapabilities",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1536,7 +1566,7 @@
       "host": "https://geoserver.ideba.gba.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1572,7 +1602,7 @@
       "host": "https://nodoide.catamarca.gob.ar/geoserver/idecat/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1590,7 +1620,7 @@
       "host": "https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1698,8 +1728,7 @@
       "host": "https://ideconurbano.ungs.edu.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-    
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1735,7 +1764,7 @@
       "host": "https://idef.formosa.gob.ar/servicios/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1789,7 +1818,7 @@
       "host": "https://atmgis.mendoza.gov.ar/geoserver/cartografia/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -1807,7 +1836,6 @@
       "host": "https://ide.ordenamientoterritorial.misiones.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
       "feature_info_format": "application/json"
     },
-   
     {
       "tab": {
         "id": "Organismos",
@@ -1862,7 +1890,6 @@
       "host": "http://geoeducacion.neuquen.gov.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-    
     {
       "tab": {
         "id": "Organismos",
@@ -1971,7 +1998,7 @@
       "host": "http://geoportal.idesa.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2205,7 +2232,7 @@
       "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Choromoro/MapServer/WMSServer",
       "feature_info_format": "text/html"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2223,7 +2250,7 @@
       "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/balcarce/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2241,7 +2268,7 @@
       "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/benitojuarez/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2259,7 +2286,7 @@
       "host": "https://webgis.ciudaddemendoza.gob.ar/server/services/Catastro_público/MapServer/WMSServer",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2277,7 +2304,7 @@
       "host": "https://ide.concordia.gob.ar/geoserver/ows?service=wms&version=1.3.0",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2295,7 +2322,7 @@
       "host": "https://nodoide.catamarca.gob.ar/geoserver/fme/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2313,7 +2340,7 @@
       "host": "https://geo.gualeguaychu.gov.ar/geoserver/gis/wms?Request=GetCapabilities",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2331,7 +2358,7 @@
       "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/lujan/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2349,7 +2376,7 @@
       "host": "http://mapas.moreno.gob.ar/cgi-bin/mapserv?map=ide",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2421,7 +2448,7 @@
       "host": "https://infomapa.rosario.gov.ar/wms/planobase?",
       "feature_info_format": "application/json"
     },
-	    {
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2439,7 +2466,7 @@
       "host": "https://geo.municipalidadsalta.gob.ar:8080/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2457,7 +2484,7 @@
       "host": "https://geoserver.sanbenito.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2475,7 +2502,7 @@
       "host": "http://190.228.16.100/geoserver/catamarca_editable/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2493,7 +2520,7 @@
       "host": "http://200.5.71.75:9000/geoserver/ows?service=WMS&version=1.1.0",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2511,7 +2538,7 @@
       "host": "https://geonodeide.santarosa.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2529,7 +2556,7 @@
       "host": "https://mapa.tandil.gov.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2547,7 +2574,7 @@
       "host": "https://villamaria.ign.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2583,7 +2610,7 @@
       "host": "http://visualcatsl.dyndns.info/geoserver/SanLuis/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2601,7 +2628,7 @@
       "host": "https://unide.sanjuan.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2619,7 +2646,7 @@
       "host": "https://170.210.71.26/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2655,7 +2682,7 @@
       "host": "https://ideigunlpam.humanas.unlpam.edu.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2673,7 +2700,7 @@
       "host": "https://www.ide.unp.edu.ar:8080/geoserver/wms?",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2691,7 +2718,7 @@
       "host": "https://ideunmdp.mdp.edu.ar/geoserver/ows?service=wms&version=1.3.0",
       "feature_info_format": "application/json"
     },
-	{
+    {
       "tab": {
         "id": "Organismos",
         "searcheable": false,
@@ -2731,7 +2758,7 @@
   "template": "argenmap-leaflet-idera-tpl",
   "template_feature_info_exception": [
     "gid",
-	"id",
-	"entidad"
+    "id",
+    "entidad"
   ]
 }
