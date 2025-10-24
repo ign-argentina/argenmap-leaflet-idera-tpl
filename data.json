@@ -1437,7 +1437,7 @@
       "seccion": "organismos-agro",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoforestal.magyp.gob.ar/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities",
+      "host": "https://geoforestal.magyp.gob.ar/geoserver/wms?service=wms&version=1.1.1&request=GetCapabilities",
       "feature_info_format": "application/json"
     },
     {
