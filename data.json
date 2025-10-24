@@ -2085,7 +2085,7 @@
       "seccion": "organismos-Ministerio de Desarrollo Social",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://rides.producciontucuman.gov.ar/ArcGIS/services/Ambientes_Naturales/MapServer/WMSServer?",
+      "host": "http://190.221.181.227/geoserver/dgct/wms?",
       "feature_info_format": "application/json"
     },
     {
