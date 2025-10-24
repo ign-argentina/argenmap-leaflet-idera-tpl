@@ -2193,7 +2193,7 @@
       "seccion": "organismos-riego-lules-tucuman",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Lules/MapServer/WMSServer",
+      "host": "https://gis.producciontucuman.gob.ar:442/ArcGIS/services/Lules/MapServer/WMSServer?",
       "feature_info_format": "application/json"
     },
     {
