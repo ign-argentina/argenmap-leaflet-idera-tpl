@@ -2061,60 +2061,6 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Tucumán - Secretaría de Gestión Pública y Planeamiento",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-geosplan-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://geosplan.tucuman.gob.ar/geoserver/SituacionActual/wms?",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Tucumán - Imágenes Procesadas por el Ministerio de Desarrollo Productivo",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-productivo-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://rides.producciontucuman.gov.ar/ArcGIS/services/Choromoro/MapServer/WMSServer?",
-      "feature_info_format": "text/html"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Tucumán - Municipalidad de San Miguel de Tucumán",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-municipalidad-sanmigueltucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://sigcap.no-ip.org:8082/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
       "nombre": "Tucumán - Red de Información Para el Desarrollo Productivo",
       "short_abstract": "",
       "class": "",
