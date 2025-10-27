@@ -2043,24 +2043,6 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Tucumán - Dirección de Estadística",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-estadistica-tucuman",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://181.88.186.115:8080/geoserver/servidor/wms?",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
       "nombre": "Tucumán - Catastro",
       "short_abstract": "",
       "class": "",
