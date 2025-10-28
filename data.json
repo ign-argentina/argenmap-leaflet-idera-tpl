@@ -2031,7 +2031,7 @@
       "seccion": "organismos-ide-santafe",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://aswe.santafe.gov.ar/idesf/wms",
+      "host": "https://aswe.santafe.gov.ar/idesf/publico-wms?service=WMS&request=GetCapabilities",
       "feature_info_format": "application/json"
     },
     {
