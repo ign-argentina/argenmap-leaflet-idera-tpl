@@ -1653,7 +1653,7 @@
       "seccion": "organismos-etidig-chaco",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://idechaco.gob.ar/geoserver/idechaco/wms?",
+      "host": "http://idechaco.gob.ar/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities",
       "feature_info_format": "application/json"
     },
     {
