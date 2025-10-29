@@ -2445,7 +2445,7 @@
       "seccion": "organismos-uba",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://geonode.filo.uba.ar/geoserver/ows?version=2.0.0",
+      "host": "http://ide.filo.uba.ar/geoserver/atlas/wms",
       "feature_info_format": "application/json"
     },
     {
