@@ -2079,24 +2079,6 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Municipalidad de Concordia",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-concordia",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://ide.concordia.gob.ar/geoserver/wms?",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
       "nombre": "Municipalidad de Fray Mamerto Esquiú ",
       "short_abstract": "",
       "class": "",
@@ -2194,96 +2176,6 @@
       "servicio": "wms",
       "version": "1.3.0",
       "host": "https://www.ide.posadas.gob.ar/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Municipalidad de Salta - IDE",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-municipalidad-salta",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://geo.municipalidadsalta.gob.ar:8080/geoserver/wms?",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Municipalidad de San Benito - IDE",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-sanbenito",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://geoserver.sanbenito.gob.ar/geoserver/wms?",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Municipalidad de San Fernando del Valle de Catamarca - Provincia de Catamarca",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-san-fernando-del-valle",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://190.228.16.100/geoserver/catamarca_editable/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Municipalidad de San Salvador de Jujuy - IDE",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-sansalvadordejujuy",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "http://200.5.71.75:9000/geoserver/ows?service=WMS&version=1.1.0",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Municipalidad de Santa Rosa - IDE",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-santarosa",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://geonodeide.santarosa.gob.ar/geoserver/wms",
       "feature_info_format": "application/json"
     },
     {
