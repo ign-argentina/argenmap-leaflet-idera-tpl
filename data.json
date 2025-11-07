@@ -1815,7 +1815,7 @@
       "seccion": "organismos-estadistica-censos-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://gisestadisticanqn.neuquen.gov.ar/geoserver/wms",
+      "host": "http://sig.viviendaneuquen.gov.ar/arcgis/services/INTEGRABILIDAD/Parcelas_Provisorias_IPVU_ADUS/MapServer/WMSServer",
       "feature_info_format": "application/json"
     },
     {
