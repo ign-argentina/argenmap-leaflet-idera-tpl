@@ -1563,7 +1563,7 @@
       "seccion": "organismos-IDE-IDEBA",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoserver-nodo1.ideba.gba.gob.ar/geoserver/ows?service=WMS&version=1.1.1&request=GetCapabilities",
+      "host": "https://geoserver-nodo1.ideba.gba.gob.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
     {
