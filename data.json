@@ -1689,7 +1689,7 @@
       "seccion": "organismos-caba-est",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://idecaba.estadisticaciudad.gob.ar/geoserver/wms",
+      "host": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows?service=wms&request=GetCapabilities",
       "feature_info_format": "application/json"
     },
     {
