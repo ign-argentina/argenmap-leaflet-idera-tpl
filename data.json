@@ -1251,24 +1251,6 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Registro Nacional de las Personas (RENAPER)",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-renaper",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://poblacion.idear.gov.ar/geoserver/wms?",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
       "nombre": "Dirección Nacional de Vialidad - SIG-vial",
       "short_abstract": "",
       "class": "",
@@ -1510,24 +1492,6 @@
       "servicio": "wms",
       "version": "1.3.0",
       "host": "https://geonode.senasa.gob.ar/geoserver/wms",
-      "feature_info_format": "application/json"
-    },
-    {
-      "tab": {
-        "id": "Organismos",
-        "searcheable": false,
-        "content": "Organismos",
-        "list_type": "combobox"
-      },
-      "peso": 9999,
-      "type": "wms",
-      "nombre": "Infraestructura de Datos Espaciales de Comunicaciones - IDECOM",
-      "short_abstract": "",
-      "class": "",
-      "seccion": "organismos-idecom",
-      "servicio": "wms",
-      "version": "1.3.0",
-      "host": "https://www.idecom.gob.ar/geoserver/idera/wms?",
       "feature_info_format": "application/json"
     },
     {
