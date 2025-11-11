@@ -1809,13 +1809,13 @@
       },
       "peso": 9999,
       "type": "wms",
-      "nombre": "Neuquén - Dirección Provincial de Estadística y Censos",
+      "nombre": "Neuquén - Dirección Provincial de Catastro e Informacion Territorial",
       "short_abstract": "",
       "class": "",
       "seccion": "organismos-estadistica-censos-neuquen",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "http://sig.viviendaneuquen.gov.ar/arcgis/services/INTEGRABILIDAD/Parcelas_Provisorias_IPVU_ADUS/MapServer/WMSServer",
+      "host": "https://catastro.neuquen.gov.ar/nqn_ide/services/IDE/Catastro/MapServer/WMSServer",
       "feature_info_format": "application/json"
     },
     {
