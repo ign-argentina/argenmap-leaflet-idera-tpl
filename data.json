@@ -1671,7 +1671,7 @@
       "seccion": "organismos-ungs-conourbano",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://ideconurbano.ungs.edu.ar/geoserver/wms?",
+      "host": "http://ideconurbano.ungs.edu.ar/geoserver/wms?",
       "feature_info_format": "application/json"
     },
     {
