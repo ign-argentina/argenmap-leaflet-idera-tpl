@@ -1959,7 +1959,7 @@
       "seccion": "organismos-lujan",
       "servicio": "wms",
       "version": "1.3.0",
-      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/lujan/wms?",
+      "host": "https://geoserver-nodo2.ideba.gba.gob.ar/geoserver/lujan/wms?version=1.3.0",
       "feature_info_format": "application/json"
     },
     {
