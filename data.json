@@ -793,7 +793,6 @@
         "dgarh:ing_sin_ias",
         "areas_protegidas:eco-regiones_Arg",
         "suelos:indice_aridez_",
-        "suelos:extension_degradacion",
         "areas_protegidas:APN_limite_areas_wgs84",
         "areas_protegidas:reservas_mab",
         "areas_protegidas:sitios_ramsar"
@@ -827,11 +826,6 @@
           "new_title": "Tierras áridas",
           "new_abstract": "Área clasificada según la escasez estacional y / o anual de los recursos hídricos. Se define comúnmente como la insuficiencia de agua en el suelo y en la atmósfera.",
           "new_keywords": "tierras áridas, índice de aridez, degradación, desertificación, tierras degradadas"
-        },
-        "suelos:extension_degradacion": {
-          "new_title": "Tierras degradadas",
-          "new_abstract": "Área que sufre un cambio en la salud del suelo, resultando en una disminución de la capacidad del ecosistema para producir bienes o prestar servicios para sus beneficiarios. Las tierras degradadas cubren todos los cambios negativos en la capacidad del ecosistema para prestar bienes y servicios (incluso biológicos y servicios y bienes relacionados con el agua, y también su relación con bienes y servicios sociales y económicos).",
-          "new_keywords": "tierras secas, degradación, desertificación, tierras degradadas"
         },
         "areas_protegidas:APN_limite_areas_wgs84": {
           "new_title": "Áreas protegidas Nacionales",
